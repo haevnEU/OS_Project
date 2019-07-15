@@ -16,6 +16,7 @@ public:
     void setBit(long bitNumm,bool value);
     ~Block();
 
+    Block();
 };
 
 

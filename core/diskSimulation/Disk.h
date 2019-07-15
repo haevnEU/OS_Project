@@ -6,23 +6,32 @@
 #define PROJEKT_DISK_H
 
 
+class PartitionTable;
+
 class Block;
 class MBR;
 class Partition;
-enum FormatType{};
+class FileSystem;
 
+
+class list;
 
 class Disk {
 private:
     long diskSize;
     long blockSize;
-    Block * storageBlocks ;
+    long blockCount;
+    Block ** blocks ;
     MBR * mbr;
+    PartitionTable* partitions;
 
 public:
     Disk(long diskSize, long blockSize);
-    Partition * addPartition(FormatType type , long size);
+    Partition * addPartition(Block *startBlock, Block *endBlock, FileSystem* formate, bool active);
     int removePartition(Partition* partition);
+    bool getBit(long blockNumm,long bitNumm);
+    void setBit(long blockNumm,long bitNumm,bool value);
+    int coppyBlockContent(long block1,long block2);
     ~Disk();
 
 

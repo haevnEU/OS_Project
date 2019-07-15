@@ -19,4 +19,4 @@ add_executable(OS_Project
         core/diskSimulation/Partition.cpp
         core/diskSimulation/Partition.h
         core/main.cpp
-        )
+        core/diskSimulation/PartitionTable.cpp core/diskSimulation/PartitionTable.h core/FileSystem.cpp core/FileSystem.h)

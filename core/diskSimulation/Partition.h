@@ -6,16 +6,19 @@
 #define OS_PROJECT_PARTITION_H
 
 
-#include "Block.h"
-#include "FormatType.h"
+class FileSystem;
+
+class Block;
 
 class Partition {
 private:
     Block * startBlock;
     Block * endBlock;
-    FormatType formate;
+    FileSystem * formate;
     bool active;
-
+public:
+    Partition(Block *startBlock, Block *endBlock, FileSystem * formate, bool active);
+    ~Partition();
 };
 
 
