@@ -19,4 +19,4 @@ add_executable(OS_Project
         core/diskSimulation/Partition.cpp
         core/diskSimulation/Partition.h
         core/main.cpp
-        core/diskSimulation/PartitionTable.cpp core/diskSimulation/PartitionTable.h core/FileSystem.cpp core/FileSystem.h)
+        core/diskSimulation/PartitionTable.cpp core/diskSimulation/PartitionTable.h core/FileSystem.cpp core/FileSystem.h core/fat/FAT.cpp core/fat/FAT.h core/fat/FATFile.cpp core/fat/FATFile.h)
