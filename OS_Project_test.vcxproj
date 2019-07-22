@@ -18,10 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Partition.cpp" />
+    <ClCompile Include="PartitionTable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Definitionsh.h" />
+    <ClInclude Include="Partition.h" />
+    <ClInclude Include="PartitionTable.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{B5EBC7C8-DA99-4376-9163-616DC2A66211}</ProjectGuid>
-    <RootNamespace>OSProject</RootNamespace>
+    <ProjectGuid>{3D4A8D0A-99AE-46D7-B7CC-EDC6BB0F5E00}</ProjectGuid>
+    <RootNamespace>OSProjecttest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -122,23 +133,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="core\diskSimulation\Block.h" />
-    <ClInclude Include="core\diskSimulation\Disk.h" />
-    <ClInclude Include="core\diskSimulation\MBR.h" />
-    <ClInclude Include="core\diskSimulation\Partition.h" />
-    <ClInclude Include="core\diskSimulation\PartitionTable.h" />
-    <ClInclude Include="core\FileSystem.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="core\diskSimulation\Block.cpp" />
-    <ClCompile Include="core\diskSimulation\Disk.cpp" />
-    <ClCompile Include="core\diskSimulation\MBR.cpp" />
-    <ClCompile Include="core\diskSimulation\Partition.cpp" />
-    <ClCompile Include="core\diskSimulation\PartitionTable.cpp" />
-    <ClCompile Include="core\FileSystem.cpp" />
-    <ClCompile Include="core\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
