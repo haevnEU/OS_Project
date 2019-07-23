@@ -20,12 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="IFileSystem.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Partition.cpp" />
     <ClCompile Include="PartitionTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
     <ClInclude Include="Definitionsh.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="IFileSystem.h" />
     <ClInclude Include="Partition.h" />
     <ClInclude Include="PartitionTable.h" />
   </ItemGroup>

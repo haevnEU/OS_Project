@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Block.h"
+#include "IFileSystem.h"
 
 namespace os_project {
 	namespace hard_disk {
@@ -8,14 +9,14 @@ namespace os_project {
 		private:
 			os_project::hard_disk::Block** blocks_m;
 			os_project::definitions::partition_state state_m;
-			os_project::definitions::file_system fileSystem_m;
+			os_project::fileSystem::IFileSystem* fileSystem_m;
 			bool primary_m;
 			int index_m;
 			int size_m;
 			int amountBlocks_m;
 		public:
 
-			Partition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::definitions::file_system fileSystem);
+			Partition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem);
 
 			~Partition(void);
 
@@ -29,7 +30,7 @@ namespace os_project {
 
 			os_project::definitions::partition_state state(void);
 
-			os_project::definitions::file_system fileSystem(void);
+			os_project::fileSystem::IFileSystem* fileSystem(void);
 
 			bool isPrimary();
 
@@ -38,6 +39,8 @@ namespace os_project {
 			int size(void);
 
 			int amountBlocks(void);
+			
+			friend std::ostream& operator<< (std::ostream& out, Partition& block);
 
 		};
 	}
