@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Compiler script for OS_Project"
 echo "Version 1 created by Nils Milewski at July 23 2019"
+echo "This version is not usable, it will be improved over time"
 PS3='Please enter your choice: '
 options=("All" "Single file" "Quit")
 include="./include/"
