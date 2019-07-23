@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include "Block.h"
-#include "Definitionsh.h"
-#include "File.h"
-#include "IFileSystem.h"
-#include "Partition.h"
-#include "PartitionTable.h"
+#include "../include/Block.h"
+#include "../include/Definitionsh.h"
+#include "../include/File.h"
+#include "../include/IFileSystem.h"
+#include "../include/Partition.h"
+#include "../include/PartitionTable.h"
 
 
 

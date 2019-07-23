@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OS_PROJECT_PARTITION_TABLE_H_
+#define _OS_PROJECT_PARTITION_TABLE_H_
 
 #include <vector>
 
@@ -30,4 +31,4 @@ namespace os_project {
 	}
 }
 
-
+#endif // _OS_PROJECT_PARTITION_TABLE_H_

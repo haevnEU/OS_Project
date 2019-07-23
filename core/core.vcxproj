@@ -18,26 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Block.cpp" />
-    <ClCompile Include="File.cpp" />
-    <ClCompile Include="IFileSystem.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Partition.cpp" />
-    <ClCompile Include="PartitionTable.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Block.h" />
-    <ClInclude Include="Definitionsh.h" />
-    <ClInclude Include="File.h" />
-    <ClInclude Include="IFileSystem.h" />
-    <ClInclude Include="Partition.h" />
-    <ClInclude Include="PartitionTable.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{3D4A8D0A-99AE-46D7-B7CC-EDC6BB0F5E00}</ProjectGuid>
-    <RootNamespace>OSProjecttest</RootNamespace>
+    <ProjectGuid>{2B0BA76D-4FB0-4C44-8BB4-6ADF4AB291CF}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,6 +122,22 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Block.h" />
+    <ClInclude Include="include\Definitionsh.h" />
+    <ClInclude Include="include\File.h" />
+    <ClInclude Include="include\IFileSystem.h" />
+    <ClInclude Include="include\Partition.h" />
+    <ClInclude Include="include\PartitionTable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Block.cpp" />
+    <ClCompile Include="src\File.cpp" />
+    <ClCompile Include="src\IFileSystem.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Partition.cpp" />
+    <ClCompile Include="src\PartitionTable.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

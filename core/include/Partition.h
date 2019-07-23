@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OS_PROJECT_PARTITION_H_
+#define _OS_PROJECT_PARTITION_H_
 
 #include "Block.h"
 #include "IFileSystem.h"
@@ -45,3 +46,5 @@ namespace os_project {
 		};
 	}
 }
+
+#endif // _OS_PROJECT_PARTITION_H_

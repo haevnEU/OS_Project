@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OS_PROJECT_IFILESYSTEM_H_
+#define _OS_PROJECT_IFILESYSTEM_H_
 
 #include <vector>
 
@@ -31,3 +32,5 @@ namespace os_project {
 
 	}
 }
+
+#endif // _OS_PROJECT_IFILESYSTEM_H_

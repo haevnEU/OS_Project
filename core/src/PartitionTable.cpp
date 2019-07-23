@@ -1,4 +1,4 @@
-#include "PartitionTable.h"
+#include "../include/PartitionTable.h"
 
 
 using namespace os_project::hard_disk;

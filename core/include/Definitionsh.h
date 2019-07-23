@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _OS_PROJECT_DEFINITIONS_H_
+#define _OS_PROJECT_DEFINITIONS_H_
+
 namespace os_project {
 	namespace definitions {
 		enum block_state { block_free, block_reserved, block_occupied, block_corrupted };
@@ -13,3 +15,5 @@ namespace os_project {
 
 	}
 }
+
+#endif // _OS_PROJECT_DEFINITIONS_H_

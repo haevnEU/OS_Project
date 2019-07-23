@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OS_PROJECT_BLOCK_H_
+#define _OS_PROJECT_BLOCK_H_
 
 #include <iostream>
 #include <cstdlib>
@@ -54,3 +55,5 @@ namespace os_project {
 		
 	}
 }
+
+#endif //_OS_PROJECT_BLOCK_H_
