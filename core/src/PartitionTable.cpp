@@ -1,9 +1,6 @@
 #include "../include/PartitionTable.h"
 
-
 using namespace os_project::hard_disk;
-
-
 
 PartitionTable::PartitionTable(void) {
 	size_m = 0;
@@ -15,7 +12,8 @@ PartitionTable::~PartitionTable(void) {
 	delete(partitions);
 }
 
-int PartitionTable::addPartition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
+int PartitionTable::addPartition(os_project::hard_disk::Block** blocks, int amountBlocks,
+	bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
 	size_m++;
 	partitions->push_back(new Partition(blocks, amountBlocks, primary, index, fileSystem));
 	return size_m;

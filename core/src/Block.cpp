@@ -4,7 +4,7 @@ using namespace os_project::hard_disk;
 
 Block::Block(int size, int index) {
 	this->state = os_project::definitions::block_state::block_free;
-	this->size = size;
+	this->blocksize = size;
 	this->data = new unsigned char[size];
 	for (int i = 0; i < size; i++) {
 		this->data[i] = 0;
@@ -43,7 +43,7 @@ bool Block::isBitSet(int pos) {
 }
 
 int Block::blockSize(void) {
-	return size;
+	return blocksize;
 }
 
 const unsigned char* Block::getData(void) {
@@ -51,7 +51,7 @@ const unsigned char* Block::getData(void) {
 }
 
 const int Block::getSize(void) {
-	return size;
+	return blocksize;
 }
 
 const int Block::getClusterIndex(void) {

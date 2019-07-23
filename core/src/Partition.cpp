@@ -2,7 +2,9 @@
 
 using namespace os_project::hard_disk;
 
-Partition::Partition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
+Partition::Partition(os_project::hard_disk::Block** blocks, int amountBlocks,
+	bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
+
 	blocks_m = blocks;
 	amountBlocks_m = amountBlocks;
 	state_m = os_project::definitions::partition_state::partition_unmounted;
@@ -59,12 +61,11 @@ int Partition::amountBlocks(void) {
 	return amountBlocks_m;
 }
 
-
 std::ostream& os_project::hard_disk::operator<< (std::ostream& os, Partition& partition) {
 
 	os << "Partition: " << partition.index() << " primary: " << (partition.isPrimary() == true ? "true" : "false") << std::endl
 		// TODO BUG os prints 800 instead of 2048
-		<< "Filesystem: " << partition.fileSystem() << " Size: " << partition.size_m << " amount blocks: " << partition.amountBlocks() << std::endl;
+		<< "File system: " << partition.fileSystem() << " Size: " << partition.size_m << " amount blocks: " << partition.amountBlocks() << std::endl;
 
 	for (int i = 0; i < partition.amountBlocks(); i++) {
 		std::cout << *partition.getBlock(i) << std::endl;
