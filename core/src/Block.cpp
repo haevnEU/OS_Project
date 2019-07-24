@@ -13,7 +13,10 @@ Block::Block(int size, int index) {
 }
 
 Block::~Block(void) {
+	std::cout << "DTOR of Block is called" << std::endl;
+
 	delete(data);
+	data = nullptr;
 }
 
 void Block::setData(const unsigned char* data) {
@@ -22,8 +25,10 @@ void Block::setData(const unsigned char* data) {
 }
 
 void Block::setBit(int pos) {
+	if (pos < blocksize) {
 		this->data[pos / 8] |= (1 << (7 - (pos % 8)));
 	}
+}
 
 void Block::clearData(void) {
 	setState(os_project::definitions::block_state::block_free);
@@ -31,7 +36,9 @@ void Block::clearData(void) {
 }
 
 void Block::clearBit(int pos) {
-	this->data[pos / 8] &= ~(1 << (7 - (pos % 8)));
+	if (pos < blocksize) {
+		this->data[pos / 8] &= ~(1 << (7 - (pos % 8)));
+	}
 }
 
 void Block::setState(os_project::definitions::block_state state_t) {

@@ -15,7 +15,17 @@ Partition::Partition(os_project::hard_disk::Block** blocks, int amountBlocks,
 }
 
 Partition::~Partition(void) {
-	
+	std::cout << "DTOR of Parition is called" << std::endl;
+
+	for (int i = 0; i < amountBlocks_m; i++) {
+		delete(blocks_m[i]);
+		blocks_m[i] = nullptr;
+	}
+	delete(blocks_m);
+	blocks_m = nullptr;
+
+	delete(fileSystem_m);
+	fileSystem_m = nullptr;
 }
 
 void Partition::mount(void) {

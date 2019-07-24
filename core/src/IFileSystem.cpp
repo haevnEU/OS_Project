@@ -8,6 +8,8 @@ IFileSystem::IFileSystem(os_project::definitions::file_system_type file_system_t
 }
 
 IFileSystem::~IFileSystem(void){
+	std::cout << "DTOR of IFileSystem is called" << std::endl;
+
 	files->clear();
 	delete(files);
 }

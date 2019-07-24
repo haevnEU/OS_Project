@@ -1,8 +1,6 @@
 #ifndef _OS_PROJECT_PARTITION_TABLE_H_
 #define _OS_PROJECT_PARTITION_TABLE_H_
 
-#include <vector>
-
 #include "Partition.h"
 #include "IFileSystem.h"
 
@@ -21,11 +19,10 @@ namespace os_project {
 		 */
 		class PartitionTable{
 		private: 
-			/// This attributes contains all partition
-			std::vector<os_project::hard_disk::Partition*>* partitions;
-			
 			/// This attributes is the size of the table
-			int size_m;
+			#define MAX_PARTITION 4
+			/// This attributes contains all partition
+			os_project::hard_disk::Partition* partitions_[MAX_PARTITION];
 
 		public:
 
@@ -40,12 +37,12 @@ namespace os_project {
 			 *
 			 * @return current table size
  			 */
-			int size(void);
+			int maxSize(void);
 
 			/**
 			 * This method adds a given partition to the partition table and returns its index inside the table.
 			 *
-			 * @return Index inside the partitiont able
+			 * @return Index inside the partition table
 			 */
 			void addPartition(os_project::hard_disk::Partition* partition_t);
 			

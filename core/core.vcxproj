@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Disk.h" />
     <ClInclude Include="include\Block.h" />
     <ClInclude Include="include\Definitionsh.h" />
     <ClInclude Include="include\File.h" />
@@ -131,6 +132,7 @@
     <ClInclude Include="include\PartitionTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Disk.cpp" />
     <ClCompile Include="src\Block.cpp" />
     <ClCompile Include="src\File.cpp" />
     <ClCompile Include="src\IFileSystem.cpp" />

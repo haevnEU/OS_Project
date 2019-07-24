@@ -2,6 +2,7 @@
 #define _OS_PROJECT_IFILESYSTEM_H_
 
 #include <vector>
+#include <iostream>
 
 #include "File.h"
 #include "Definitionsh.h"
