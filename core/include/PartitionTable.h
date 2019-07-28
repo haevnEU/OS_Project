@@ -59,7 +59,7 @@ namespace os_project {
 			 *
 			 * @return Index inside the partitiont able
 			 */
-			int addPartition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem);
+			int addPartition(int amountBlocks, int blockSIze, bool primary, int index, os_project::definitions::file_system_type fileSystem);
 
 			/**
 			 * This method removes a partition based on an index from the table.
@@ -68,7 +68,7 @@ namespace os_project {
 			 *
 			 * @contract Index must be smaller or equal the size (@size_m) of the table
 			 */
-			void removePartition(int index);			
+			bool removePartition(int index);			
 			
 			/**
 			 * This method returns a partition based on an index from the table.

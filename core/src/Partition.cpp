@@ -2,22 +2,39 @@
 
 using namespace os_project::hard_disk;
 
-Partition::Partition(os_project::hard_disk::Block** blocks, int amountBlocks,
-	bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
+Partition::Partition(int amountBlocks, int blockSize,
+	bool primary, int index, os_project::definitions::file_system_type fileSystem) {
 
-	blocks_m = blocks;
+	this->blockSize_m = blockSize;
+	this->amountBlocks_m = amountBlocks;
+
+	blocks_m = new Block * [amountBlocks];
+	for (int i = 0; i < amountBlocks; i++) {
+		blocks_m[i] = new Block(blockSize, i);
+	}
 	amountBlocks_m = amountBlocks;
 	state_m = os_project::definitions::partition_state::partition_unmounted;
-	fileSystem_m = fileSystem;
+	
 	primary_m = primary;
 	index_m = index;
-	size_m = amountBlocks_m * blocks[0]->blockSize();
+	size_m = amountBlocks_m * blockSize;
+
+	switch (fileSystem) {
+	case os_project::definitions::file_system_type::FAT:
+		// TODO Add FAT
+		break;
+	case os_project::definitions::file_system_type::INode:
+		fileSystem_m = new os_project::fileSystem::INode();
+		break;
+
+	}
 }
 
 Partition::~Partition(void) {
-	std::cout << "DTOR of Parition is called" << std::endl;
+	std::cout << "DTOR of Partition is called" << std::endl;
 
 	for (int i = 0; i < amountBlocks_m; i++) {
+		std::cout << "DTOR of " << i << std::endl;
 		delete(blocks_m[i]);
 		blocks_m[i] = nullptr;
 	}
@@ -73,9 +90,10 @@ int Partition::amountBlocks(void) {
 
 std::ostream& os_project::hard_disk::operator<< (std::ostream& os, Partition& partition) {
 
-	os << "Partition: " << partition.index() << " primary: " << (partition.isPrimary() == true ? "true" : "false") << std::endl
+	os << "Partition: " << partition.index() << " primary: " << (partition.primary_m == true ? "true" : "false") << std::endl
 		// TODO BUG os prints 800 instead of 2048
-		<< "File system: " << partition.fileSystem() << " Size: " << partition.size_m << " amount blocks: " << partition.amountBlocks() << std::endl;
+		<< "File system: " << os_project::definitions::file_system_type_names[partition.fileSystem()->getType()]
+		<< " Size: " << partition.size_m << " amount blocks: " << partition.amountBlocks() << std::endl;
 
 	for (int i = 0; i < partition.amountBlocks(); i++) {
 		std::cout << *partition.getBlock(i) << std::endl;

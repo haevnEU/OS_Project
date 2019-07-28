@@ -17,13 +17,12 @@ PartitionTable::~PartitionTable(void) {
 	}
 }
 
-int PartitionTable::addPartition(os_project::hard_disk::Block** blocks, int amountBlocks,
-	bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem) {
+int PartitionTable::addPartition(int amountBlocks, int blockSIze, bool primary, int index, os_project::definitions::file_system_type fileSystem) {
 	int idx = 0;
 	for (int i = 0; i < MAX_PARTITION; i++) {
 		idx = i;
 		if (nullptr == partitions_[i]) {
-			partitions_[i] = new Partition(blocks, amountBlocks, primary, i, fileSystem);
+			partitions_[i] = new Partition(amountBlocks, blockSIze, primary, i, fileSystem);
 			break; 
 		}
 	}
@@ -41,13 +40,15 @@ void PartitionTable::addPartition(os_project::hard_disk::Partition* partition_t)
 	}
 }
 
-void PartitionTable::removePartition(int index) {
+bool PartitionTable::removePartition(int index) {
 	if (index >= MAX_PARTITION) {
-		return;
+		return false;
 	}
 
 	delete(partitions_[index]);
 	partitions_[index] = nullptr;
+	
+	return true;
 }
 
 os_project::hard_disk::Partition* PartitionTable::getPartition(int index) {

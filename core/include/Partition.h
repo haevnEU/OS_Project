@@ -3,6 +3,7 @@
 
 #include "Block.h"
 #include "IFileSystem.h"
+#include "INode.h"
 
 namespace os_project {
 	namespace hard_disk {
@@ -41,6 +42,9 @@ namespace os_project {
 
 			/// This variable is dynamically calculated during creation and states how many blocks exist
 			int amountBlocks_m;
+
+			int blockSize_m;
+
 		public:
 
 			/**
@@ -53,7 +57,7 @@ namespace os_project {
 			 * @param index This param is the index at the disk
 			 * @param fileSystem This param is the operated file system. For more information see inside @see Definitions.h
 			 */
-			Partition(os_project::hard_disk::Block** blocks, int amountBlocks, bool primary, int index, os_project::fileSystem::IFileSystem* fileSystem);
+			Partition(int amountBlocks, int blockSize, bool primary, int index, os_project::definitions::file_system_type fileSystem);
 
 			~Partition(void);
 

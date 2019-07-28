@@ -22,7 +22,7 @@ namespace os_project {
 		 * @version 1.0
 		 */
 		class IFileSystem{
-		private: 
+		protected: 
 			/// This attribute is used to assign a file system. For more information @see Definitions.h
 			os_project::definitions::file_system_type file_system_type;
 
@@ -31,13 +31,13 @@ namespace os_project {
 
 			IFileSystem(os_project::definitions::file_system_type file_system_type);
 			virtual ~IFileSystem(void);
-			virtual void createFile(void) = 0;
+			virtual int createFile(void) = 0;
 			virtual void deleteFile(void) = 0;
 			virtual void createDirectory(void) = 0;
 			virtual void deleteDirectory(void) = 0;
 		
 			virtual File* getFile(int index) = 0;
-			virtual std::vector<os_project::fileSystem::File*> getFiles(void) = 0;
+			virtual std::vector<os_project::fileSystem::File*>* getFiles(void) = 0;
 
 			/**
 			 * This method returns the type of the file system. 

@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "PartitionTable.h"
+#include "Block.h"
 
 namespace os_project {
 	namespace hard_disk {
@@ -11,11 +12,12 @@ namespace os_project {
 		class Disk {
 		private:
 			char manufactor[16];
-			long disk_size;
+			long long disk_size;
+			long long free_space;
 			os_project::hard_disk::PartitionTable* partitionTable;
 
 		public:
-			Disk(const char* manufactor, long disk_size);
+			Disk(const char* manufactor, long long disk_size);
 
 			~Disk(void);
 
@@ -23,7 +25,14 @@ namespace os_project {
 
 			const long getDiskSize(void);
 
-			os_project::hard_disk::PartitionTable* getPartitionTable(void);
+			// TODO Switch IFilesytem with enumerator
+			bool createPartition(int blockSize, int amountBlocks, bool primary, int index, os_project::definitions::file_system_type fs);
+
+			Partition* getPartition(int index);
+
+			bool erasePartition(int index);
+
+			//os_project::hard_disk::PartitionTable* getPartitionTable(void);
 
 			/**
 			 * TODO write comment

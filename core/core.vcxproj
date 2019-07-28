@@ -128,6 +128,7 @@
     <ClInclude Include="include\Definitionsh.h" />
     <ClInclude Include="include\File.h" />
     <ClInclude Include="include\IFileSystem.h" />
+    <ClInclude Include="include\INode.h" />
     <ClInclude Include="include\Partition.h" />
     <ClInclude Include="include\PartitionTable.h" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClCompile Include="src\Block.cpp" />
     <ClCompile Include="src\File.cpp" />
     <ClCompile Include="src\IFileSystem.cpp" />
+    <ClCompile Include="src\INode.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Partition.cpp" />
     <ClCompile Include="src\PartitionTable.cpp" />
