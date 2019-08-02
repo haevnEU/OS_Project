@@ -23,16 +23,16 @@ namespace os_project {
 		private:
 			
 			/// This is the actual data, its size is block size * 1byte
-			unsigned char* data;
+			unsigned char* data_m;
 
 			/// This variable determines the size of this block
-			int blocksize;
+			int blockSize_m;
 
 			/// This is the block index inside a cluster of blocks
-			int clusterIndex;
+			int clusterIndex_m;
 
 			/// This is the current state of this block, @see Definitions.h 
-			os_project::definitions::block_state state;
+			os_project::definitions::block_state state_m;
 
 		public:
 			/**
@@ -45,6 +45,33 @@ namespace os_project {
 			Block(int size, int index);
 
 			~Block(void);
+
+			/**
+			 * This method sets a specific data bit at given position
+			 *
+			 * @param bit Position where the bit must be set
+			 *
+			 * @contract bit must be smaller than block size * 1byte
+			 */
+			void setBit(int bit);
+			
+			/**
+			 * This method sets given binary bits using setHex
+
+			 * @param bin 16 bit Binary data which should be set
+
+			 * @param offset Position inside the data block, the offset will be multiplied by 8
+			 */
+			void setBin(int bin, int offset);
+
+			/**
+			 * This method sets given hex bits using setHex
+
+			 * @param bin 16 bit hexadecimal data which should be set
+
+			 * @param offset Position inside the data block, the offset will be multiplied by 8
+			 */
+			void setHex(int hex, int offset);
 
 			/**
 			 * This method sets the data from the block
@@ -62,21 +89,12 @@ namespace os_project {
 			 *
 			 * @contract bit must be smaller than block size * 1byte
 			 */
-			void setBit(int bit);
+			void clearBit(int bit);
 
 			/**
 			 * This method clears the data from the block
 			 */
 			void clearData(void);
-
-			/**
-			 * This method sets a specific data bit at given position
-			 *
-			 * @param bit Position where the bit must be set
-			 *
-			 * @contract bit must be smaller than block size * 1byte
-			 */
-			void clearBit(int bit);
 
 			/**
 			 * This method tests a specific data bit at given position
@@ -97,6 +115,14 @@ namespace os_project {
 			void setState(os_project::definitions::block_state state_t);
 
 			/**
+			 * This method returns the state of the block
+			 *
+			 * @return Current state of the block. 
+			 *		   To receive details about the state @see Definitions.h
+			 */
+			const os_project::definitions::block_state getState(void);
+
+			/**
 			 * This method returns the block size in bytes
 			 *
 			 * @return size of the block in bytes
@@ -111,24 +137,11 @@ namespace os_project {
 			const unsigned char* getData(void);
 
 			/**
-			 * @Deprecated
-			 */
-			const int getSize(void);
-			
-			/**
 			 * This method returns the index of this block inside a cluster
 			 *
 			 * @return index of the block
 			 */
 			const int getClusterIndex(void);
-
-			/**
-			 * This method returns the state of the block
-			 *
-			 * @return Current state of the block. 
-			 *		   To receive details about the state @see Definitions.h
-			 */
-			const os_project::definitions::block_state getState(void);
 
 			/**
 			 * TODO write comment

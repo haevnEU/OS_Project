@@ -24,12 +24,13 @@ namespace os_project {
 		class IFileSystem{
 		protected: 
 			/// This attribute is used to assign a file system. For more information @see Definitions.h
-			os_project::definitions::file_system_type file_system_type;
+			os_project::definitions::file_system_type fileSystemType_m;
 
-			std::vector<os_project::fileSystem::File*>* files;
+			/// This attributes contains all files inside the file system
+			std::vector<os_project::fileSystem::File*>* files_m;
 		public:
 
-			IFileSystem(os_project::definitions::file_system_type file_system_type);
+			IFileSystem(os_project::definitions::file_system_type fileSystemType);
 			virtual ~IFileSystem(void);
 			virtual int createFile(void) = 0;
 			virtual void deleteFile(void) = 0;

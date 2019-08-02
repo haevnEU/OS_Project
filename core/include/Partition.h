@@ -38,7 +38,7 @@ namespace os_project {
 			int index_m;
 
 			/// This variable contains the disk size
-			int size_m;
+			long long size_m;
 
 			/// This variable is dynamically calculated during creation and states how many blocks exist
 			int amountBlocks_m;
@@ -57,7 +57,7 @@ namespace os_project {
 			 * @param index This param is the index at the disk
 			 * @param fileSystem This param is the operated file system. For more information see inside @see Definitions.h
 			 */
-			Partition(int amountBlocks, int blockSize, bool primary, int index, os_project::definitions::file_system_type fileSystem);
+			Partition(int amountBlocks, int blockSize, bool primary, int index, os_project::definitions::file_system_type fileSystemType);
 
 			~Partition(void);
 

@@ -3,51 +3,51 @@
 using namespace os_project::hard_disk;
 
 Disk::Disk(const char* manufactor, long long disk_size) {
-	this->disk_size = disk_size; 
-	this->free_space = disk_size;
-	snprintf(this->manufactor, 16, "%s", manufactor);
-	partitionTable = new PartitionTable();
+	this->diskSize_m = disk_size; 
+	this->freeSpace_m = disk_size;
+	snprintf(this->manufactor_m, 16, "%s", manufactor);
+	partitionTable_m = new PartitionTable();
 }
 
 Disk::~Disk(void) {
 	std::cout << "DTOR of Disk is called" << std::endl;
 
-	delete(partitionTable);
-	partitionTable = nullptr;
+	delete(partitionTable_m);
+	partitionTable_m = nullptr;
 }
 
 const char* Disk::getManufactor(void) {
-	return manufactor;
+	return manufactor_m;
 }
 
-const long Disk::getDiskSize(void) {
-	return disk_size;
+const long Disk::diskSize(void) {
+	return diskSize_m;
 }
 
 bool Disk::createPartition(int blockSize, int amountBlocks, bool primary, int index, os_project::definitions::file_system_type fs) {
-	if (free_space < (blockSize * amountBlocks)) {
+	if (freeSpace_m < (blockSize * amountBlocks)) {
 		return false;
 	}
-	partitionTable->addPartition(amountBlocks, blockSize, primary, index, fs);
-	free_space -= blockSize * amountBlocks;
+	partitionTable_m->addPartition(amountBlocks, blockSize, primary, index, fs);
+	freeSpace_m -= blockSize * amountBlocks;
 }
 
 Partition* Disk::getPartition(int index) {
-	return partitionTable->getPartition(index);
+	return partitionTable_m->getPartition(index);
 }
 
 bool Disk::erasePartition(int index) {
-	return partitionTable->removePartition(index);
+	return partitionTable_m->removePartition(index);
 }
 
 std::ostream& os_project::hard_disk::operator<< (std::ostream& os, Disk& disk) {
 
-	double percentage = (disk.free_space * 100) / disk.disk_size;
+	double percentage = (disk.freeSpace_m * 100) / disk.diskSize_m;
 
 	os << "Disk: " << disk.getManufactor() << std::endl
-		<< "Size: " << disk.disk_size << std::endl
-		<< "Not assigned space: " << disk.free_space << "(" << (percentage * 1) << "%)" << std::endl 
-		<< "Partition table: " << std::endl << *disk.partitionTable << std::endl;
+		<< "Size: " << disk.diskSize_m << std::endl
+		<< "Not assigned space: " << disk.freeSpace_m << "(" << (percentage * 1) << "%)" << std::endl 
+		<< "Partition table: " << std::endl << *disk.partitionTable_m << std::endl;
 	return os;
 
 

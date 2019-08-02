@@ -3,81 +3,92 @@
 using namespace os_project::hard_disk;
 
 Block::Block(int size, int index) {
-	this->state = os_project::definitions::block_state::block_free;
-	this->blocksize = size;
-	this->data = new unsigned char[size];
+	this->state_m = os_project::definitions::block_state::block_free;
+	this->blockSize_m = size;
+	this->clusterIndex_m = index;
+	this->data_m = new unsigned char[size];
+	
 	for (int i = 0; i < size; i++) {
-		this->data[i] = 0;
+		this->data_m[i] = 0;
 	}
-	this->clusterIndex = index;
 }
 
 Block::~Block(void) {
-	std::cout << "DTOR of Block is called" << std::endl;
-
-	delete(data);
-	data = nullptr;
-}
-
-void Block::setData(const unsigned char* data) {
-	this->data = const_cast<unsigned char*>(data);
-	setState(os_project::definitions::block_state::block_occupied);
+	delete(data_m);
+	data_m = nullptr;
 }
 
 void Block::setBit(int pos) {
-	if (pos < blocksize) {
-		this->data[pos / 8] |= (1 << (7 - (pos % 8)));
+	if (pos < blockSize_m) {
+		this->data_m[pos / 8] |= (1 << (7 - (pos % 8)));
+	}
+}
+
+void Block::setBin(int bin, int offset) {
+	setHex(bin, offset);
+}
+
+void Block::setHex(int hex, int offset) {
+
+	offset *= 8;
+	int pos = 0;
+	for (int i = 0; i < 8; i++) {
+		pos = (offset + i);
+		// Test if bit is set
+		if (hex & (1 << i)) {
+			this->data_m[pos / 8] |= (1 << (pos % 8));
+		}
+		else {
+			this->data_m[pos / 8] &= ~(1 << (pos % 8));
+		}
+	}
+
+}
+
+void Block::clearBit(int pos) {
+	if (pos < blockSize_m) {
+		this->data_m[pos / 8] &= ~(1 << (7 - (pos % 8)));
 	}
 }
 
 void Block::clearData(void) {
 	setState(os_project::definitions::block_state::block_free);
-	data = 0;
-}
-
-void Block::clearBit(int pos) {
-	if (pos < blocksize) {
-		this->data[pos / 8] &= ~(1 << (7 - (pos % 8)));
-	}
-}
-
-void Block::setState(os_project::definitions::block_state state_t) {
-	state = state_t;
+	data_m = 0;
 }
 
 bool Block::isBitSet(int pos) {
-	return data[pos / 8] & (1 << (7 - (pos % 8)));
+	return data_m[pos / 8] & (1 << (7 - (pos % 8)));
 }
 
-int Block::blockSize(void) {
-	return blocksize;
-}
-
-const unsigned char* Block::getData(void) {
-	return data;
-}
-
-const int Block::getSize(void) {
-	return blocksize;
-}
-
-const int Block::getClusterIndex(void) {
-	return clusterIndex;
+void Block::setState(os_project::definitions::block_state state_t) {
+	state_m = state_t;
 }
 
 const os_project::definitions::block_state Block::getState(void) {
-	return state;
+	return state_m;
+}
+
+int Block::blockSize(void) {
+	return blockSize_m;
+}
+
+const unsigned char* Block::getData(void) {
+	return data_m;
+}
+
+const int Block::getClusterIndex(void) {
+	return clusterIndex_m;
 }
 
 std::ostream& os_project::hard_disk::operator<<(std::ostream& os, Block& block){
 	os << "Block" << std::endl 
-		<< "Size: " << block.getSize() << std::endl
-		<< "State: " << block.getState() << std::endl
+		<< "Size: " << block.blockSize() << std::endl
+		<< "State: " << os_project::definitions::block_state_names[block.getState()] << std::endl
 		<< "Cluster index: " << block.getClusterIndex() << std::endl
 		<< "Data: " << std::endl;
 	
-	for (int i = 0; i < block.getSize(); i++) {
-		os << std::setw(2) << std::setfill('0') << std::hex << std::uppercase << ((int)block.getData()[i]) << " ";
+	for (int i = 0; i < block.blockSize(); i++) {
+		os << std::setw(2) << std::setfill('0') << std::hex << std::uppercase << ((int)block.getData()[i]) << std::dec << " ";
 	}
 	os << std::endl;
 	return os;

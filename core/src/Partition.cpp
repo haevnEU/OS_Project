@@ -7,7 +7,6 @@ Partition::Partition(int amountBlocks, int blockSize,
 
 	this->blockSize_m = blockSize;
 	this->amountBlocks_m = amountBlocks;
-
 	blocks_m = new Block * [amountBlocks];
 	for (int i = 0; i < amountBlocks; i++) {
 		blocks_m[i] = new Block(blockSize, i);

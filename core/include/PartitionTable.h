@@ -22,7 +22,7 @@ namespace os_project {
 			/// This attributes is the size of the table
 			#define MAX_PARTITION 4
 			/// This attributes contains all partition
-			os_project::hard_disk::Partition* partitions_[MAX_PARTITION];
+			os_project::hard_disk::Partition* partitions_m[MAX_PARTITION];
 
 		public:
 
@@ -30,22 +30,9 @@ namespace os_project {
 			 * This constructor creates a new partition table it also instantiate all required attributes.
 			 */
 			PartitionTable(void);
+
 			~PartitionTable(void);
 
-			/**
-			 * This method return the size of the table
-			 *
-			 * @return current table size
- 			 */
-			int maxSize(void);
-
-			/**
-			 * This method adds a given partition to the partition table and returns its index inside the table.
-			 *
-			 * @return Index inside the partition table
-			 */
-			void addPartition(os_project::hard_disk::Partition* partition_t);
-			
 			/**
 			 * This method creates a new partition and returns its index inside the table.
 			 * The constructor of the partition class will be invoked so this method requires a couple basic 
@@ -59,7 +46,7 @@ namespace os_project {
 			 *
 			 * @return Index inside the partitiont able
 			 */
-			int addPartition(int amountBlocks, int blockSIze, bool primary, int index, os_project::definitions::file_system_type fileSystem);
+			int addPartition(int amountBlocks, int blockSize, bool primary, int index, os_project::definitions::file_system_type fileSystemType);
 
 			/**
 			 * This method removes a partition based on an index from the table.

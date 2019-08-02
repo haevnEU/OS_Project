@@ -4,7 +4,7 @@ using namespace os_project::hard_disk;
 
 PartitionTable::PartitionTable(void) {
 	for (int i = 0; i < MAX_PARTITION; i++) {
-		partitions_[i] = nullptr;
+		partitions_m[i] = nullptr;
 	}
 }
 
@@ -12,8 +12,8 @@ PartitionTable::~PartitionTable(void) {
 	std::cout << "DTOR of PartitionTable is called" << std::endl;
 
 	for (int i = 0; i < MAX_PARTITION; i++) {
-		delete(partitions_[i]); 
-		partitions_[i] = nullptr;
+		delete(partitions_m[i]); 
+		partitions_m[i] = nullptr;
 	}
 }
 
@@ -21,23 +21,12 @@ int PartitionTable::addPartition(int amountBlocks, int blockSIze, bool primary, 
 	int idx = 0;
 	for (int i = 0; i < MAX_PARTITION; i++) {
 		idx = i;
-		if (nullptr == partitions_[i]) {
-			partitions_[i] = new Partition(amountBlocks, blockSIze, primary, i, fileSystem);
+		if (nullptr == partitions_m[i]) {
+			partitions_m[i] = new Partition(amountBlocks, blockSIze, primary, i, fileSystem);
 			break; 
 		}
 	}
 	return idx;
-}
-
-void PartitionTable::addPartition(os_project::hard_disk::Partition* partition_t) {
-	int idx = 0;
-	for (int i = 0; i < MAX_PARTITION; i++) {
-		idx = i;
-		if (nullptr == partitions_[i]) {
-			partitions_[i] = partition_t;
-			break;
-		}
-	}
 }
 
 bool PartitionTable::removePartition(int index) {
@@ -45,8 +34,8 @@ bool PartitionTable::removePartition(int index) {
 		return false;
 	}
 
-	delete(partitions_[index]);
-	partitions_[index] = nullptr;
+	delete(partitions_m[index]);
+	partitions_m[index] = nullptr;
 	
 	return true;
 }
@@ -56,17 +45,13 @@ os_project::hard_disk::Partition* PartitionTable::getPartition(int index) {
 		nullptr;
 	}
 
-	return partitions_[index];
-}
-
-int os_project::hard_disk::PartitionTable::maxSize(void) {
-	return MAX_PARTITION;
+	return partitions_m[index];
 }
 
 std::ostream& os_project::hard_disk::operator<<(std::ostream& os, PartitionTable& partitionTable) {
 
-	os << "PartitionTable size: " << partitionTable.maxSize() << std::endl;
-	for (int i = 0; i < partitionTable.maxSize(); i++) {
+	os << "PartitionTable size: " << MAX_PARTITION << std::endl;
+	for (int i = 0; i < MAX_PARTITION; i++) {
 		Partition* partition = partitionTable.getPartition(i);
 		if (nullptr != partition) {
 			os << "Partition No: " << i << std::endl << *partition << std::endl;
