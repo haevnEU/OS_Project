@@ -2,6 +2,7 @@
 #define _OS_PROJECT_INODE_H_
 
 #include "IFileSystem.h"
+
 namespace os_project {
 	namespace fileSystem {
 		class INode : public os_project::fileSystem::IFileSystem {
