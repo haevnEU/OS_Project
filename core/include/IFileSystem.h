@@ -24,8 +24,6 @@ namespace os_project {
 			/// This attribute is used to assign a file system. For more information @see Definitions.h
 			os_project::definitions::file_system_type fileSystemType_m;
 
-			/// This attributes contains all files inside the file system
-			std::vector<os_project::fileSystem::File*>* files_m;
 		public:
 
 			IFileSystem(os_project::definitions::file_system_type fileSystemType);
@@ -36,7 +34,6 @@ namespace os_project {
 			virtual void deleteDirectory(void) = 0;
 		
 			virtual File* getFile(int index) = 0;
-			virtual std::vector<os_project::fileSystem::File*>* getFiles(void) = 0;
 
 			/**
 			 * This method returns the type of the file system. 

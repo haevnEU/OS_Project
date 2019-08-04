@@ -90,7 +90,6 @@ int Partition::amountBlocks(void) {
 std::ostream& os_project::hard_disk::operator<< (std::ostream& os, Partition& partition) {
 
 	os << "Partition: " << partition.index() << " primary: " << (partition.primary_m == true ? "true" : "false") << std::endl
-		// TODO BUG os prints 800 instead of 2048
 		<< "File system: " << os_project::definitions::file_system_type_names[partition.fileSystem()->getType()]
 		<< " Size: " << partition.size_m << " amount blocks: " << partition.amountBlocks() << std::endl;
 
