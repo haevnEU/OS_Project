@@ -1,29 +1,33 @@
 #ifndef _OS_PROJECT_INODE_H_
 #define _OS_PROJECT_INODE_H_
 
+#include <iostream>
+#include <ctime>
+#include <string>
+
+#include "Definitionsh.h"
 #include "IFileSystem.h"
 
 namespace os_project {
 	namespace fileSystem {
 		class INode : public os_project::fileSystem::IFileSystem {
 		private:
-			/*
-			File: f2 
-  Size: 6               Blocks: 0          IO Block: 4096   regular file
-Device: dh/13d  Inode: 24769797950898151  Links: 2
-Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    nils)   Gid: ( 1000/    nils)
-Access: 2019-08-05 00:38:26.381845300 +0200
-Modify: 2019-08-05 00:38:26.381845300 +0200
-Change: 2019-08-05 00:41:54.347723800 +0200
- Birth: -
-			
-			*/
+			static unsigned int idCounter;
+
+			unsigned int id_m;
+
 			
 			/*  generation number  */
 			unsigned long generation_m;
 			/*  mode_t returned by stat () */
 			/*  format,attributes and permission bits  */
-			int mode;
+			int mode_m;
+			
+			/// This attribute is the file extension, Important it is not NULL terminated
+			char extension_m[3];
+
+			/// This attribute is the file name, Important it is not NULL terminated
+			char name_m[8];
 
 			/* number of links to file(if 0,inode is available)  */
 			unsigned short aountLinks_m;
@@ -53,10 +57,12 @@ Change: 2019-08-05 00:41:54.347723800 +0200
 			int changeTime_m;
 
 			unsigned int blockSize_m;
+			
+			// 16 | 15 | 14 | 13 | 12 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 
+			//	                 |  t |  h | x | w | r | x | w | r | x | w | r		
+			short permission_m;
 
-			int permission;
-
-
+			// TODO Add data, double data and tripple data pointer
 
 		/*	int id;
 
@@ -84,11 +90,11 @@ Change: 2019-08-05 00:41:54.347723800 +0200
 
 		public:
 
-			INode(void);
+			INode(unsigned int blockSize);
 
 			~INode(void);
 
-			int createFile(void);
+			int createFile(const char* name, const char* extension, int uid, int gid, os_project::definitions::file_system_file_types type);
 			
 			void deleteFile(void);
 			
@@ -96,8 +102,94 @@ Change: 2019-08-05 00:41:54.347723800 +0200
 			
 			void deleteDirectory(void);
 
+
 			File* getFile(int index);
 			
+
+
+
+
+
+
+
+
+			unsigned int id(void);
+
+			unsigned long generation(void);
+
+			int mode(void);
+
+			char* extension(void);
+
+			void changeExtension(const char* ext);
+
+			char* name(void);
+
+			void changeName(const char* name);
+
+			unsigned short aountLinks(void);
+
+			void addLink(void);
+
+			void removeLink(void);
+
+			unsigned short acct(void);
+
+			unsigned short UID(void);
+			
+			void changeUID(unsigned short uid);
+
+			unsigned int GID(void);
+
+			void changeGID(unsigned short gid);
+
+			unsigned int size(void);
+
+			unsigned long amounBlocks(void);
+
+			void changeMode(int mode);
+
+			int modifyTime(void);
+
+			int accessTime(void);
+
+			int changeTime(void);
+
+			unsigned int blockSize(void);
+
+			const char* data(void);
+
+			void append(const char* data);
+
+			void remove(int start, int end);
+
+			void add(int pos, const char* data);
+
+			void forbidAll();
+
+			bool readAllowed(os_project::definitions::file_system_groups who);
+
+			void allowRead(os_project::definitions::file_system_groups who);
+
+			void forbidRead(os_project::definitions::file_system_groups who);
+
+			bool writeAllowed(os_project::definitions::file_system_groups who);
+
+			void allowWrite(os_project::definitions::file_system_groups who);
+			
+			void forbidWrite(os_project::definitions::file_system_groups who);
+
+			bool executeAllowed(os_project::definitions::file_system_groups who);
+
+			void allowExecute(os_project::definitions::file_system_groups who);
+			
+			void forbidExecute(os_project::definitions::file_system_groups who);
+
+			bool isHidden(void);
+
+			os_project::definitions::file_system_file_types type(void);
+
+			std::string permissionAsString();
 
 			/**
 			 * TODO write comment

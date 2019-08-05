@@ -36,8 +36,15 @@ namespace os_project {
 		enum file_system_type { INode, FAT };
 		/// This array maps the file_system_types enumeration to strings
 		static const char* file_system_type_names[] = { "INode", "FAT" };
+			   
+		enum file_system_file_types {file = 0, directory = 1, symbolic_link = 2, 
+									 block_special_file = 3, character_special_file = 4,
+								     named_pipe_file = 5, loacl_socket_special_file = 6,
+									 unknown = 7};
+		/// This array maps the file_system_file_types enumeration to strings
+		static const char* file_system_file_types_name[] = {"-", "d", "l", "b", "c", "p", "s", "u"};
 
-
+		enum file_system_groups {Owner, Group, Other};
 	}
 }
 

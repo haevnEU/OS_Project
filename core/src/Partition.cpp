@@ -23,7 +23,7 @@ Partition::Partition(int amountBlocks, int blockSize,
 		// TODO Add FAT
 		break;
 	case os_project::definitions::file_system_type::INode:
-		fileSystem_m = new os_project::fileSystem::INode();
+		fileSystem_m = new os_project::fileSystem::INode(512);
 		break;
 
 	}

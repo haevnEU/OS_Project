@@ -18,19 +18,25 @@ int main(int argc, const char* argv[]) {
 
 	os_project::fileSystem::File* f = new os_project::fileSystem::File(10, "TEST", "exe", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
 
-	os_project::fileSystem::File* f2 = new os_project::fileSystem::File(10, "TEST", "exe2", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
+	os_project::fileSystem::INode* f2 = new os_project::fileSystem::INode(512);// (10, "TEST", "exe2", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
+	os_project::fileSystem::INode* f3 = new os_project::fileSystem::INode(512);// (10, "TEST", "exe2", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
+	f2->createFile("Hello", "out", 0, 0, os_project::definitions::file_system_file_types::file);
+	f3->createFile("", "tmp", 1, 1, os_project::definitions::file_system_file_types::block_special_file);
 
-	/// Bit  0 -  5: Seconds
-		/// Bit  6 - 10: Minutes
-		/// Bit 11 - 15: Hours
-	f->DBG_setTime(0b0000011111000000);
-
-	std::string str = f->getTimeAsString();
-	std::cout << *f << std::endl;
-	
+	f2->data();
+	f2->changeExtension("out");
+	f2->changeName("Hello");
+	f2->changeGID(0);
+	f2->changeUID(1);
 
 
+	std::cout << *f2 << std::endl;
+	std::cout << *f3 << std::endl;
 
+
+
+
+	return 0;
 
 
 
