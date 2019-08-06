@@ -3,6 +3,7 @@
 
 #include "Block.h"
 #include "IFileSystem.h"
+#include "INodeTable.h"
 #include "INode.h"
 
 namespace os_project {

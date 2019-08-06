@@ -11,29 +11,34 @@
 
 #include "../include/File.h"
 
+#include "../include/INode.h"
+#include "../include/INodeTable.h"
+
 #define DEBUG
 
 int main(int argc, const char* argv[]) {
 
 
-	os_project::fileSystem::File* f = new os_project::fileSystem::File(10, "TEST", "exe", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
-
-	os_project::fileSystem::INode* f2 = new os_project::fileSystem::INode(512);// (10, "TEST", "exe2", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
-	os_project::fileSystem::INode* f3 = new os_project::fileSystem::INode(512);// (10, "TEST", "exe2", 0b11110000, 0, 0b1111111111111111, 0b0000000000000000);
-	f2->createFile("Hello", "out", 0, 0, os_project::definitions::file_system_file_types::file);
-	f3->createFile("", "tmp", 1, 1, os_project::definitions::file_system_file_types::block_special_file);
-
-	f2->data();
-	f2->changeExtension("out");
-	f2->changeName("Hello");
-	f2->changeGID(0);
-	f2->changeUID(1);
+	os_project::fileSystem::INodeTable* tbl = new os_project::fileSystem::INodeTable(512, 5);
+	   	  
 
 
-	std::cout << *f2 << std::endl;
-	std::cout << *f3 << std::endl;
+	tbl->getINode(0)->createFile("Hello", "out", 0, 0, os_project::definitions::file_system_file_types::file);
+	tbl->getINode(1)->createFile("", "tmp", 1, 1, os_project::definitions::file_system_file_types::block_special_file);
+
+	tbl->getINode(0)->data();
+	tbl->getINode(0)->changeExtension("out");
+	tbl->getINode(0)->changeName("Hello");
+	tbl->getINode(0)->changeGID(0);
+	tbl->getINode(0)->changeUID(1);
 
 
+	std::cout << *tbl->getINode(0) << std::endl;
+	std::cout << *tbl->getINode(1) << std::endl;
+
+	std::cout << std::endl << std::endl;
+
+	std::cout << *tbl << std::endl;
 
 
 	return 0;

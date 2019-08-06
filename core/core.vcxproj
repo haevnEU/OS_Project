@@ -129,10 +129,12 @@
     <ClInclude Include="include\File.h" />
     <ClInclude Include="include\IFileSystem.h" />
     <ClInclude Include="include\INode.h" />
+    <ClInclude Include="include\INodeTable.h" />
     <ClInclude Include="include\Partition.h" />
     <ClInclude Include="include\PartitionTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\INodeTable.cpp" />
     <ClCompile Include="src\Disk.cpp" />
     <ClCompile Include="src\Block.cpp" />
     <ClCompile Include="src\File.cpp" />

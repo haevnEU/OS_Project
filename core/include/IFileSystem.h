@@ -28,7 +28,7 @@ namespace os_project {
 
 			IFileSystem(os_project::definitions::file_system_type fileSystemType);
 			virtual ~IFileSystem(void);
-			virtual int createFile(const char* name, const char* extension, int uid, int gid, os_project::definitions::file_system_file_types type) = 0;
+			virtual int createFile(const char* name, const char* extension, int uid) = 0;
 			virtual void deleteFile(void) = 0;
 			virtual void createDirectory(void) = 0;
 			virtual void deleteDirectory(void) = 0;

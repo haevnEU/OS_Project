@@ -4,12 +4,11 @@ using namespace os_project::fileSystem;
 
 unsigned int INode::idCounter = 0;
 
-INode::INode(unsigned int blockSize) : IFileSystem(os_project::definitions::file_system_type::INode) {
+INode::INode(unsigned int blockSize) {
 	id_m = idCounter;
 	idCounter++;
 
 	generation_m = 0;
-	mode_m = 0;
 	aountLinks_m = 0;
 
 	blockSize_m = blockSize;
@@ -34,7 +33,7 @@ INode::INode(unsigned int blockSize) : IFileSystem(os_project::definitions::file
 	modifyTime_m = 0;
 	accessTime_m = 0;
 	changeTime_m = 0;
-	permission_m = 0;
+	mode_m = 0;
 
 }
 
@@ -81,45 +80,45 @@ int INode::createFile(const char* name, const char* extension, int uid, int gid,
 	
 	switch (type) {
 	case os_project::definitions::file_system_file_types::file:
-		permission_m &= ~(1 << 10);
-		permission_m &= ~(1 << 11);
-		permission_m &= ~(1 << 12);
+		mode_m &= ~(1 << 10);
+		mode_m &= ~(1 << 11);
+		mode_m &= ~(1 << 12);
 		break;
 
 	case os_project::definitions::file_system_file_types::directory:
-		permission_m |= 1 << 10;
-		permission_m &= ~(1 << 11);
-		permission_m &= ~(1 << 12);
+		mode_m |= 1 << 10;
+		mode_m &= ~(1 << 11);
+		mode_m &= ~(1 << 12);
 		break;
 
 	case os_project::definitions::file_system_file_types::symbolic_link:
-		permission_m &= ~(1 << 10);
-		permission_m |= 1 << 11;
-		permission_m &= ~(1 << 12);
+		mode_m &= ~(1 << 10);
+		mode_m |= 1 << 11;
+		mode_m &= ~(1 << 12);
 		break;
 
 	case os_project::definitions::file_system_file_types::block_special_file:
-		permission_m |= 1 << 10;
-		permission_m |= 1 << 11;
-		permission_m &= ~(1 << 12);
+		mode_m |= 1 << 10;
+		mode_m |= 1 << 11;
+		mode_m &= ~(1 << 12);
 		break;
 
 	case os_project::definitions::file_system_file_types::character_special_file:
-		permission_m &= ~(1 << 10);
-		permission_m &= ~(1 << 11);
-		permission_m |= 1 << 12;
+		mode_m &= ~(1 << 10);
+		mode_m &= ~(1 << 11);
+		mode_m |= 1 << 12;
 		break;
 
 	case os_project::definitions::file_system_file_types::named_pipe_file:
-		permission_m |= 1 << 10;
-		permission_m &= ~(1 << 11);
-		permission_m |= 1 << 12;
+		mode_m |= 1 << 10;
+		mode_m &= ~(1 << 11);
+		mode_m |= 1 << 12;
 		break;
 
 	case os_project::definitions::file_system_file_types::loacl_socket_special_file:
-		permission_m &= ~(1 << 10);
-		permission_m |= 1 << 11;
-		permission_m |= 1 << 12;
+		mode_m &= ~(1 << 10);
+		mode_m |= 1 << 11;
+		mode_m |= 1 << 12;
 		break;
 	}
 
@@ -153,12 +152,11 @@ unsigned long INode::generation(void){
 }
 
 int INode::mode(void){
-	return mode_m;
+	return 0;
 }
 
 void INode::changeMode(int mode) {
 
-	mode_m = mode;
 	accessTime_m = changeTime_m = std::time(0);
 }
 
@@ -300,13 +298,13 @@ void INode::forbidAll() {
 bool INode::readAllowed(os_project::definitions::file_system_groups who) {
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		return (permission_m & 0b0000000001000000);
+		return (mode_m & 0b0000000001000000);
 		break;
 	case os_project::definitions::file_system_groups::Group:
-		return (permission_m & 0b0000000000001000);
+		return (mode_m & 0b0000000000001000);
 		break;
 	case os_project::definitions::file_system_groups::Owner:
-		return (permission_m & 0b0000000000000001);
+		return (mode_m & 0b0000000000000001);
 		break;
 	}
 	return false;
@@ -315,15 +313,15 @@ bool INode::readAllowed(os_project::definitions::file_system_groups who) {
 void os_project::fileSystem::INode::allowRead(os_project::definitions::file_system_groups who){
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m |= 1 << 0;
+		mode_m |= 1 << 0;
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m |= 1 << 3;
+		mode_m |= 1 << 3;
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m |= 1 << 6;
+		mode_m |= 1 << 6;
 		break;
 	}
 }
@@ -332,15 +330,15 @@ void os_project::fileSystem::INode::forbidRead(os_project::definitions::file_sys
 
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m &= ~(1 << 0);
+		mode_m &= ~(1 << 0);
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m &= ~(1 << 3);
+		mode_m &= ~(1 << 3);
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m &= ~(1 << 6);
+		mode_m &= ~(1 << 6);
 		break;
 	}
 }
@@ -348,11 +346,11 @@ void os_project::fileSystem::INode::forbidRead(os_project::definitions::file_sys
 bool INode::writeAllowed(os_project::definitions::file_system_groups who) {
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		return (permission_m & 0b0000000010000000);
+		return (mode_m & 0b0000000010000000);
 	case os_project::definitions::file_system_groups::Group:
-		return (permission_m & 0b0000000000010000);
+		return (mode_m & 0b0000000000010000);
 	case os_project::definitions::file_system_groups::Owner:
-		return (permission_m & 0b0000000000000010);
+		return (mode_m & 0b0000000000000010);
 	}
 	return false;
 }
@@ -360,15 +358,15 @@ bool INode::writeAllowed(os_project::definitions::file_system_groups who) {
 void os_project::fileSystem::INode::allowWrite(os_project::definitions::file_system_groups who){
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m |= 1 << 1;
+		mode_m |= 1 << 1;
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m |= 1 << 4;
+		mode_m |= 1 << 4;
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m |= 1 << 7;
+		mode_m |= 1 << 7;
 		break;
 	}
 }
@@ -377,15 +375,15 @@ void os_project::fileSystem::INode::forbidWrite(os_project::definitions::file_sy
 
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m &= ~(1 << 1);
+		mode_m &= ~(1 << 1);
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m &= ~(1 << 4);
+		mode_m &= ~(1 << 4);
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m &= ~(1 << 7);
+		mode_m &= ~(1 << 7);
 		break;
 	}
 }
@@ -393,11 +391,11 @@ void os_project::fileSystem::INode::forbidWrite(os_project::definitions::file_sy
 bool INode::executeAllowed(os_project::definitions::file_system_groups who) {
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		return (permission_m & 0b0000000100000000);
+		return (mode_m & 0b0000000100000000);
 	case os_project::definitions::file_system_groups::Group:
-		return (permission_m & 0b0000000000100000);
+		return (mode_m & 0b0000000000100000);
 	case os_project::definitions::file_system_groups::Owner:
-		return (permission_m & 0b0000000000000100);
+		return (mode_m & 0b0000000000000100);
 	}
 	return false;
 }
@@ -405,15 +403,15 @@ bool INode::executeAllowed(os_project::definitions::file_system_groups who) {
 void os_project::fileSystem::INode::allowExecute(os_project::definitions::file_system_groups who){
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m |= 1 << 8;
+		mode_m |= 1 << 8;
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m |= 1 << 5;
+		mode_m |= 1 << 5;
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m |= 1 << 2;
+		mode_m |= 1 << 2;
 		break;
 	}
 }
@@ -422,32 +420,32 @@ void os_project::fileSystem::INode::forbidExecute(os_project::definitions::file_
 	
 	switch (who) {
 	case os_project::definitions::file_system_groups::Other:
-		permission_m &= ~(1 << 8);
+		mode_m &= ~(1 << 8);
 		break;
 
 	case os_project::definitions::file_system_groups::Group:
-		permission_m &= ~(1 << 5);
+		mode_m &= ~(1 << 5);
 		break;
 
 	case os_project::definitions::file_system_groups::Owner:
-		permission_m &= ~(1 << 2);
+		mode_m &= ~(1 << 2);
 		break;
 	}
 }
 
 bool INode::isHidden(void) {
-	return (permission_m & 0b0000001000000000);
+	return (mode_m & 0b0000001000000000);
 }
 
 os_project::definitions::file_system_file_types INode::type(void) {
-	int val = (permission_m & 0b0001110000000000) >> 10;
+	int val = (mode_m & 0b0001110000000000) >> 10;
 	os_project::definitions::file_system_file_types ret = static_cast<os_project::definitions::file_system_file_types>(val);
 	return ret;
 }
 
 std::string os_project::fileSystem::INode::permissionAsString() {
 	
-	int val = (permission_m & 0b0001110000000000) >> 10;
+	int val = (mode_m & 0b0001110000000000) >> 10;
 	std::string str = os_project::definitions::file_system_file_types_name[val];
 	 
 	// type

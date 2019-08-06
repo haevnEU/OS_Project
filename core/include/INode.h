@@ -10,7 +10,7 @@
 
 namespace os_project {
 	namespace fileSystem {
-		class INode : public os_project::fileSystem::IFileSystem {
+		class INode {
 		private:
 			static unsigned int idCounter;
 
@@ -21,7 +21,7 @@ namespace os_project {
 			unsigned long generation_m;
 			/*  mode_t returned by stat () */
 			/*  format,attributes and permission bits  */
-			int mode_m;
+			
 			
 			/// This attribute is the file extension, Important it is not NULL terminated
 			char extension_m[3];
@@ -60,7 +60,7 @@ namespace os_project {
 			
 			// 16 | 15 | 14 | 13 | 12 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 
 			//	                 |  t |  h | x | w | r | x | w | r | x | w | r		
-			short permission_m;
+			short mode_m;
 
 			// TODO Add data, double data and tripple data pointer
 
