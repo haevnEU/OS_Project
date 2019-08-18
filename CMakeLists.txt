@@ -3,20 +3,13 @@ project(OS_Project)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES Main.cpp)
-
-include_directories(core)
-include_directories(core/diskSimulation)
+include_directories(core/include)
 
 add_executable(OS_Project
-        core/diskSimulation/Block.cpp
-        core/diskSimulation/Block.h
-        core/diskSimulation/Disk.cpp
-        core/diskSimulation/Disk.h
-        core/diskSimulation/FormatType.h
-        core/diskSimulation/MBR.cpp
-        core/diskSimulation/MBR.h
-        core/diskSimulation/Partition.cpp
-        core/diskSimulation/Partition.h
-        core/main.cpp
-        core/diskSimulation/PartitionTable.cpp core/diskSimulation/PartitionTable.h core/FileSystem.cpp core/FileSystem.h)
+        core/include/Block.h
+        core/include/Definitionsh.h
+        core/include/Disk.h
+        core/src/Block.cpp
+        core/src/Disk.cpp
+        core/src/MBR.cpp
+        core/include/MBR.h core/include/Partition.h core/src/Partition.cpp core/include/Filesystem.h)
