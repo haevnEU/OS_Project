@@ -47,7 +47,7 @@ namespace os_project {
              * Resizes the size of the Partition
              * @param new_var the new value of blockCount
              */
-            void resizePartition (unsigned long int blockcount);
+            void resizePartition (unsigned long int blockCount);
 
             /**
              * gets the a mount of blocks in the partition
@@ -67,7 +67,6 @@ namespace os_project {
              */
             os_project::Filesystem::Filesystem* getFileSystem ();
 
-            bool formatPartition
 
         };
     }

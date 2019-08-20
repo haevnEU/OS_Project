@@ -40,9 +40,8 @@ namespace os_project {
              *
              * @param size Size of the block, data type is int
              *
-             * @param index Index of the block inside a block cluster, data type is int
              */
-            Block(int size, int index);
+            Block(int size);
 
             ~Block(void);
 

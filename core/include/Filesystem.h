@@ -21,19 +21,19 @@ namespace os_project {
             unsigned long int blockCount;
         public:
             /**
-             * Set the value of startBlock
-             * @param new_var the new value of startBlock
+             * Set the start block of the partion in the filesystem
+             * @param startBlock of the partition for use in filesystem
              */
-            void setStartBlock (Block new_var);
+            void setStartBlock (Block startBlock);
 
             /**
-             * Get the value of startBlock
-             * @return the value of startBlock
+             * Get the startBlock of the filesystem
+             * @return the value of startBlock sould be the same as the start block of the partition
              */
             Block getStartBlock ();
 
             /**
-             * Set the value of blockSize
+             * Set the value of blockSize sets the value of the block size from the partition for use in the file system
              * @param new_var the new value of blockSize
              */
             void setBlockSize (unsigned long int new_var);
@@ -59,7 +59,7 @@ namespace os_project {
 
             /**
             * Fragmentation in percent
-            * @return char
+            * @return returns the fragmentation of the filesystem in percent
             */
             virtual char fragmentation ()
             {
@@ -67,6 +67,7 @@ namespace os_project {
 
 
             /**
+             * defragmanting the filesystem
              * @return int
              */
             virtual int defragmentation ()
@@ -75,7 +76,8 @@ namespace os_project {
 
 
             /**
-             * @return unsigned long int
+             * get free space in the filesystem
+             * @return filesystem free space in bytes
              */
             virtual unsigned long int getFreeSpace ()
             {
@@ -83,7 +85,8 @@ namespace os_project {
 
 
             /**
-             * @return unsigned long int
+             * get used space in the filesystem
+             * @return filesystem used space in bytes
              */
             virtual unsigned long int getUsedSpace ()
             {
@@ -91,7 +94,8 @@ namespace os_project {
 
 
             /**
-             * @return unsigned long int
+             * the maximum capasity of fylesystem
+             * @return filesystem maximal storage in bytes
              */
             virtual unsigned long int getMaximumSpace ()
             {

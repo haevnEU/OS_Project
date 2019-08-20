@@ -2,10 +2,9 @@
 
 using namespace os_project::hard_disk;
 
-Block::Block(int size, int index) {
+Block::Block(int size) {
     this->state_m = os_project::definitions::block_state::block_free;
     this->blockSize_m = size;
-    this->clusterIndex_m = index;
     this->data_m = new unsigned char[size];
 
     for (int i = 0; i < size; i++) {
