@@ -6,7 +6,7 @@ DiskWizard::DiskWizard(QWidget* parent) : QWizard (parent){
     setPage(pages::pages_enum::introPage, new pages::IntroPage("This wizard will guide you through the creation of a disk.", pages::pages_enum::diskPage));
     setPage(pages::pages_enum::diskPage, new pages::DiskPage());
     setPage(pages::pages_enum::partitionPage, new pages::PartitionPage());
-    setPage(pages::pages_enum::summaryPage, new SummaryPage(pages::pages_enum::diskPage | pages::pages_enum::partitionPage));
+    setPage(pages::pages_enum::summaryPage, new pages::SummaryPage(pages::pages_enum::diskPage | pages::pages_enum::partitionPage));
     setStartId(pages::pages_enum::introPage);
     setWizardStyle(QWizard::WizardStyle::NStyles);
 }

@@ -42,7 +42,6 @@ SOURCES +=  main.cpp \
     ui/wizard/pages/intropage.cpp \
     ui/wizard/pages/partitionpage.cpp \
     ui/wizard/pages/summarypage.cpp \
-    ui/wizard/pages/summarypage.cpp \
     ui/wizard/partitionwizard.cpp
 
 

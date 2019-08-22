@@ -5,7 +5,7 @@ using namespace ui::wizard;
 PartitionWizard::PartitionWizard(unsigned long long diskSize, QWidget* parent) :QWizard(parent){
     setPage(pages::pages_enum::introPage, new pages::IntroPage("This wizard will guide you through the creation of a partition.", pages::pages_enum::partitionPage));
     setPage(pages::pages_enum::partitionPage, new pages::PartitionPage(diskSize));
-    setPage(pages::pages_enum::summaryPage, new SummaryPage(pages::pages_enum::partitionPage));
+    setPage(pages::pages_enum::summaryPage, new pages::SummaryPage(pages::pages_enum::partitionPage));
     setStartId(pages::pages_enum::introPage);
     setWizardStyle(QWizard::WizardStyle::NStyles);
 }
