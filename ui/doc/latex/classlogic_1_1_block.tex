@@ -1,0 +1,239 @@
+\hypertarget{classlogic_1_1_block}{}\section{logic\+:\+:Block Class Reference}
+\label{classlogic_1_1_block}\index{logic\+::\+Block@{logic\+::\+Block}}
+
+
+The \mbox{\hyperlink{classlogic_1_1_block}{Block}} class.  
+
+
+
+
+{\ttfamily \#include $<$block.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1_block_a893088c60b4c0c41370eb5df87b566d0}{Block}} (unsigned long \mbox{\hyperlink{classlogic_1_1_block_a0b57337ab5b3817a6509efd1a323c3eb}{block\+Size}})
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_acb19637acf2ec89d7d9fde9b40b3cd29}{set\+Bit}} (int bit)
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_a9f25c077733b21120df01e5174a8dfc7}{set\+Bin}} (int bin, int offset)
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_ab7c61557660651b8afb417ac6fff8418}{set\+Hex}} (int hex, int offset)
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_aaf20f779418e0491c626e009f1e66bb9}{clear\+Bit}} (int bit)
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_aa63e9635221bda7c6660a5c254510e78}{clear\+Data}} (void)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1_block_a0130b21b567a1149edcc02c48ccc52ef}{is\+Bit\+Set}} (int pos)
+\item 
+void \mbox{\hyperlink{classlogic_1_1_block_a2568d052f60f1c8fb59cc099bb8ba12b}{set\+State}} (block\+\_\+state state\+\_\+t)
+\item 
+const block\+\_\+state \mbox{\hyperlink{classlogic_1_1_block_a0a84f5b5c790173d5f3ed4db2f33535b}{state}} (void)
+\item 
+int \mbox{\hyperlink{classlogic_1_1_block_a0b57337ab5b3817a6509efd1a323c3eb}{block\+Size}} (void)
+\item 
+const unsigned char $\ast$ \mbox{\hyperlink{classlogic_1_1_block_a2c8b08fd7d36f82b34b7d89268f2da4f}{data}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogic_1_1_block_afa168ce1afb85db10a312e0288bfee1f}\label{classlogic_1_1_block_afa168ce1afb85db10a312e0288bfee1f}} 
+unsigned char $\ast$ \mbox{\hyperlink{classlogic_1_1_block_afa168ce1afb85db10a312e0288bfee1f}{data\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em data\+\_\+m This is the actual data, its size is block size $\ast$ 1byte \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlogic_1_1_block_a2e11cf21efb27e54d8e4b18b5f7fa091}\label{classlogic_1_1_block_a2e11cf21efb27e54d8e4b18b5f7fa091}} 
+unsigned long \mbox{\hyperlink{classlogic_1_1_block_a2e11cf21efb27e54d8e4b18b5f7fa091}{block\+Size\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em block\+Size\+\_\+m This variable determines the size of this block \end{DoxyCompactList}\item 
+block\+\_\+state \mbox{\hyperlink{classlogic_1_1_block_ae267e23894435a8a93368db5af0519be}{state\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em state\+\_\+m This is the current state of this block, \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classlogic_1_1_block_a822a522e43e47d065d5c56a2103e08a3}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classlogic_1_1_block}{Block}} \&block)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classlogic_1_1_block}{Block}} class. 
+
+This class implementes all required methods and attributes for a block A \mbox{\hyperlink{classlogic_1_1_block}{Block}} is used as the smallest entity which can be addressed \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlogic_1_1_block_a893088c60b4c0c41370eb5df87b566d0}\label{classlogic_1_1_block_a893088c60b4c0c41370eb5df87b566d0}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{unsigned long}]{block\+Size }\end{DoxyParamCaption})}
+
+Creates a new block with given index and size
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of the block, data type is int\\
+\hline
+{\em index} & Index of the block inside a block cluster, data type is int \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlogic_1_1_block_a0b57337ab5b3817a6509efd1a323c3eb}\label{classlogic_1_1_block_a0b57337ab5b3817a6509efd1a323c3eb}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!block\+Size@{block\+Size}}
+\index{block\+Size@{block\+Size}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{block\+Size()}{blockSize()}}
+{\footnotesize\ttfamily int Block\+::block\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method returns the block size in bytes
+
+\begin{DoxyReturn}{Returns}
+size of the block in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlogic_1_1_block_aaf20f779418e0491c626e009f1e66bb9}\label{classlogic_1_1_block_aaf20f779418e0491c626e009f1e66bb9}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!clear\+Bit@{clear\+Bit}}
+\index{clear\+Bit@{clear\+Bit}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{clear\+Bit()}{clearBit()}}
+{\footnotesize\ttfamily void Block\+::clear\+Bit (\begin{DoxyParamCaption}\item[{int}]{bit }\end{DoxyParamCaption})}
+
+This method sets a specific data bit at given position
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & Position where the bit must be set\\
+\hline
+\end{DoxyParams}
+bit must be smaller than block size $\ast$ 1byte \mbox{\Hypertarget{classlogic_1_1_block_aa63e9635221bda7c6660a5c254510e78}\label{classlogic_1_1_block_aa63e9635221bda7c6660a5c254510e78}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!clear\+Data@{clear\+Data}}
+\index{clear\+Data@{clear\+Data}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{clear\+Data()}{clearData()}}
+{\footnotesize\ttfamily void Block\+::clear\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method clears the data from the block \mbox{\Hypertarget{classlogic_1_1_block_a2c8b08fd7d36f82b34b7d89268f2da4f}\label{classlogic_1_1_block_a2c8b08fd7d36f82b34b7d89268f2da4f}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!data@{data}}
+\index{data@{data}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily const unsigned char $\ast$ Block\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method returns the block size in bytes
+
+\begin{DoxyReturn}{Returns}
+data of the block as const unsigned char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlogic_1_1_block_a0130b21b567a1149edcc02c48ccc52ef}\label{classlogic_1_1_block_a0130b21b567a1149edcc02c48ccc52ef}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!is\+Bit\+Set@{is\+Bit\+Set}}
+\index{is\+Bit\+Set@{is\+Bit\+Set}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{is\+Bit\+Set()}{isBitSet()}}
+{\footnotesize\ttfamily bool Block\+::is\+Bit\+Set (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+This method tests a specific data bit at given position
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & Position where the bit must be set\\
+\hline
+\end{DoxyParams}
+bit must be smaller than block size $\ast$ 1byte \mbox{\Hypertarget{classlogic_1_1_block_a9f25c077733b21120df01e5174a8dfc7}\label{classlogic_1_1_block_a9f25c077733b21120df01e5174a8dfc7}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!set\+Bin@{set\+Bin}}
+\index{set\+Bin@{set\+Bin}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Bin()}{setBin()}}
+{\footnotesize\ttfamily void Block\+::set\+Bin (\begin{DoxyParamCaption}\item[{int}]{bin,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+This method sets given binary bits using set\+Hex
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin} & 16 bit Binary data which should be set\\
+\hline
+{\em offset} & Position inside the data block, the offset will be multiplied by 8 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlogic_1_1_block_acb19637acf2ec89d7d9fde9b40b3cd29}\label{classlogic_1_1_block_acb19637acf2ec89d7d9fde9b40b3cd29}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!set\+Bit@{set\+Bit}}
+\index{set\+Bit@{set\+Bit}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Bit()}{setBit()}}
+{\footnotesize\ttfamily void Block\+::set\+Bit (\begin{DoxyParamCaption}\item[{int}]{bit }\end{DoxyParamCaption})}
+
+This method sets a specific data bit at given position
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & Position where the bit must be set\\
+\hline
+\end{DoxyParams}
+bit must be smaller than block size $\ast$ 1byte \mbox{\Hypertarget{classlogic_1_1_block_ab7c61557660651b8afb417ac6fff8418}\label{classlogic_1_1_block_ab7c61557660651b8afb417ac6fff8418}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!set\+Hex@{set\+Hex}}
+\index{set\+Hex@{set\+Hex}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Hex()}{setHex()}}
+{\footnotesize\ttfamily void Block\+::set\+Hex (\begin{DoxyParamCaption}\item[{int}]{hex,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+This method sets given hex bits using set\+Hex
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin} & 16 bit hexadecimal data which should be set\\
+\hline
+{\em offset} & Position inside the data block, the offset will be multiplied by 8 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlogic_1_1_block_a2568d052f60f1c8fb59cc099bb8ba12b}\label{classlogic_1_1_block_a2568d052f60f1c8fb59cc099bb8ba12b}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily void Block\+::set\+State (\begin{DoxyParamCaption}\item[{block\+\_\+state}]{state\+\_\+t }\end{DoxyParamCaption})}
+
+This method sets the block state
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & New state of the block. Details \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Definitions.\+h
+\end{DoxySeeAlso}
+state must be a valid block\+\_\+state \mbox{\Hypertarget{classlogic_1_1_block_a0a84f5b5c790173d5f3ed4db2f33535b}\label{classlogic_1_1_block_a0a84f5b5c790173d5f3ed4db2f33535b}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!state@{state}}
+\index{state@{state}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily const block\+\_\+state Block\+::state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This method returns the state of the block
+
+\begin{DoxyReturn}{Returns}
+Current state of the block. To receive details about the state 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Definitions.\+h 
+\end{DoxySeeAlso}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlogic_1_1_block_a822a522e43e47d065d5c56a2103e08a3}\label{classlogic_1_1_block_a822a522e43e47d065d5c56a2103e08a3}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classlogic_1_1_block}{Block}} \&}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+T\+O\+DO write comment 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlogic_1_1_block_ae267e23894435a8a93368db5af0519be}\label{classlogic_1_1_block_ae267e23894435a8a93368db5af0519be}} 
+\index{logic\+::\+Block@{logic\+::\+Block}!state\+\_\+m@{state\+\_\+m}}
+\index{state\+\_\+m@{state\+\_\+m}!logic\+::\+Block@{logic\+::\+Block}}
+\subsubsection{\texorpdfstring{state\+\_\+m}{state\_m}}
+{\footnotesize\ttfamily block\+\_\+state logic\+::\+Block\+::state\+\_\+m\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+state\+\_\+m This is the current state of this block, 
+
+\begin{DoxySeeAlso}{See also}
+Definitions.\+h 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/block.\+h\item 
+core/block.\+cpp\end{DoxyCompactItemize}

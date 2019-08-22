@@ -1,0 +1,176 @@
+\hypertarget{classcore_1_1disk_1_1_master_boot_record}{}\section{core\+:\+:disk\+:\+:Master\+Boot\+Record Class Reference}
+\label{classcore_1_1disk_1_1_master_boot_record}\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+
+
+The \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} class.  
+
+
+
+
+{\ttfamily \#include $<$masterbootrecord.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_ad037f4c38e76f64b7d06f8795531442c}{Master\+Boot\+Record}} (unsigned long long disk\+Capacity)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{logic\+::\+Partition}} $\ast$ \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a857825face8484c5bbc23768cd4344d6}{get\+Partition}} (int index)
+\begin{DoxyCompactList}\small\item\em get\+Partition This method queries a partition from the Master Boot Record \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_ab1f46cc41735db1fcdd2aef912da29a4}{add\+Partition}} (long block\+Size, long amount\+Blocks, \mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$file\+System)
+\begin{DoxyCompactList}\small\item\em add\+Partition Adds a new partition to the M\+BR \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a901d6bfb4b860b739e204be4f6cc47a4}{add\+Partition}} (int index, long block\+Size, long amount\+Blocks, \mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$file\+System)
+\begin{DoxyCompactList}\small\item\em add\+Partition Adds a new partition to the M\+BR \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_af155df4b9738c217678a8f875e679c50}{remove\+Partition}} (int index)
+\begin{DoxyCompactList}\small\item\em remove\+Partition Removes a partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a87a82e1edd865a766f6cf73de147a9e1}\label{classcore_1_1disk_1_1_master_boot_record_a87a82e1edd865a766f6cf73de147a9e1}} 
+unsigned long long {\bfseries available\+Space} (void)
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a2247447acf2ad887c9ef1effbd397fae}\label{classcore_1_1disk_1_1_master_boot_record_a2247447acf2ad887c9ef1effbd397fae}} 
+bool {\bfseries add\+Partition} (\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{logic\+::\+Partition}} $\ast$partition)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a8db81e19979e90b3f826745c9a14288b}\label{classcore_1_1disk_1_1_master_boot_record_a8db81e19979e90b3f826745c9a14288b}} 
+static const int \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a8db81e19979e90b3f826745c9a14288b}{M\+A\+X\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON}} = 4
+\begin{DoxyCompactList}\small\item\em M\+A\+X\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON This variable contains the maximum of available partition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_ab332516409a1180967132f0a5249e3e6}\label{classcore_1_1disk_1_1_master_boot_record_ab332516409a1180967132f0a5249e3e6}} 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{logic\+::\+Partition}} $\ast$ \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_ab332516409a1180967132f0a5249e3e6}{partitions\+\_\+m}} \mbox{[}\mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a8db81e19979e90b3f826745c9a14288b}{M\+A\+X\+\_\+\+P\+A\+R\+T\+I\+T\+I\+ON}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em partitions\+\_\+m This attribute is array of all registred partitions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a133c97daafd6f7abd543f99a72744578}\label{classcore_1_1disk_1_1_master_boot_record_a133c97daafd6f7abd543f99a72744578}} 
+unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a133c97daafd6f7abd543f99a72744578}{disk\+Capacity\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em disk\+Capacity\+\_\+m This attributes contains the size of the disk \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a1e70503a01c4c4511050ca8e5173c43e}\label{classcore_1_1disk_1_1_master_boot_record_a1e70503a01c4c4511050ca8e5173c43e}} 
+unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record_a1e70503a01c4c4511050ca8e5173c43e}{available\+Disk\+Capacity\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em available\+Disk\+Capacity\+\_\+m This attributes contains the available size of the disk \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a33e3ea037895ea6142548552beee358a}\label{classcore_1_1disk_1_1_master_boot_record_a33e3ea037895ea6142548552beee358a}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} \&mbr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} class. 
+
+This class represent a Master Boot Record entry \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_ad037f4c38e76f64b7d06f8795531442c}\label{classcore_1_1disk_1_1_master_boot_record_ad037f4c38e76f64b7d06f8795531442c}} 
+\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}!Master\+Boot\+Record@{Master\+Boot\+Record}}
+\index{Master\+Boot\+Record@{Master\+Boot\+Record}!core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+\subsubsection{\texorpdfstring{Master\+Boot\+Record()}{MasterBootRecord()}}
+{\footnotesize\ttfamily Master\+Boot\+Record\+::\+Master\+Boot\+Record (\begin{DoxyParamCaption}\item[{unsigned long long}]{disk\+Capacity }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} Constructor. 
+
+This Constructor sets the disk capacity and creates the array of partitions (partitions\+\_\+m) with null pointer 
+\begin{DoxyParams}{Parameters}
+{\em disk\+Capacity} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_ab1f46cc41735db1fcdd2aef912da29a4}\label{classcore_1_1disk_1_1_master_boot_record_ab1f46cc41735db1fcdd2aef912da29a4}} 
+\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}!add\+Partition@{add\+Partition}}
+\index{add\+Partition@{add\+Partition}!core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+\subsubsection{\texorpdfstring{add\+Partition()}{addPartition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Master\+Boot\+Record\+::add\+Partition (\begin{DoxyParamCaption}\item[{long}]{block\+Size,  }\item[{long}]{amount\+Blocks,  }\item[{\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$}]{file\+System }\end{DoxyParamCaption})}
+
+
+
+add\+Partition Adds a new partition to the M\+BR 
+
+First a check if enough space is available is done. Next the M\+BR iterates over all entries from his partition table, iff the M\+BR finds a free spot (entry is nullptr) the M\+BR creates a new partition and returns true otherwise the M\+BR iterates to the end if all entries are used (not nullptr) false will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em block\+Size} & Size of the block in bytes \\
+\hline
+{\em amount\+Blocks} & Amount of blocks the partition owns \\
+\hline
+{\em file\+System} & Filesystem of the Partition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Partition was created otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a901d6bfb4b860b739e204be4f6cc47a4}\label{classcore_1_1disk_1_1_master_boot_record_a901d6bfb4b860b739e204be4f6cc47a4}} 
+\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}!add\+Partition@{add\+Partition}}
+\index{add\+Partition@{add\+Partition}!core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+\subsubsection{\texorpdfstring{add\+Partition()}{addPartition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Master\+Boot\+Record\+::add\+Partition (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{long}]{block\+Size,  }\item[{long}]{amount\+Blocks,  }\item[{\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$}]{file\+System }\end{DoxyParamCaption})}
+
+
+
+add\+Partition Adds a new partition to the M\+BR 
+
+First a check if enough space is available is done. Next the M\+BR tries to insert a new Partition at given index, iff the spoti a free spot (entry is nullptr) the M\+BR creates a new partition and returns true otherwise the M\+BR false will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index where the partition should be located, range 0 -\/ 3 \\
+\hline
+{\em block\+Size} & Size of the block in bytes \\
+\hline
+{\em amount\+Blocks} & Amount of blocks the partition owns \\
+\hline
+{\em file\+System} & Filesystem of the Partition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Partition was created otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_a857825face8484c5bbc23768cd4344d6}\label{classcore_1_1disk_1_1_master_boot_record_a857825face8484c5bbc23768cd4344d6}} 
+\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}!get\+Partition@{get\+Partition}}
+\index{get\+Partition@{get\+Partition}!core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+\subsubsection{\texorpdfstring{get\+Partition()}{getPartition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{core\+::logic\+::\+Partition}} $\ast$ Master\+Boot\+Record\+::get\+Partition (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+get\+Partition This method queries a partition from the Master Boot Record 
+
+First a check about the index will be done, iff the index is out of range a exception will be thrown. Next a nullpointer check will be done, iff index argument points to a nullpointer entry a exception will be thrown. Iff all checks are done without an exceptiont the querried partition will be returned 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to access, range form 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Partition assoziated with index Index 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime} & error if the index is out of range or the access would be a nullpointer \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_master_boot_record_af155df4b9738c217678a8f875e679c50}\label{classcore_1_1disk_1_1_master_boot_record_af155df4b9738c217678a8f875e679c50}} 
+\index{core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}!remove\+Partition@{remove\+Partition}}
+\index{remove\+Partition@{remove\+Partition}!core\+::disk\+::\+Master\+Boot\+Record@{core\+::disk\+::\+Master\+Boot\+Record}}
+\subsubsection{\texorpdfstring{remove\+Partition()}{removePartition()}}
+{\footnotesize\ttfamily bool Master\+Boot\+Record\+::remove\+Partition (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+remove\+Partition Removes a partition 
+
+This method removes a partiton at given index. First a check will be done to ensure that the index is not out of range(0 -\/ 3), if its out of range a runtimeexception will be thrown Next a check will be done to ensure that the partition is not a nullpoint, if its a nullpointer a runtimeexception will be trhown Iff all checks are done without an exception the partiton will be removed using his destructor and assign a nullpointer to the spot inside the partition table 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/masterbootrecord.\+h\item 
+core/masterbootrecord.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{class_disk_wizard}{}\section{Disk\+Wizard Class Reference}
+\label{class_disk_wizard}\index{Disk\+Wizard@{Disk\+Wizard}}
+
+
+The \mbox{\hyperlink{class_disk_wizard}{Disk\+Wizard}} class this class implements a wizard.  
+
+
+
+
+{\ttfamily \#include $<$diskwizard.\+h$>$}
+
+Inheritance diagram for Disk\+Wizard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_disk_wizard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}{Disk\+Wizard}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_disk_wizard}{Disk\+Wizard}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_wizard_a9376442c638a808b79a27be0379f83c2}\label{class_disk_wizard_a9376442c638a808b79a27be0379f83c2}} 
+virtual \mbox{\hyperlink{class_disk_wizard_a9376442c638a808b79a27be0379f83c2}{$\sim$\+Disk\+Wizard}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Disk\+Wizard Destrucotr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdisk_1_1_disk}{disk\+::\+Disk}} $\ast$ \mbox{\hyperlink{class_disk_wizard_a301923c0d1511e93504a61f465796ca7}{get\+Resulted\+Disk}} (void)
+\begin{DoxyCompactList}\small\item\em get\+Resulted\+Disk This method returns the disk which where created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}{done}} (int result) override
+\begin{DoxyCompactList}\small\item\em done This is a custom implementation of the done event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_disk_wizard}{Disk\+Wizard}} class this class implements a wizard. 
+
+This class is a custom implementation of a wizard. It handles all pages and serves as an interaction with the calling object \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}\label{class_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}} 
+\index{Disk\+Wizard@{Disk\+Wizard}!Disk\+Wizard@{Disk\+Wizard}}
+\index{Disk\+Wizard@{Disk\+Wizard}!Disk\+Wizard@{Disk\+Wizard}}
+\subsubsection{\texorpdfstring{Disk\+Wizard()}{DiskWizard()}}
+{\footnotesize\ttfamily Disk\+Wizard\+::\+Disk\+Wizard (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_disk_wizard}{Disk\+Wizard}} Constructor. 
+
+This constructor construct a wizard and assign the page order. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}\label{class_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}} 
+\index{Disk\+Wizard@{Disk\+Wizard}!done@{done}}
+\index{done@{done}!Disk\+Wizard@{Disk\+Wizard}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily void Disk\+Wizard\+::done (\begin{DoxyParamCaption}\item[{int}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+done This is a custom implementation of the done event 
+
+This event will ensure that the wizard only closes after the user aproved it with an anwser of a close question. 
+\begin{DoxyParams}{Parameters}
+{\em result} & Qt internal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_disk_wizard_a301923c0d1511e93504a61f465796ca7}\label{class_disk_wizard_a301923c0d1511e93504a61f465796ca7}} 
+\index{Disk\+Wizard@{Disk\+Wizard}!get\+Resulted\+Disk@{get\+Resulted\+Disk}}
+\index{get\+Resulted\+Disk@{get\+Resulted\+Disk}!Disk\+Wizard@{Disk\+Wizard}}
+\subsubsection{\texorpdfstring{get\+Resulted\+Disk()}{getResultedDisk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdisk_1_1_disk}{disk\+::\+Disk}} $\ast$ Disk\+Wizard\+::get\+Resulted\+Disk (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get\+Resulted\+Disk This method returns the disk which where created. 
+
+This method creates a new Disk based on prviuous entered information \begin{DoxyReturn}{Returns}
+Disk based on previous information 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/diskwizard.\+h\item 
+ui/wizard/diskwizard.\+cpp\end{DoxyCompactItemize}

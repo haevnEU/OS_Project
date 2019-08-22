@@ -1,0 +1,86 @@
+\hypertarget{class_i_file_system}{}\section{I\+File\+System Class Reference}
+\label{class_i_file_system}\index{I\+File\+System@{I\+File\+System}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_file_system_a6ce2b2c38629462050b9ec53eda0a248}\label{class_i_file_system_a6ce2b2c38629462050b9ec53eda0a248}} 
+{\bfseries I\+File\+System} (long block\+Size, long block\+Count)
+\item 
+\mbox{\Hypertarget{class_i_file_system_a493334ffcc971d8319bd00a141dca6e5}\label{class_i_file_system_a493334ffcc971d8319bd00a141dca6e5}} 
+long {\bfseries block\+Size} (void)
+\item 
+\mbox{\Hypertarget{class_i_file_system_abd457a1423ac45a0c2e1fb980120dbf5}\label{class_i_file_system_abd457a1423ac45a0c2e1fb980120dbf5}} 
+long {\bfseries amount\+Blocks} (void)
+\item 
+\mbox{\Hypertarget{class_i_file_system_a3b782dc67538f03ca70c341e166e29a3}\label{class_i_file_system_a3b782dc67538f03ca70c341e166e29a3}} 
+virtual void {\bfseries mount} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a1ba6b4c1b5f79110be46f77c349308be}\label{class_i_file_system_a1ba6b4c1b5f79110be46f77c349308be}} 
+virtual void {\bfseries unmount} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a3c505ca813ca232455b98e33f3135738}\label{class_i_file_system_a3c505ca813ca232455b98e33f3135738}} 
+virtual void {\bfseries self\+Check} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_ac11cdfc1f70814d14ac0fce55755eb69}\label{class_i_file_system_ac11cdfc1f70814d14ac0fce55755eb69}} 
+virtual void {\bfseries self\+Repair} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a5fb7b691c58f8a822c3b995ef92c23be}\label{class_i_file_system_a5fb7b691c58f8a822c3b995ef92c23be}} 
+virtual void {\bfseries create\+File} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_af2d36ebdf1539e6f63662e9f2be81a75}\label{class_i_file_system_af2d36ebdf1539e6f63662e9f2be81a75}} 
+virtual void {\bfseries create\+Directory} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a99530dfec1763b4bdbf59a335b0d258f}\label{class_i_file_system_a99530dfec1763b4bdbf59a335b0d258f}} 
+virtual void {\bfseries delete\+File} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_adcbe556f382d2657e995965b14e1008e}\label{class_i_file_system_adcbe556f382d2657e995965b14e1008e}} 
+virtual void {\bfseries delete\+Directory} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a214bf58e3df9bdceb55e183f61ced8a8}\label{class_i_file_system_a214bf58e3df9bdceb55e183f61ced8a8}} 
+virtual void {\bfseries open\+File} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a8c84708a739e7b96d47f44819f6ec064}\label{class_i_file_system_a8c84708a739e7b96d47f44819f6ec064}} 
+virtual void {\bfseries close\+File} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a0ac481f672945e109ba8c41412c4ea24}\label{class_i_file_system_a0ac481f672945e109ba8c41412c4ea24}} 
+virtual const char $\ast$ {\bfseries read\+File} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a3182b47ffd37547ce3175082772a1b53}\label{class_i_file_system_a3182b47ffd37547ce3175082772a1b53}} 
+virtual const char $\ast$ {\bfseries read\+File} (int length)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a64d6fb96a9c1e7cd3f0c45358f84ad78}\label{class_i_file_system_a64d6fb96a9c1e7cd3f0c45358f84ad78}} 
+virtual void {\bfseries write\+File} (const char $\ast$data, int length)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a3b9e67a92d0c18163a7b82ff1b7575b5}\label{class_i_file_system_a3b9e67a92d0c18163a7b82ff1b7575b5}} 
+virtual char {\bfseries fragmentation} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a33484c8444af9bdda6ecac2cb1a2f069}\label{class_i_file_system_a33484c8444af9bdda6ecac2cb1a2f069}} 
+virtual void {\bfseries defrag} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a6c78f4f5543658247aec33822d362f81}\label{class_i_file_system_a6c78f4f5543658247aec33822d362f81}} 
+virtual long {\bfseries free\+Space} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a28efe29ae21bf46350aa93145cc0e200}\label{class_i_file_system_a28efe29ae21bf46350aa93145cc0e200}} 
+virtual long {\bfseries used\+Space} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a70192875a200cef5c2c7752ef2aca147}\label{class_i_file_system_a70192875a200cef5c2c7752ef2aca147}} 
+virtual long {\bfseries capacity} (void)=0
+\item 
+\mbox{\Hypertarget{class_i_file_system_a53681c492975559e268965a4c8fbc17f}\label{class_i_file_system_a53681c492975559e268965a4c8fbc17f}} 
+virtual void {\bfseries change\+Attributes} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_file_system_a4af87f9255160f93c82e52a68aff0a70}\label{class_i_file_system_a4af87f9255160f93c82e52a68aff0a70}} 
+long {\bfseries block\+Size\+\_\+m}
+\item 
+\mbox{\Hypertarget{class_i_file_system_a2963224aaf1c4850f992d90f48d7bdfa}\label{class_i_file_system_a2963224aaf1c4850f992d90f48d7bdfa}} 
+long {\bfseries block\+Count\+\_\+m}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/ifilesystem.\+h\item 
+core/ifilesystem.\+cpp\end{DoxyCompactItemize}

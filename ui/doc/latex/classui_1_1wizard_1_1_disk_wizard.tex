@@ -1,0 +1,95 @@
+\hypertarget{classui_1_1wizard_1_1_disk_wizard}{}\section{ui\+:\+:wizard\+:\+:Disk\+Wizard Class Reference}
+\label{classui_1_1wizard_1_1_disk_wizard}\index{ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}}
+
+
+This class this class implements a wizard.  
+
+
+
+
+{\ttfamily \#include $<$diskwizard.\+h$>$}
+
+Inheritance diagram for ui\+:\+:wizard\+:\+:Disk\+Wizard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1wizard_1_1_disk_wizard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}{Disk\+Wizard}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard}{Disk\+Wizard}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1wizard_1_1_disk_wizard_a9376442c638a808b79a27be0379f83c2}\label{classui_1_1wizard_1_1_disk_wizard_a9376442c638a808b79a27be0379f83c2}} 
+virtual \mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard_a9376442c638a808b79a27be0379f83c2}{$\sim$\+Disk\+Wizard}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Disk\+Wizard Destrucotr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ \mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard_ae62aaaaa962e9cac555928bf84579e8f}{get\+Resulted\+Disk}} (void)
+\begin{DoxyCompactList}\small\item\em get\+Resulted\+Disk This method returns the disk which where created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}{done}} (int result) override
+\begin{DoxyCompactList}\small\item\em done This is a custom implementation of the done event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class this class implements a wizard. 
+
+This class is a custom implementation of a wizard. It handles all pages and serves as an interaction with the calling object \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}\label{classui_1_1wizard_1_1_disk_wizard_a728f3938ee8a8f44cef12158b6e6ab1f}} 
+\index{ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}!Disk\+Wizard@{Disk\+Wizard}}
+\index{Disk\+Wizard@{Disk\+Wizard}!ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}}
+\subsubsection{\texorpdfstring{Disk\+Wizard()}{DiskWizard()}}
+{\footnotesize\ttfamily Disk\+Wizard\+::\+Disk\+Wizard (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1wizard_1_1_disk_wizard}{Disk\+Wizard}} Constructor. 
+
+This constructor construct a wizard and assign the page order. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}\label{classui_1_1wizard_1_1_disk_wizard_aa0569c57c5568c9b03bbae99661f11ac}} 
+\index{ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}!done@{done}}
+\index{done@{done}!ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily void Disk\+Wizard\+::done (\begin{DoxyParamCaption}\item[{int}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+done This is a custom implementation of the done event 
+
+This event will ensure that the wizard only closes after the user aproved it with an anwser of a close question. 
+\begin{DoxyParams}{Parameters}
+{\em result} & Qt internal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_disk_wizard_ae62aaaaa962e9cac555928bf84579e8f}\label{classui_1_1wizard_1_1_disk_wizard_ae62aaaaa962e9cac555928bf84579e8f}} 
+\index{ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}!get\+Resulted\+Disk@{get\+Resulted\+Disk}}
+\index{get\+Resulted\+Disk@{get\+Resulted\+Disk}!ui\+::wizard\+::\+Disk\+Wizard@{ui\+::wizard\+::\+Disk\+Wizard}}
+\subsubsection{\texorpdfstring{get\+Resulted\+Disk()}{getResultedDisk()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ Disk\+Wizard\+::get\+Resulted\+Disk (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get\+Resulted\+Disk This method returns the disk which where created. 
+
+This method creates a new Disk based on prviuous entered information \begin{DoxyReturn}{Returns}
+Disk based on previous information 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/diskwizard.\+h\item 
+ui/wizard/diskwizard.\+cpp\end{DoxyCompactItemize}

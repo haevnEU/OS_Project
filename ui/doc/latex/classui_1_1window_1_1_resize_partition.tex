@@ -1,0 +1,188 @@
+\hypertarget{classui_1_1window_1_1_resize_partition}{}\section{ui\+:\+:window\+:\+:Resize\+Partition Class Reference}
+\label{classui_1_1window_1_1_resize_partition}\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+
+
+This class provides a partition resize window.  
+
+
+
+
+{\ttfamily \#include $<$resizepartition.\+h$>$}
+
+Inheritance diagram for ui\+:\+:window\+:\+:Resize\+Partition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1window_1_1_resize_partition}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a6cdad6be2f435ad46bcf0b537b062a40}{value\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em value\+Changed This slot is invoked when a slider changes his value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_ab742e4bcdf7e0684ad3e8a787309ef5d}{bt\+Ok\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em bt\+Ok\+Pressed This slot is invoked when a ok button is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a82f2b0a7f31c72e0ea6176415ddb855c}{bt\+Cancel\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em bt\+Cancel\+Pressed This slot cancels the resize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1window_1_1_resize_partition_aae9713fef4f920cea006ca9552f02b82}{Resize\+Partition}} (void)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1window_1_1_resize_partition}{Resize\+Partition}} This Cosntructor creates the UI and initializes attributes. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a2e2c8343e7d758f6276ad459424533e9}{$\sim$\+Resize\+Partition}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Resize\+Partition Destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a1c14acdca1d021b12584b639ac51fc7c}{set\+Disk}} (\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$disk)
+\begin{DoxyCompactList}\small\item\em set\+Disk This method sets the working disk \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a0c564d96b48c8c9b134e73184a9f591e}{set\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em set\+Index This method sets the index of the partition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a3a220945008ce93de147fdf3d8faf486}{show\+Event}} (Q\+Show\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em show\+Event This event is called when the window is visible \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_ad167e56b7a434144ff8d74b82032eaaa}\label{classui_1_1window_1_1_resize_partition_ad167e56b7a434144ff8d74b82032eaaa}} 
+Q\+Label $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_ad167e56b7a434144ff8d74b82032eaaa}{lb\+Max\+Value}}
+\begin{DoxyCompactList}\small\item\em max\+Label This UI element displays the maximum space \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_ac6bc04608307e6209a7fbf061b02dfe6}\label{classui_1_1window_1_1_resize_partition_ac6bc04608307e6209a7fbf061b02dfe6}} 
+Q\+Label $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_ac6bc04608307e6209a7fbf061b02dfe6}{lb\+Current\+Value}}
+\begin{DoxyCompactList}\small\item\em current\+Label This UI element displays the current value of the slider \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_aa3eacbce4b79f497f9baebdcda9fcf9d}\label{classui_1_1window_1_1_resize_partition_aa3eacbce4b79f497f9baebdcda9fcf9d}} 
+Q\+Slider $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_aa3eacbce4b79f497f9baebdcda9fcf9d}{sd\+Partition\+Size}}
+\begin{DoxyCompactList}\small\item\em slider This UI element provides the resize functionality \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a8098de513ac511197d124937271850c7}\label{classui_1_1window_1_1_resize_partition_a8098de513ac511197d124937271850c7}} 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_a8098de513ac511197d124937271850c7}{bt\+Ok}}
+\begin{DoxyCompactList}\small\item\em bt\+Ok This UI element represents an ok button \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_abe84d7ad5ed17041184f17f84e81ed55}\label{classui_1_1window_1_1_resize_partition_abe84d7ad5ed17041184f17f84e81ed55}} 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_abe84d7ad5ed17041184f17f84e81ed55}{bt\+Cancel}}
+\begin{DoxyCompactList}\small\item\em bt\+Ok This UI element represents a cancel button \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_aa9f3a4abebf2444077705e49ddb3a237}\label{classui_1_1window_1_1_resize_partition_aa9f3a4abebf2444077705e49ddb3a237}} 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_aa9f3a4abebf2444077705e49ddb3a237}{disk\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em disk This attribute represent the current working disk \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_acde46a28e7bfbfb9750450719e8d8a65}\label{classui_1_1window_1_1_resize_partition_acde46a28e7bfbfb9750450719e8d8a65}} 
+int \mbox{\hyperlink{classui_1_1window_1_1_resize_partition_acde46a28e7bfbfb9750450719e8d8a65}{index\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em index This attributes is used to detemrine which partition should be resized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a partition resize window. 
+
+This class is a window which display the possiblity to resize a partition It will provide a basic layout with the maximum size, minimum size, current size and a slider to adjust the size. \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_aae9713fef4f920cea006ca9552f02b82}\label{classui_1_1window_1_1_resize_partition_aae9713fef4f920cea006ca9552f02b82}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!Resize\+Partition@{Resize\+Partition}}
+\index{Resize\+Partition@{Resize\+Partition}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{Resize\+Partition()}{ResizePartition()}}
+{\footnotesize\ttfamily Resize\+Partition\+::\+Resize\+Partition (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1window_1_1_resize_partition}{Resize\+Partition}} This Cosntructor creates the UI and initializes attributes. 
+
+This class requires a partition index corresponding to the partition inside the M\+BR of the disk. 
+\begin{DoxyParams}{Parameters}
+{\em partition} & Parititon index which should be resized, range 0 -\/ 3. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a2e2c8343e7d758f6276ad459424533e9}\label{classui_1_1window_1_1_resize_partition_a2e2c8343e7d758f6276ad459424533e9}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!````~Resize\+Partition@{$\sim$\+Resize\+Partition}}
+\index{````~Resize\+Partition@{$\sim$\+Resize\+Partition}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{$\sim$\+Resize\+Partition()}{~ResizePartition()}}
+{\footnotesize\ttfamily Resize\+Partition\+::$\sim$\+Resize\+Partition (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Resize\+Partition Destructor 
+
+This destructor will free up used resources 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a82f2b0a7f31c72e0ea6176415ddb855c}\label{classui_1_1window_1_1_resize_partition_a82f2b0a7f31c72e0ea6176415ddb855c}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!bt\+Cancel\+Pressed@{bt\+Cancel\+Pressed}}
+\index{bt\+Cancel\+Pressed@{bt\+Cancel\+Pressed}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{bt\+Cancel\+Pressed}{btCancelPressed}}
+{\footnotesize\ttfamily void Resize\+Partition\+::bt\+Cancel\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+bt\+Cancel\+Pressed This slot cancels the resize. 
+
+This method cancels the resize operation and discards all changes. \mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_ab742e4bcdf7e0684ad3e8a787309ef5d}\label{classui_1_1window_1_1_resize_partition_ab742e4bcdf7e0684ad3e8a787309ef5d}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!bt\+Ok\+Pressed@{bt\+Ok\+Pressed}}
+\index{bt\+Ok\+Pressed@{bt\+Ok\+Pressed}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{bt\+Ok\+Pressed}{btOkPressed}}
+{\footnotesize\ttfamily void Resize\+Partition\+::bt\+Ok\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+bt\+Ok\+Pressed This slot is invoked when a ok button is pressed 
+
+This method ensures that all changes from the partition are saved. The partition will shrink or grow after this call \mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a1c14acdca1d021b12584b639ac51fc7c}\label{classui_1_1window_1_1_resize_partition_a1c14acdca1d021b12584b639ac51fc7c}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!set\+Disk@{set\+Disk}}
+\index{set\+Disk@{set\+Disk}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{set\+Disk()}{setDisk()}}
+{\footnotesize\ttfamily void Resize\+Partition\+::set\+Disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$}]{disk }\end{DoxyParamCaption})}
+
+
+
+set\+Disk This method sets the working disk 
+
+This method sets the working disk which the resize operation should be operate on 
+\begin{DoxyParams}{Parameters}
+{\em disk} & New working disk \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a0c564d96b48c8c9b134e73184a9f591e}\label{classui_1_1window_1_1_resize_partition_a0c564d96b48c8c9b134e73184a9f591e}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!set\+Index@{set\+Index}}
+\index{set\+Index@{set\+Index}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{set\+Index()}{setIndex()}}
+{\footnotesize\ttfamily void Resize\+Partition\+::set\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+set\+Index This method sets the index of the partition 
+
+This method sets the index which should be used to operate on. Note the partition index must be inside the M\+BR (0 -\/ 3) 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a3a220945008ce93de147fdf3d8faf486}\label{classui_1_1window_1_1_resize_partition_a3a220945008ce93de147fdf3d8faf486}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!show\+Event@{show\+Event}}
+\index{show\+Event@{show\+Event}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{show\+Event()}{showEvent()}}
+{\footnotesize\ttfamily void Resize\+Partition\+::show\+Event (\begin{DoxyParamCaption}\item[{Q\+Show\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+show\+Event This event is called when the window is visible 
+
+This event occurres if the window enteres the state of visibility. All required field will be set to ensure a acurate functioanlity. 
+\begin{DoxyParams}{Parameters}
+{\em event} & Qt\+Internal... \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1window_1_1_resize_partition_a6cdad6be2f435ad46bcf0b537b062a40}\label{classui_1_1window_1_1_resize_partition_a6cdad6be2f435ad46bcf0b537b062a40}} 
+\index{ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}!value\+Changed@{value\+Changed}}
+\index{value\+Changed@{value\+Changed}!ui\+::window\+::\+Resize\+Partition@{ui\+::window\+::\+Resize\+Partition}}
+\subsubsection{\texorpdfstring{value\+Changed}{valueChanged}}
+{\footnotesize\ttfamily void Resize\+Partition\+::value\+Changed (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+value\+Changed This slot is invoked when a slider changes his value 
+
+When a slider changes hsi value this method will be invoked and refresh the UI 
+\begin{DoxyParams}{Parameters}
+{\em value} & New slider value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/pages/resizepartition.\+h\item 
+ui/pages/resizepartition.\+cpp\end{DoxyCompactItemize}

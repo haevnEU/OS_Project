@@ -1,0 +1,106 @@
+\hypertarget{classui_1_1wizard_1_1_partition_wizard}{}\section{ui\+:\+:wizard\+:\+:Partition\+Wizard Class Reference}
+\label{classui_1_1wizard_1_1_partition_wizard}\index{ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}}
+
+
+This class this class implements a wizard.  
+
+
+
+
+{\ttfamily \#include $<$partitionwizard.\+h$>$}
+
+Inheritance diagram for ui\+:\+:wizard\+:\+:Partition\+Wizard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1wizard_1_1_partition_wizard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard_aab98955e5371a971ac94b7f0d4b24258}{Partition\+Wizard}} (unsigned long long disk\+Size, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard}{Partition\+Wizard}} Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard_a356484066944c627c00346690d3ffc80}{$\sim$\+Partition\+Wizard}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Partition\+Wizard Destructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{core\+::logic\+::\+Partition}} $\ast$ \mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard_a0ae0814425acc12ed09291de436f8771}{get\+Resulted\+Partition}} (void)
+\begin{DoxyCompactList}\small\item\em get\+Resulted\+Partition This method returns the partition which where created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard_af5141307f45f8fc9bd091c718a0f31b6}{done}} (int result) override
+\begin{DoxyCompactList}\small\item\em done This is a custom implementation of the done event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class this class implements a wizard. 
+
+This class is a custom implementation of a wizard. It handles all pages and serves as an interaction with the calling object \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_partition_wizard_aab98955e5371a971ac94b7f0d4b24258}\label{classui_1_1wizard_1_1_partition_wizard_aab98955e5371a971ac94b7f0d4b24258}} 
+\index{ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}!Partition\+Wizard@{Partition\+Wizard}}
+\index{Partition\+Wizard@{Partition\+Wizard}!ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}}
+\subsubsection{\texorpdfstring{Partition\+Wizard()}{PartitionWizard()}}
+{\footnotesize\ttfamily Partition\+Wizard\+::\+Partition\+Wizard (\begin{DoxyParamCaption}\item[{unsigned long long}]{disk\+Size,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1wizard_1_1_partition_wizard}{Partition\+Wizard}} Constructor. 
+
+This constructor construct a wizard and assign the page order. 
+\begin{DoxyParams}{Parameters}
+{\em disk\+Size} & Size of the disk where the partition should be created \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_partition_wizard_a356484066944c627c00346690d3ffc80}\label{classui_1_1wizard_1_1_partition_wizard_a356484066944c627c00346690d3ffc80}} 
+\index{ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}!````~Partition\+Wizard@{$\sim$\+Partition\+Wizard}}
+\index{````~Partition\+Wizard@{$\sim$\+Partition\+Wizard}!ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}}
+\subsubsection{\texorpdfstring{$\sim$\+Partition\+Wizard()}{~PartitionWizard()}}
+{\footnotesize\ttfamily Partition\+Wizard\+::$\sim$\+Partition\+Wizard (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Partition\+Wizard Destructor 
+
+This destructor will free up used resources 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_partition_wizard_af5141307f45f8fc9bd091c718a0f31b6}\label{classui_1_1wizard_1_1_partition_wizard_af5141307f45f8fc9bd091c718a0f31b6}} 
+\index{ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}!done@{done}}
+\index{done@{done}!ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}}
+\subsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily void Partition\+Wizard\+::done (\begin{DoxyParamCaption}\item[{int}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+done This is a custom implementation of the done event 
+
+This event will ensure that the wizard only closes after the user aproved it with an anwser of a close question. 
+\begin{DoxyParams}{Parameters}
+{\em result} & Qt internal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1_partition_wizard_a0ae0814425acc12ed09291de436f8771}\label{classui_1_1wizard_1_1_partition_wizard_a0ae0814425acc12ed09291de436f8771}} 
+\index{ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}!get\+Resulted\+Partition@{get\+Resulted\+Partition}}
+\index{get\+Resulted\+Partition@{get\+Resulted\+Partition}!ui\+::wizard\+::\+Partition\+Wizard@{ui\+::wizard\+::\+Partition\+Wizard}}
+\subsubsection{\texorpdfstring{get\+Resulted\+Partition()}{getResultedPartition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{core\+::logic\+::\+Partition}} $\ast$ Partition\+Wizard\+::get\+Resulted\+Partition (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get\+Resulted\+Partition This method returns the partition which where created. 
+
+This method creates a new partition based on prviouus entered information \begin{DoxyReturn}{Returns}
+partition based on previous information 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/partitionwizard.\+h\item 
+ui/wizard/partitionwizard.\+cpp\end{DoxyCompactItemize}

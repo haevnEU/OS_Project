@@ -1,0 +1,84 @@
+\hypertarget{classui_1_1wizard_1_1pages_1_1_disk_page}{}\section{ui\+:\+:wizard\+:\+:pages\+:\+:Disk\+Page Class Reference}
+\label{classui_1_1wizard_1_1pages_1_1_disk_page}\index{ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}}
+
+
+This class provides a custom implementation of a wizard page.  
+
+
+
+
+{\ttfamily \#include $<$diskpage.\+h$>$}
+
+Inheritance diagram for ui\+:\+:wizard\+:\+:pages\+:\+:Disk\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1wizard_1_1pages_1_1_disk_page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_disk_page_a7962a9459e0cb49c1f587de2d595cc04}{Disk\+Page}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_disk_page}{Disk\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_disk_page_adb9feba7b9ac2bbfa5b944920a2328e3}{$\sim$\+Disk\+Page}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Disk\+Page Destructor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_disk_page_ac6cb9ab53d89deac235d43251b333354}{next\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em next\+Id This method returns the next id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a custom implementation of a wizard page. 
+
+This class is a custom implementation of a wizard page It request all required information for a disk creation \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_disk_page_a7962a9459e0cb49c1f587de2d595cc04}\label{classui_1_1wizard_1_1pages_1_1_disk_page_a7962a9459e0cb49c1f587de2d595cc04}} 
+\index{ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}!Disk\+Page@{Disk\+Page}}
+\index{Disk\+Page@{Disk\+Page}!ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}}
+\subsubsection{\texorpdfstring{Disk\+Page()}{DiskPage()}}
+{\footnotesize\ttfamily Disk\+Page\+::\+Disk\+Page (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_disk_page}{Disk\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page and set required attributes 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_disk_page_adb9feba7b9ac2bbfa5b944920a2328e3}\label{classui_1_1wizard_1_1pages_1_1_disk_page_adb9feba7b9ac2bbfa5b944920a2328e3}} 
+\index{ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}!````~Disk\+Page@{$\sim$\+Disk\+Page}}
+\index{````~Disk\+Page@{$\sim$\+Disk\+Page}!ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}}
+\subsubsection{\texorpdfstring{$\sim$\+Disk\+Page()}{~DiskPage()}}
+{\footnotesize\ttfamily Disk\+Page\+::$\sim$\+Disk\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Disk\+Page Destructor 
+
+This destructor will free up used resources 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_disk_page_ac6cb9ab53d89deac235d43251b333354}\label{classui_1_1wizard_1_1pages_1_1_disk_page_ac6cb9ab53d89deac235d43251b333354}} 
+\index{ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}!next\+Id@{next\+Id}}
+\index{next\+Id@{next\+Id}!ui\+::wizard\+::pages\+::\+Disk\+Page@{ui\+::wizard\+::pages\+::\+Disk\+Page}}
+\subsubsection{\texorpdfstring{next\+Id()}{nextId()}}
+{\footnotesize\ttfamily int Disk\+Page\+::next\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+next\+Id This method returns the next id 
+
+This method overrides the default implementation to utilize different intro pages. It will return the enum of next\+\_\+page to differenciate between disk and partition pages \begin{DoxyReturn}{Returns}
+Next id for the wizard 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/pages/diskpage.\+h\item 
+ui/wizard/pages/diskpage.\+cpp\end{DoxyCompactItemize}

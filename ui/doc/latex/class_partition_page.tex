@@ -1,0 +1,157 @@
+\hypertarget{class_partition_page}{}\section{Partition\+Page Class Reference}
+\label{class_partition_page}\index{Partition\+Page@{Partition\+Page}}
+
+
+The \mbox{\hyperlink{class_partition_page}{Partition\+Page}} class.  
+
+
+
+
+{\ttfamily \#include $<$partitionpage.\+h$>$}
+
+Inheritance diagram for Partition\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_partition_page}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_partition_page_a0160f5f4dd1dcc377dc7a2f1db732f24}{amount\+Blocks\+Slider\+Value\+Changed}} (int amount)
+\begin{DoxyCompactList}\small\item\em amount\+Blocks\+Slider\+Value\+Changed This slot is used to change the value of the partition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partition_page_aa90723be1956b54ce182cc64b3b4ce6f}{block\+Size\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em block\+Size\+Changed This slot is used to change the block size of the partition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_partition_page_a0d12fa168dd41719b3d70cb2effd3629}{Partition\+Page}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_partition_page}{Partition\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_partition_page_a426e777d0785c6992bcfa8a1badd242e}{Partition\+Page}} (unsigned long long \mbox{\hyperlink{class_partition_page_ad564ff04040e97b842785ba79c1ca2fe}{disk\+Size}}, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_partition_page}{Partition\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_partition_page_a63ae270155bc6d01ae83adf63860d6f9}{next\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em next\+Id This method returns the next id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partition_page_a105573c5cd7af63d8425672c45d2540f}{set\+Visible}} (bool visible) override
+\begin{DoxyCompactList}\small\item\em set\+Visible This method toggles the visiblity state of the pages \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_partition_page_ad564ff04040e97b842785ba79c1ca2fe}\label{class_partition_page_ad564ff04040e97b842785ba79c1ca2fe}} 
+unsigned long long \mbox{\hyperlink{class_partition_page_ad564ff04040e97b842785ba79c1ca2fe}{disk\+Size}}
+\begin{DoxyCompactList}\small\item\em disk\+Size This attribute state the total usable disk size \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_page_a43cc085a7c6fe43bc4dd5bf3dfab73a7}\label{class_partition_page_a43cc085a7c6fe43bc4dd5bf3dfab73a7}} 
+Q\+Label $\ast$ \mbox{\hyperlink{class_partition_page_a43cc085a7c6fe43bc4dd5bf3dfab73a7}{lb\+Slider\+Value}}
+\begin{DoxyCompactList}\small\item\em lb\+Slider\+Value This UI element shows the current value of the slider \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_page_aff6a3942a73b05da887ab96010b71f43}\label{class_partition_page_aff6a3942a73b05da887ab96010b71f43}} 
+Q\+Slider $\ast$ \mbox{\hyperlink{class_partition_page_aff6a3942a73b05da887ab96010b71f43}{slider}}
+\begin{DoxyCompactList}\small\item\em slider This UI element changes the partition size \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_partition_page}{Partition\+Page}} class. 
+
+This class is a custom implementation of a wizard page It request all required information for a partition creation \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_partition_page_a0d12fa168dd41719b3d70cb2effd3629}\label{class_partition_page_a0d12fa168dd41719b3d70cb2effd3629}} 
+\index{Partition\+Page@{Partition\+Page}!Partition\+Page@{Partition\+Page}}
+\index{Partition\+Page@{Partition\+Page}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{Partition\+Page()}{PartitionPage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Partition\+Page\+::\+Partition\+Page (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_partition_page}{Partition\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page and set required attributes Note only call iff this page is used during a disk creation process 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_partition_page_a426e777d0785c6992bcfa8a1badd242e}\label{class_partition_page_a426e777d0785c6992bcfa8a1badd242e}} 
+\index{Partition\+Page@{Partition\+Page}!Partition\+Page@{Partition\+Page}}
+\index{Partition\+Page@{Partition\+Page}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{Partition\+Page()}{PartitionPage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Partition\+Page\+::\+Partition\+Page (\begin{DoxyParamCaption}\item[{unsigned long long}]{disk\+Size,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_partition_page}{Partition\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page and set required attributes, 
+\begin{DoxyParams}{Parameters}
+{\em disk\+Size} & Size of the disk \\
+\hline
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_partition_page_a0160f5f4dd1dcc377dc7a2f1db732f24}\label{class_partition_page_a0160f5f4dd1dcc377dc7a2f1db732f24}} 
+\index{Partition\+Page@{Partition\+Page}!amount\+Blocks\+Slider\+Value\+Changed@{amount\+Blocks\+Slider\+Value\+Changed}}
+\index{amount\+Blocks\+Slider\+Value\+Changed@{amount\+Blocks\+Slider\+Value\+Changed}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{amount\+Blocks\+Slider\+Value\+Changed}{amountBlocksSliderValueChanged}}
+{\footnotesize\ttfamily void Partition\+Page\+::amount\+Blocks\+Slider\+Value\+Changed (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+amount\+Blocks\+Slider\+Value\+Changed This slot is used to change the value of the partition 
+
+This method is invoked if the slider changes his value, inside the method the new partition size will be set 
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount of the change \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_partition_page_aa90723be1956b54ce182cc64b3b4ce6f}\label{class_partition_page_aa90723be1956b54ce182cc64b3b4ce6f}} 
+\index{Partition\+Page@{Partition\+Page}!block\+Size\+Changed@{block\+Size\+Changed}}
+\index{block\+Size\+Changed@{block\+Size\+Changed}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{block\+Size\+Changed}{blockSizeChanged}}
+{\footnotesize\ttfamily void Partition\+Page\+::block\+Size\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+block\+Size\+Changed This slot is used to change the block size of the partition 
+
+This method is invoked if the user changes the content of the blocksize combo box, it will set the new block size and adjust the slider max value. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index corresponding to block size. 0 = 512, 1 = 1024, 2 = 2048, 3 = 4096, 4 = 8192 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_partition_page_a63ae270155bc6d01ae83adf63860d6f9}\label{class_partition_page_a63ae270155bc6d01ae83adf63860d6f9}} 
+\index{Partition\+Page@{Partition\+Page}!next\+Id@{next\+Id}}
+\index{next\+Id@{next\+Id}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{next\+Id()}{nextId()}}
+{\footnotesize\ttfamily int Partition\+Page\+::next\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+next\+Id This method returns the next id 
+
+This method overrides the default implementation to utilize different intro pages. It will return the enum of next\+\_\+page to differenciate between disk and partition pages \begin{DoxyReturn}{Returns}
+Next id for the wizard 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_partition_page_a105573c5cd7af63d8425672c45d2540f}\label{class_partition_page_a105573c5cd7af63d8425672c45d2540f}} 
+\index{Partition\+Page@{Partition\+Page}!set\+Visible@{set\+Visible}}
+\index{set\+Visible@{set\+Visible}!Partition\+Page@{Partition\+Page}}
+\subsubsection{\texorpdfstring{set\+Visible()}{setVisible()}}
+{\footnotesize\ttfamily void Partition\+Page\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+set\+Visible This method toggles the visiblity state of the pages 
+
+This method sets the page visible or unset it. It is used to set specific information The page require to operate based on previous information. 
+\begin{DoxyParams}{Parameters}
+{\em visible} & Visibility state of the page \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/pages/partitionpage.\+h\item 
+ui/wizard/pages/partitionpage.\+cpp\end{DoxyCompactItemize}

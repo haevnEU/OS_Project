@@ -1,0 +1,72 @@
+\hypertarget{class_disk_page}{}\section{Disk\+Page Class Reference}
+\label{class_disk_page}\index{Disk\+Page@{Disk\+Page}}
+
+
+The \mbox{\hyperlink{class_disk_page}{Disk\+Page}} class.  
+
+
+
+
+{\ttfamily \#include $<$diskpage.\+h$>$}
+
+Inheritance diagram for Disk\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_disk_page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_disk_page_a7962a9459e0cb49c1f587de2d595cc04}{Disk\+Page}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_disk_page}{Disk\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_disk_page_ac6cb9ab53d89deac235d43251b333354}{next\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em next\+Id This method returns the next id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_disk_page}{Disk\+Page}} class. 
+
+This class is a custom implementation of a wizard page It request all required information for a disk creation \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_disk_page_a7962a9459e0cb49c1f587de2d595cc04}\label{class_disk_page_a7962a9459e0cb49c1f587de2d595cc04}} 
+\index{Disk\+Page@{Disk\+Page}!Disk\+Page@{Disk\+Page}}
+\index{Disk\+Page@{Disk\+Page}!Disk\+Page@{Disk\+Page}}
+\subsubsection{\texorpdfstring{Disk\+Page()}{DiskPage()}}
+{\footnotesize\ttfamily Disk\+Page\+::\+Disk\+Page (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_disk_page}{Disk\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page and set required attributes 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disk_page_ac6cb9ab53d89deac235d43251b333354}\label{class_disk_page_ac6cb9ab53d89deac235d43251b333354}} 
+\index{Disk\+Page@{Disk\+Page}!next\+Id@{next\+Id}}
+\index{next\+Id@{next\+Id}!Disk\+Page@{Disk\+Page}}
+\subsubsection{\texorpdfstring{next\+Id()}{nextId()}}
+{\footnotesize\ttfamily int Disk\+Page\+::next\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+next\+Id This method returns the next id 
+
+This method overrides the default implementation to utilize different intro pages. It will return the enum of next\+\_\+page to differenciate between disk and partition pages \begin{DoxyReturn}{Returns}
+Next id for the wizard 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/pages/diskpage.\+h\item 
+ui/wizard/pages/diskpage.\+cpp\end{DoxyCompactItemize}

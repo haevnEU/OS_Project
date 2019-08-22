@@ -1,0 +1,113 @@
+\hypertarget{classui_1_1window_1_1_main_window}{}\section{ui\+:\+:window\+:\+:Main\+Window Class Reference}
+\label{classui_1_1window_1_1_main_window}\index{ui\+::window\+::\+Main\+Window@{ui\+::window\+::\+Main\+Window}}
+
+
+The \mbox{\hyperlink{classui_1_1window_1_1_main_window}{Main\+Window}} class.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for ui\+:\+:window\+:\+:Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1window_1_1_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a59fc90a3e94d7b3749a01420154b7180}\label{classui_1_1window_1_1_main_window_a59fc90a3e94d7b3749a01420154b7180}} 
+void {\bfseries disk\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a1c0253c5f8350142145e647ba11b4eb5}\label{classui_1_1window_1_1_main_window_a1c0253c5f8350142145e647ba11b4eb5}} 
+void {\bfseries click} ()
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a3c3e137427fb9ef9f774f08d40b98d7b}\label{classui_1_1window_1_1_main_window_a3c3e137427fb9ef9f774f08d40b98d7b}} 
+void {\bfseries control\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a6b7db1a39889962fc97e0f8a0840ab4c}\label{classui_1_1window_1_1_main_window_a6b7db1a39889962fc97e0f8a0840ab4c}} 
+void {\bfseries partition\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a770edeeb1dca0d8365f28ded5ac8c1a7}\label{classui_1_1window_1_1_main_window_a770edeeb1dca0d8365f28ded5ac8c1a7}} 
+void {\bfseries refresh\+Disks} (void)
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a1e20191c2f6cecf881ed3a4de6147e12}\label{classui_1_1window_1_1_main_window_a1e20191c2f6cecf881ed3a4de6147e12}} 
+void {\bfseries refresh\+Partition} (void)
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a8f650e410a52c007fbc62e13b09cceef}\label{classui_1_1window_1_1_main_window_a8f650e410a52c007fbc62e13b09cceef}} 
+void {\bfseries refresh\+UI} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a5721fc9aa7fcc5727e137c8f4264db24}\label{classui_1_1window_1_1_main_window_a5721fc9aa7fcc5727e137c8f4264db24}} 
+void {\bfseries hide\+Event} (Q\+Hide\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a04cbd2f131266718a62c4330ccbaacee}\label{classui_1_1window_1_1_main_window_a04cbd2f131266718a62c4330ccbaacee}} 
+\mbox{\hyperlink{classui_1_1window_1_1_detail_page}{Detail\+Page}} $\ast$ {\bfseries page}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a96e1e831a4fdba02f811a4b06c6d4c44}\label{classui_1_1window_1_1_main_window_a96e1e831a4fdba02f811a4b06c6d4c44}} 
+Q\+Tab\+Widget $\ast$ {\bfseries tab\+Widget}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_aa7325ee0fcf7d33b9065f69851122a0f}\label{classui_1_1window_1_1_main_window_aa7325ee0fcf7d33b9065f69851122a0f}} 
+Q\+H\+Box\+Layout $\ast$ {\bfseries layout}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a54496f7d21ae1ae510aafbeb837e0c1e}\label{classui_1_1window_1_1_main_window_a54496f7d21ae1ae510aafbeb837e0c1e}} 
+Q\+H\+Box\+Layout $\ast$ {\bfseries detail\+Pane}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a517b2e82838b0eab89ab089c1c7bfe01}\label{classui_1_1window_1_1_main_window_a517b2e82838b0eab89ab089c1c7bfe01}} 
+\mbox{\hyperlink{classui_1_1custom_u_i_1_1_custom_control_bar}{ui\+::custom\+U\+I\+::\+Custom\+Control\+Bar}} $\ast$ {\bfseries tmp}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_aa00bcce6e063ac300b700aa5c7348259}\label{classui_1_1window_1_1_main_window_aa00bcce6e063ac300b700aa5c7348259}} 
+Q\+List\+Widget $\ast$ {\bfseries disk\+Pane}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_ab2ba1f351c5f476c5ccbaeed683e90eb}\label{classui_1_1window_1_1_main_window_ab2ba1f351c5f476c5ccbaeed683e90eb}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Disk}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a88bebba612acbd3eec664693c0d9a722}\label{classui_1_1window_1_1_main_window_a88bebba612acbd3eec664693c0d9a722}} 
+Q\+List\+Widget $\ast$ {\bfseries partition\+Pane}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_aa29b3eeaa0ca10708a642a199d09c990}\label{classui_1_1window_1_1_main_window_aa29b3eeaa0ca10708a642a199d09c990}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Partition}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a1cbe56c915e49bbe6deecc8748472cea}\label{classui_1_1window_1_1_main_window_a1cbe56c915e49bbe6deecc8748472cea}} 
+Q\+List\+Widget $\ast$ {\bfseries tool\+Pane}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a03223362f26005b9c351eab066c1a7d5}\label{classui_1_1window_1_1_main_window_a03223362f26005b9c351eab066c1a7d5}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Tool}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_ab2ab4d5f6ee5536275458c4808827b1c}\label{classui_1_1window_1_1_main_window_ab2ab4d5f6ee5536275458c4808827b1c}} 
+\mbox{\hyperlink{classui_1_1custom_u_i_1_1_custom_list_widget_item}{ui\+::custom\+U\+I\+::\+Custom\+List\+Widget\+Item}} $\ast$ {\bfseries root\+Item}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a8c4aeb9590f059a4c2b8173354f1045f}\label{classui_1_1window_1_1_main_window_a8c4aeb9590f059a4c2b8173354f1045f}} 
+\mbox{\hyperlink{classui_1_1custom_u_i_1_1_custom_list_widget_item}{ui\+::custom\+U\+I\+::\+Custom\+List\+Widget\+Item}} $\ast$ {\bfseries disk\+Info\+Item}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a8f927ac7149efbea7fe51fb6552d9b51}\label{classui_1_1window_1_1_main_window_a8f927ac7149efbea7fe51fb6552d9b51}} 
+\mbox{\hyperlink{classui_1_1custom_u_i_1_1_custom_list_widget_item}{ui\+::custom\+U\+I\+::\+Custom\+List\+Widget\+Item}} $\ast$ {\bfseries resize\+Item}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_ab4386fa5b81b950f86703493c8a15521}\label{classui_1_1window_1_1_main_window_ab4386fa5b81b950f86703493c8a15521}} 
+\mbox{\hyperlink{classui_1_1custom_u_i_1_1_custom_list_widget_item}{ui\+::custom\+U\+I\+::\+Custom\+List\+Widget\+Item}} $\ast$ {\bfseries add\+Partition}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_abb9c3b148ed4962768f35d43f8bdb7ca}\label{classui_1_1window_1_1_main_window_abb9c3b148ed4962768f35d43f8bdb7ca}} 
+std\+::vector$<$ \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ $>$ $\ast$ {\bfseries disks}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_main_window_a1ebb4730f1b18ab3cbf672d3651006e8}\label{classui_1_1window_1_1_main_window_a1ebb4730f1b18ab3cbf672d3651006e8}} 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ {\bfseries working\+Disk}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classui_1_1window_1_1_main_window}{Main\+Window}} class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/pages/mainwindow.\+h\item 
+ui/pages/mainwindow.\+cpp\end{DoxyCompactItemize}

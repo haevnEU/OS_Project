@@ -1,0 +1,95 @@
+\hypertarget{class_custom_list_widget_item}{}\section{Custom\+List\+Widget\+Item Class Reference}
+\label{class_custom_list_widget_item}\index{Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}}
+
+
+The \mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} class This class provides a custom impelemntation of a Listwidget.  
+
+
+
+
+{\ttfamily \#include $<$customlistwidgetitem.\+h$>$}
+
+Inheritance diagram for Custom\+List\+Widget\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_custom_list_widget_item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_list_widget_item_a7da08f342e6eeb0a2a4833c3031a9246}{Custom\+List\+Widget\+Item}} (Q\+String text, Q\+String res=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} This constructor creates a new instance of this class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_custom_list_widget_item_a71d6b28f6e542c450807f2277ddacdc4}{enable\+Light\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em enable\+Light\+Mode This method enabled the light mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_custom_list_widget_item_a97000c77f8c27f46c8ef2cc0ee824db0}{enable\+Dark\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em enable\+Light\+Mode This method enabled the dark mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_list_widget_item_aedc35c340aac27fc0800b73afbbbc228}\label{class_custom_list_widget_item_aedc35c340aac27fc0800b73afbbbc228}} 
+bool \mbox{\hyperlink{class_custom_list_widget_item_aedc35c340aac27fc0800b73afbbbc228}{dark\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em dark This attributes detemrines if the darkmode is enabled \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_custom_list_widget_item_a458dbdecb66efab651ea77ce58198ac3}\label{class_custom_list_widget_item_a458dbdecb66efab651ea77ce58198ac3}} 
+Q\+Icon $\ast$ \mbox{\hyperlink{class_custom_list_widget_item_a458dbdecb66efab651ea77ce58198ac3}{dark\+Mode\+Icon\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em dark\+Mode This icon contains the image of the darkmode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_custom_list_widget_item_aca43758de96754af340dcdb41a440b2d}\label{class_custom_list_widget_item_aca43758de96754af340dcdb41a440b2d}} 
+Q\+Icon $\ast$ \mbox{\hyperlink{class_custom_list_widget_item_aca43758de96754af340dcdb41a440b2d}{light\+Mode\+Icon\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em dark\+Mode This icon contains the image of the lightmode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} class This class provides a custom impelemntation of a Listwidget. 
+
+This class provides a custom implementation of the Q\+List\+Widget\+Class, it is a wrapper to enable different UI modes, such like dark and light \begin{DoxyAuthor}{Author}
+Nils Milewski(10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_custom_list_widget_item_a7da08f342e6eeb0a2a4833c3031a9246}\label{class_custom_list_widget_item_a7da08f342e6eeb0a2a4833c3031a9246}} 
+\index{Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}!Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}}
+\index{Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}!Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}}
+\subsubsection{\texorpdfstring{Custom\+List\+Widget\+Item()}{CustomListWidgetItem()}}
+{\footnotesize\ttfamily Custom\+List\+Widget\+Item\+::\+Custom\+List\+Widget\+Item (\begin{DoxyParamCaption}\item[{Q\+String}]{text,  }\item[{Q\+String}]{res = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} This constructor creates a new instance of this class. 
+
+This constructor will initalize all attributes and set the default to darkmode 
+\begin{DoxyParams}{Parameters}
+{\em text} & Text which the List\+Widget\+Ite should display \\
+\hline
+{\em res} & Name of the resource, note \+:/images/theme/$<$mode$>$/res/$<$mode$>$/ will be set, use the Icon name, e.\+g. add.\+svg \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_custom_list_widget_item_a97000c77f8c27f46c8ef2cc0ee824db0}\label{class_custom_list_widget_item_a97000c77f8c27f46c8ef2cc0ee824db0}} 
+\index{Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}!enable\+Dark\+Mode@{enable\+Dark\+Mode}}
+\index{enable\+Dark\+Mode@{enable\+Dark\+Mode}!Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}}
+\subsubsection{\texorpdfstring{enable\+Dark\+Mode()}{enableDarkMode()}}
+{\footnotesize\ttfamily void Custom\+List\+Widget\+Item\+::enable\+Dark\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+enable\+Light\+Mode This method enabled the dark mode 
+
+This method sets the dark\+\_\+m attribute to true and sets the icon to the dark\+Mode\+Icon\+\_\+m \mbox{\Hypertarget{class_custom_list_widget_item_a71d6b28f6e542c450807f2277ddacdc4}\label{class_custom_list_widget_item_a71d6b28f6e542c450807f2277ddacdc4}} 
+\index{Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}!enable\+Light\+Mode@{enable\+Light\+Mode}}
+\index{enable\+Light\+Mode@{enable\+Light\+Mode}!Custom\+List\+Widget\+Item@{Custom\+List\+Widget\+Item}}
+\subsubsection{\texorpdfstring{enable\+Light\+Mode()}{enableLightMode()}}
+{\footnotesize\ttfamily void Custom\+List\+Widget\+Item\+::enable\+Light\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+enable\+Light\+Mode This method enabled the light mode 
+
+This method sets the dark\+\_\+m attribute to false and sets the icon to the light\+Mode\+Icon\+\_\+m 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/custom\+U\+I/customlistwidgetitem.\+h\item 
+ui/custom\+U\+I/customlistwidgetitem.\+cpp\end{DoxyCompactItemize}

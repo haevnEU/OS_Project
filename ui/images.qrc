@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/lang"/>
+    <qresource prefix="/darkmode">
+        <file>res/dark/align-center.svg</file>
+        <file>res/dark/book.svg</file>
+        <file>res/dark/code.svg</file>
+        <file>res/dark/edit.svg</file>
+        <file>res/dark/hard-drive.svg</file>
+        <file>res/dark/help-circle.svg</file>
+        <file>res/dark/info.svg</file>
+        <file>res/dark/layout.svg</file>
+        <file>res/dark/moon.svg</file>
+        <file>res/dark/plus.svg</file>
+        <file>res/dark/sun.svg</file>
+        <file>res/dark/terminal.svg</file>
+        <file>res/dark/trash-2.svg</file>
+        <file>res/dark/trash.svg</file>
+        <file>res/dark/log-in.svg</file>
+        <file>res/dark/log-out.svg</file>
+        <file>res/dark/arrow-left-circle.svg</file>
+        <file>res/dark/arrow-right-circle.svg</file>
+    </qresource>
+    <qresource prefix="/lightmode">
+        <file>res/light/align-center.svg</file>
+        <file>res/light/book.svg</file>
+        <file>res/light/code.svg</file>
+        <file>res/light/edit.svg</file>
+        <file>res/light/hard-drive.svg</file>
+        <file>res/light/help-circle.svg</file>
+        <file>res/light/info.svg</file>
+        <file>res/light/layout.svg</file>
+        <file>res/light/moon.svg</file>
+        <file>res/light/plus.svg</file>
+        <file>res/light/sun.svg</file>
+        <file>res/light/terminal.svg</file>
+        <file>res/light/trash-2.svg</file>
+        <file>res/light/trash.svg</file>
+        <file>res/light/log-in.svg</file>
+        <file>res/light/log-out.svg</file>
+        <file>res/light/arrow-left-circle.svg</file>
+        <file>res/light/arrow-right-circle.svg</file>
+    </qresource>
+</RCC>

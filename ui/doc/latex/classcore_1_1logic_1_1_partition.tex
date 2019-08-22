@@ -1,0 +1,238 @@
+\hypertarget{classcore_1_1logic_1_1_partition}{}\section{core\+:\+:logic\+:\+:Partition Class Reference}
+\label{classcore_1_1logic_1_1_partition}\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+
+
+The \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} class.  
+
+
+
+
+{\ttfamily \#include $<$partition.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition_ad4a50cfda17b7996c8b1480e8701cf3a}{Partition}} (unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_ad3fb03e884170c6068b6724f1121ecc6}{block\+Size}}, unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a28f8b672dccb67a06036e223be813950}{amount\+Blocks}}, \mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$\mbox{\hyperlink{classcore_1_1logic_1_1_partition_a37dd86b3bc84bc1c7463beaf6d3adc57}{file\+System}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a6530ca85e608e3af7243ac2b32e4c4e5}{format}} (unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_ad3fb03e884170c6068b6724f1121ecc6}{block\+Size}}, unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a28f8b672dccb67a06036e223be813950}{amount\+Blocks}}, \mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$\mbox{\hyperlink{classcore_1_1logic_1_1_partition_a37dd86b3bc84bc1c7463beaf6d3adc57}{file\+System}})
+\begin{DoxyCompactList}\small\item\em format This method formats the partition \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a43ea90c84d2d9b90e665efbc06d5d626}{erase}} (void)
+\begin{DoxyCompactList}\small\item\em erase This method erased the partition \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_ad3fb03e884170c6068b6724f1121ecc6}{block\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em block\+Size getter of block size \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a28f8b672dccb67a06036e223be813950}{amount\+Blocks}} (void)
+\begin{DoxyCompactList}\small\item\em amount\+Blocks getter of amount block \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$ \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a37dd86b3bc84bc1c7463beaf6d3adc57}{file\+System}} (void)
+\begin{DoxyCompactList}\small\item\em file\+System getter of file system \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_adeee9ac61d563134c5c1157d5e8d80d5}\label{classcore_1_1logic_1_1_partition_adeee9ac61d563134c5c1157d5e8d80d5}} 
+void \mbox{\hyperlink{classcore_1_1logic_1_1_partition_adeee9ac61d563134c5c1157d5e8d80d5}{mount}} (void)
+\begin{DoxyCompactList}\small\item\em mount This method mounts the partition and sets the mounted\+\_\+m attribute to true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_adc87e31edb60281d230acdf4bd972848}\label{classcore_1_1logic_1_1_partition_adc87e31edb60281d230acdf4bd972848}} 
+void \mbox{\hyperlink{classcore_1_1logic_1_1_partition_adc87e31edb60281d230acdf4bd972848}{unmount}} (void)
+\begin{DoxyCompactList}\small\item\em mount This method unmounts the partition and sets the mounted\+\_\+m attribute to false \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a2278f8791ff716985ea54bd61470d96f}{is\+Mounted}} (void)
+\begin{DoxyCompactList}\small\item\em mount This method determines if the partition is mounted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1logic_1_1_partition_ab7b1a0f3847b9117a284cf4022e05e88}{resize}} (unsigned long long new\+Size)
+\begin{DoxyCompactList}\small\item\em resize This method resizes the partition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition_acb291b3b0ccf48005e141be32fdd7efd}{Partition}} (\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} $\ast$partition)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition_a019dc9e3d0c13954cd5d72f2049f21fd}{Partition}} (\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} \&partition)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Copy Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a57332acda5675a2f957f9dae15cb95ce}\label{classcore_1_1logic_1_1_partition_a57332acda5675a2f957f9dae15cb95ce}} 
+unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a57332acda5675a2f957f9dae15cb95ce}{block\+Size\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em block\+Size\+\_\+m Size of each block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a373c1aa0747a05cf2cce5e52f45190f0}\label{classcore_1_1logic_1_1_partition_a373c1aa0747a05cf2cce5e52f45190f0}} 
+unsigned long long \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a373c1aa0747a05cf2cce5e52f45190f0}{amount\+Blocks\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em amount\+Blocks\+\_\+m Amount of used blocks \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a46f21abe3e81b2abf000c7d7c745d9dd}\label{classcore_1_1logic_1_1_partition_a46f21abe3e81b2abf000c7d7c745d9dd}} 
+std\+::list$<$ \mbox{\hyperlink{classcore_1_1logic_1_1_block}{Block}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a46f21abe3e81b2abf000c7d7c745d9dd}{blocks\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em blocks\+\_\+m The actual blocks \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a7f3c15de42e1b59f74f216cd382545d4}\label{classcore_1_1logic_1_1_partition_a7f3c15de42e1b59f74f216cd382545d4}} 
+\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$ \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a7f3c15de42e1b59f74f216cd382545d4}{file\+System\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em file\+System\+\_\+m The used filesystem(\+I\+Node, F\+A\+T) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a1d5f9ed9365a32e9b78b6d9329b80b04}\label{classcore_1_1logic_1_1_partition_a1d5f9ed9365a32e9b78b6d9329b80b04}} 
+bool \mbox{\hyperlink{classcore_1_1logic_1_1_partition_a1d5f9ed9365a32e9b78b6d9329b80b04}{mounted\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em mounted\+\_\+m States if the partition is mounted or not \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a9182c56fedac445f5d17d76f2efc9896}\label{classcore_1_1logic_1_1_partition_a9182c56fedac445f5d17d76f2efc9896}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} \&partition)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} class. 
+
+This class represent a partition with all required attributes and method. A partition contains the block information(size and amount) as well as the blocks itself. It also contains a file system and can be mounted. The partition can be formated and erased, as well as mounted and unmounted \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_acb291b3b0ccf48005e141be32fdd7efd}\label{classcore_1_1logic_1_1_partition_acb291b3b0ccf48005e141be32fdd7efd}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!Partition@{Partition}}
+\index{Partition@{Partition}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{Partition()}{Partition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Partition\+::\+Partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} $\ast$}]{partition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Copy Constructor. 
+
+A partition copy operation is not allowed to ensure that the partition will not be accessed twice 
+\begin{DoxyExceptions}{Exceptions}
+{\em Allways} & throws a runtime exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a019dc9e3d0c13954cd5d72f2049f21fd}\label{classcore_1_1logic_1_1_partition_a019dc9e3d0c13954cd5d72f2049f21fd}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!Partition@{Partition}}
+\index{Partition@{Partition}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{Partition()}{Partition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Partition\+::\+Partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} \&}]{partition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Copy Constructor. 
+
+A partition copy operation is not allowed to ensure that the partition will not be accessed twice 
+\begin{DoxyExceptions}{Exceptions}
+{\em Allways} & throws a runtime exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_ad4a50cfda17b7996c8b1480e8701cf3a}\label{classcore_1_1logic_1_1_partition_ad4a50cfda17b7996c8b1480e8701cf3a}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!Partition@{Partition}}
+\index{Partition@{Partition}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{Partition()}{Partition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Partition\+::\+Partition (\begin{DoxyParamCaption}\item[{unsigned long long}]{block\+Size,  }\item[{unsigned long long}]{amount\+Blocks,  }\item[{\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$}]{file\+System }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1logic_1_1_partition}{Partition}} Constructor. 
+
+This method constructs a new partition. All required attributes will be set and ininitalized The partition will not be mounted 
+\begin{DoxyParams}{Parameters}
+{\em block\+Size} & Size of each block \\
+\hline
+{\em amount\+Blocks} & Amount of the blocks, how many block should be created \\
+\hline
+{\em file\+System} & The underlying file system \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a28f8b672dccb67a06036e223be813950}\label{classcore_1_1logic_1_1_partition_a28f8b672dccb67a06036e223be813950}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!amount\+Blocks@{amount\+Blocks}}
+\index{amount\+Blocks@{amount\+Blocks}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{amount\+Blocks()}{amountBlocks()}}
+{\footnotesize\ttfamily unsigned long long Partition\+::amount\+Blocks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+amount\+Blocks getter of amount block 
+
+\begin{DoxyReturn}{Returns}
+amount\+Blocks\+\_\+m 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_ad3fb03e884170c6068b6724f1121ecc6}\label{classcore_1_1logic_1_1_partition_ad3fb03e884170c6068b6724f1121ecc6}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!block\+Size@{block\+Size}}
+\index{block\+Size@{block\+Size}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{block\+Size()}{blockSize()}}
+{\footnotesize\ttfamily unsigned long long Partition\+::block\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+block\+Size getter of block size 
+
+\begin{DoxyReturn}{Returns}
+block\+Size\+\_\+m 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a43ea90c84d2d9b90e665efbc06d5d626}\label{classcore_1_1logic_1_1_partition_a43ea90c84d2d9b90e665efbc06d5d626}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!erase@{erase}}
+\index{erase@{erase}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily bool Partition\+::erase (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+erase This method erased the partition 
+
+First a check if the partition is mounted will be done if not the operation will abort and returns false. Next all attributes except filesystem and blocks will be set to zero (0) Following the filesystem will be deleted using its destructor Finally the blocks are cleared and deleted using a destructor Sidenote filesystem as wel as blocks will only deleted if neither one is a nullpointer \begin{DoxyReturn}{Returns}
+true iff the erase operation was succesfull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a37dd86b3bc84bc1c7463beaf6d3adc57}\label{classcore_1_1logic_1_1_partition_a37dd86b3bc84bc1c7463beaf6d3adc57}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!file\+System@{file\+System}}
+\index{file\+System@{file\+System}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{file\+System()}{fileSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$ Partition\+::file\+System (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+file\+System getter of file system 
+
+This method is the primary way to interact with the underlying file system \begin{DoxyReturn}{Returns}
+file\+System\+\_\+m 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a6530ca85e608e3af7243ac2b32e4c4e5}\label{classcore_1_1logic_1_1_partition_a6530ca85e608e3af7243ac2b32e4c4e5}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!format@{format}}
+\index{format@{format}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily bool Partition\+::format (\begin{DoxyParamCaption}\item[{unsigned long long}]{block\+Size,  }\item[{unsigned long long}]{amount\+Blocks,  }\item[{\mbox{\hyperlink{classcore_1_1_i_file_system}{I\+File\+System}} $\ast$}]{file\+System }\end{DoxyParamCaption})}
+
+
+
+format This method formats the partition 
+
+A format operation contains of a check if the partition is mounted and could be erased If these check fails the operation will abort and return false. The first check is done to inspect the mounted attribute if its false the next check will be done Next check if the partition was erased, this is done with invoking the erase method, if this was succesfull the partition will be formated. Finally the operation as the constructor done will be executed 
+\begin{DoxyParams}{Parameters}
+{\em block\+Size} & New Blocksize \\
+\hline
+{\em amount\+Blocks} & New amount of blocks \\
+\hline
+{\em file\+System} & New File syste, \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the partition was formated otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_a2278f8791ff716985ea54bd61470d96f}\label{classcore_1_1logic_1_1_partition_a2278f8791ff716985ea54bd61470d96f}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!is\+Mounted@{is\+Mounted}}
+\index{is\+Mounted@{is\+Mounted}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{is\+Mounted()}{isMounted()}}
+{\footnotesize\ttfamily bool Partition\+::is\+Mounted (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+mount This method determines if the partition is mounted. 
+
+\begin{DoxyReturn}{Returns}
+true iff the partition is mounted (attribtued mounted\+\_\+m is true), otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1logic_1_1_partition_ab7b1a0f3847b9117a284cf4022e05e88}\label{classcore_1_1logic_1_1_partition_ab7b1a0f3847b9117a284cf4022e05e88}} 
+\index{core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}!resize@{resize}}
+\index{resize@{resize}!core\+::logic\+::\+Partition@{core\+::logic\+::\+Partition}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Partition\+::resize (\begin{DoxyParamCaption}\item[{unsigned long long}]{new\+Size }\end{DoxyParamCaption})}
+
+
+
+resize This method resizes the partition 
+
+This method resized the partition, it will shrink the partition if the new size is smaller than the previous size and grow if the new size is bigger than the previous size. If the partition will shrink data will be lost. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Size} & New size of the partition \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/partition.\+h\item 
+core/partition.\+cpp\end{DoxyCompactItemize}

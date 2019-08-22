@@ -1,0 +1,112 @@
+\hypertarget{classui_1_1wizard_1_1pages_1_1_intro_page}{}\section{ui\+:\+:wizard\+:\+:pages\+:\+:Intro\+Page Class Reference}
+\label{classui_1_1wizard_1_1pages_1_1_intro_page}\index{ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}}
+
+
+This class provides a custom implementation of a wizard page.  
+
+
+
+
+{\ttfamily \#include $<$intropage.\+h$>$}
+
+Inheritance diagram for ui\+:\+:wizard\+:\+:pages\+:\+:Intro\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1wizard_1_1pages_1_1_intro_page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page_ad984d57f77f15e89e82d1184c997b778}{Intro\+Page}} (Q\+String text, \mbox{\hyperlink{namespaceui_1_1wizard_1_1pages_a1a25c157e498474f0cf868944a52bf44}{pages\+\_\+enum}} next\+Page, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page}{Intro\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page_ac83805abea5b47093cc0e3ff4c85abf3}{$\sim$\+Intro\+Page}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Intro\+Page Destructor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page_a210708d731eaca79e5c0d220c08ad739}{next\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em next\+Id This method returns the next id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceui_1_1wizard_1_1pages_a1a25c157e498474f0cf868944a52bf44}{pages\+\_\+enum}} \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page_a8b77ec9feb8996a03d71f034ee3296ca}{next\+Page\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em next\+Page\+\_\+m This variable contains the next page, \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a custom implementation of a wizard page. 
+
+This class is a custom implementation of a wizard page It provides a quick introduction about the following wizard steps \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_intro_page_ad984d57f77f15e89e82d1184c997b778}\label{classui_1_1wizard_1_1pages_1_1_intro_page_ad984d57f77f15e89e82d1184c997b778}} 
+\index{ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}!Intro\+Page@{Intro\+Page}}
+\index{Intro\+Page@{Intro\+Page}!ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}}
+\subsubsection{\texorpdfstring{Intro\+Page()}{IntroPage()}}
+{\footnotesize\ttfamily Intro\+Page\+::\+Intro\+Page (\begin{DoxyParamCaption}\item[{Q\+String}]{text,  }\item[{\mbox{\hyperlink{namespaceui_1_1wizard_1_1pages_a1a25c157e498474f0cf868944a52bf44}{pages\+\_\+enum}}}]{next\+Page,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_intro_page}{Intro\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page and set required attributes 
+\begin{DoxyParams}{Parameters}
+{\em text} & Text which should be displayed to the user \\
+\hline
+{\em next\+Page} & Enum from the next step \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{pages__enum_8h_source}{pages\+\_\+enum.\+h}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_intro_page_ac83805abea5b47093cc0e3ff4c85abf3}\label{classui_1_1wizard_1_1pages_1_1_intro_page_ac83805abea5b47093cc0e3ff4c85abf3}} 
+\index{ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}!````~Intro\+Page@{$\sim$\+Intro\+Page}}
+\index{````~Intro\+Page@{$\sim$\+Intro\+Page}!ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}}
+\subsubsection{\texorpdfstring{$\sim$\+Intro\+Page()}{~IntroPage()}}
+{\footnotesize\ttfamily Intro\+Page\+::$\sim$\+Intro\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Intro\+Page Destructor 
+
+This destructor will free up used resources 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_intro_page_a210708d731eaca79e5c0d220c08ad739}\label{classui_1_1wizard_1_1pages_1_1_intro_page_a210708d731eaca79e5c0d220c08ad739}} 
+\index{ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}!next\+Id@{next\+Id}}
+\index{next\+Id@{next\+Id}!ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}}
+\subsubsection{\texorpdfstring{next\+Id()}{nextId()}}
+{\footnotesize\ttfamily int Intro\+Page\+::next\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+next\+Id This method returns the next id 
+
+This method overrides the default implementation to utilize different intro pages. It will return the enum of next\+\_\+page to differenciate between disk and partition pages \begin{DoxyReturn}{Returns}
+Next id for the wizard 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_intro_page_a8b77ec9feb8996a03d71f034ee3296ca}\label{classui_1_1wizard_1_1pages_1_1_intro_page_a8b77ec9feb8996a03d71f034ee3296ca}} 
+\index{ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}!next\+Page\+\_\+m@{next\+Page\+\_\+m}}
+\index{next\+Page\+\_\+m@{next\+Page\+\_\+m}!ui\+::wizard\+::pages\+::\+Intro\+Page@{ui\+::wizard\+::pages\+::\+Intro\+Page}}
+\subsubsection{\texorpdfstring{next\+Page\+\_\+m}{nextPage\_m}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceui_1_1wizard_1_1pages_a1a25c157e498474f0cf868944a52bf44}{pages\+\_\+enum}} ui\+::wizard\+::pages\+::\+Intro\+Page\+::next\+Page\+\_\+m\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+next\+Page\+\_\+m This variable contains the next page, 
+
+next page containt the page index which should follow. You can look into \mbox{\hyperlink{pages__enum_8h_source}{pages\+\_\+enum.\+h}} for a detailed look about all possible pages. Most of the time it will be used to switch between disk and partition pages. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/pages/intropage.\+h\item 
+ui/wizard/pages/intropage.\+cpp\end{DoxyCompactItemize}

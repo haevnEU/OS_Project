@@ -1,0 +1,113 @@
+\hypertarget{class_main_window}{}\section{Main\+Window Class Reference}
+\label{class_main_window}\index{Main\+Window@{Main\+Window}}
+
+
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a59fc90a3e94d7b3749a01420154b7180}\label{class_main_window_a59fc90a3e94d7b3749a01420154b7180}} 
+void {\bfseries disk\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\item 
+\mbox{\Hypertarget{class_main_window_a1c0253c5f8350142145e647ba11b4eb5}\label{class_main_window_a1c0253c5f8350142145e647ba11b4eb5}} 
+void {\bfseries click} ()
+\item 
+\mbox{\Hypertarget{class_main_window_a3c3e137427fb9ef9f774f08d40b98d7b}\label{class_main_window_a3c3e137427fb9ef9f774f08d40b98d7b}} 
+void {\bfseries control\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\item 
+\mbox{\Hypertarget{class_main_window_a6b7db1a39889962fc97e0f8a0840ab4c}\label{class_main_window_a6b7db1a39889962fc97e0f8a0840ab4c}} 
+void {\bfseries partition\+Pane\+Item\+Clicked} (Q\+List\+Widget\+Item $\ast$item)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a770edeeb1dca0d8365f28ded5ac8c1a7}\label{class_main_window_a770edeeb1dca0d8365f28ded5ac8c1a7}} 
+void {\bfseries refresh\+Disks} (void)
+\item 
+\mbox{\Hypertarget{class_main_window_a1e20191c2f6cecf881ed3a4de6147e12}\label{class_main_window_a1e20191c2f6cecf881ed3a4de6147e12}} 
+void {\bfseries refresh\+Partition} (void)
+\item 
+\mbox{\Hypertarget{class_main_window_a8f650e410a52c007fbc62e13b09cceef}\label{class_main_window_a8f650e410a52c007fbc62e13b09cceef}} 
+void {\bfseries refresh\+UI} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a5721fc9aa7fcc5727e137c8f4264db24}\label{class_main_window_a5721fc9aa7fcc5727e137c8f4264db24}} 
+void {\bfseries hide\+Event} (Q\+Hide\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a85aca5dff12a58a98fed2a781bc90144}\label{class_main_window_a85aca5dff12a58a98fed2a781bc90144}} 
+\mbox{\hyperlink{class_detail_page}{Detail\+Page}} $\ast$ {\bfseries page}
+\item 
+\mbox{\Hypertarget{class_main_window_a545e481058060c9fdf9ba6566b98e641}\label{class_main_window_a545e481058060c9fdf9ba6566b98e641}} 
+Q\+Tab\+Widget $\ast$ {\bfseries tab\+Widget}
+\item 
+\mbox{\Hypertarget{class_main_window_ae1b151a79d93313a31bc76c3ffb37a4c}\label{class_main_window_ae1b151a79d93313a31bc76c3ffb37a4c}} 
+Q\+H\+Box\+Layout $\ast$ {\bfseries layout}
+\item 
+\mbox{\Hypertarget{class_main_window_a4ef02c79dd339d13f836aaf268b6bd50}\label{class_main_window_a4ef02c79dd339d13f836aaf268b6bd50}} 
+Q\+H\+Box\+Layout $\ast$ {\bfseries detail\+Pane}
+\item 
+\mbox{\Hypertarget{class_main_window_aa981569cad600f9bf9e38eb708b77e0a}\label{class_main_window_aa981569cad600f9bf9e38eb708b77e0a}} 
+\mbox{\hyperlink{class_custom_control_bar}{Custom\+Control\+Bar}} $\ast$ {\bfseries tmp}
+\item 
+\mbox{\Hypertarget{class_main_window_a9b4044fa84d1c1e35a76ba6977d640b2}\label{class_main_window_a9b4044fa84d1c1e35a76ba6977d640b2}} 
+Q\+List\+Widget $\ast$ {\bfseries disk\+Pane}
+\item 
+\mbox{\Hypertarget{class_main_window_ac01415060808803d2f2b5b2055d21c71}\label{class_main_window_ac01415060808803d2f2b5b2055d21c71}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Disk}
+\item 
+\mbox{\Hypertarget{class_main_window_a2f6788d49fb2f6ddf90e122a42309abc}\label{class_main_window_a2f6788d49fb2f6ddf90e122a42309abc}} 
+Q\+List\+Widget $\ast$ {\bfseries partition\+Pane}
+\item 
+\mbox{\Hypertarget{class_main_window_a90321224ad4be8bca64d6046e94fc204}\label{class_main_window_a90321224ad4be8bca64d6046e94fc204}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Partition}
+\item 
+\mbox{\Hypertarget{class_main_window_a9dedf62dfeafc8d6047be8f90966c62c}\label{class_main_window_a9dedf62dfeafc8d6047be8f90966c62c}} 
+Q\+List\+Widget $\ast$ {\bfseries tool\+Pane}
+\item 
+\mbox{\Hypertarget{class_main_window_ab97c3f788b735ad05d4f4f54e1f56775}\label{class_main_window_ab97c3f788b735ad05d4f4f54e1f56775}} 
+Q\+List\+Widget\+Item $\ast$ {\bfseries current\+Tool}
+\item 
+\mbox{\Hypertarget{class_main_window_a7cf33185547b63281d9c361fdd623452}\label{class_main_window_a7cf33185547b63281d9c361fdd623452}} 
+\mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} $\ast$ {\bfseries root\+Item}
+\item 
+\mbox{\Hypertarget{class_main_window_a8340e48a56e82f7ed6be1a00b75cfbf5}\label{class_main_window_a8340e48a56e82f7ed6be1a00b75cfbf5}} 
+\mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} $\ast$ {\bfseries disk\+Info\+Item}
+\item 
+\mbox{\Hypertarget{class_main_window_a2edc4e1cc13b43c5b8cd3bfacfbfbbbd}\label{class_main_window_a2edc4e1cc13b43c5b8cd3bfacfbfbbbd}} 
+\mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} $\ast$ {\bfseries resize\+Item}
+\item 
+\mbox{\Hypertarget{class_main_window_a74ec18d9a8b2a967bbc915edc7335526}\label{class_main_window_a74ec18d9a8b2a967bbc915edc7335526}} 
+\mbox{\hyperlink{class_custom_list_widget_item}{Custom\+List\+Widget\+Item}} $\ast$ {\bfseries add\+Partition}
+\item 
+\mbox{\Hypertarget{class_main_window_ac3e039dffec105d885b6cf46993e0362}\label{class_main_window_ac3e039dffec105d885b6cf46993e0362}} 
+std\+::vector$<$ \mbox{\hyperlink{classdisk_1_1_disk}{disk\+::\+Disk}} $\ast$ $>$ $\ast$ {\bfseries disks}
+\item 
+\mbox{\Hypertarget{class_main_window_a98c92e90caf2a0312d38fcf3608acd47}\label{class_main_window_a98c92e90caf2a0312d38fcf3608acd47}} 
+\mbox{\hyperlink{classdisk_1_1_disk}{disk\+::\+Disk}} $\ast$ {\bfseries working\+Disk}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/pages/mainwindow.\+h\item 
+ui/pages/mainwindow.\+cpp\end{DoxyCompactItemize}

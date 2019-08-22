@@ -1,0 +1,150 @@
+\hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page}{}\section{ui\+:\+:wizard\+:\+:pages\+:\+:Summary\+Page Class Reference}
+\label{classui_1_1wizard_1_1pages_1_1_summary_page}\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+
+
+This class provides a custom implementation of a wizard page.  
+
+
+
+
+{\ttfamily \#include $<$summarypage.\+h$>$}
+
+Inheritance diagram for ui\+:\+:wizard\+:\+:pages\+:\+:Summary\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1wizard_1_1pages_1_1_summary_page}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a798aff071dddd63b2b5ee049fa87e6a7}{Summary\+Page}} (int used\+Pages, Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_partition_page}{Partition\+Page}} This is a constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a93b880d988f9f85f28c3d239ce1457e0}{$\sim$\+Summary\+Page}} (void) override
+\begin{DoxyCompactList}\small\item\em $\sim$\+Summary\+Page Destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a987e9e51fef71237349acb3b47818737}{initialize\+Page}} () override
+\begin{DoxyCompactList}\small\item\em initialize\+Page This method initializes the page \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a343463680aad6cf8357c9f13fe23e57d}{next\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em next\+Id This method returns the next id for the wizard \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_af31d12dc5ed2c917c8f65fe7790b661f}{get\+Disk\+Text}} ()
+\begin{DoxyCompactList}\small\item\em get\+Disk\+Text This method returns a text representing a disk \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a0100c8e2a029708c5447c20c83bd7257}{get\+Partitio\+N\+Text}} ()
+\begin{DoxyCompactList}\small\item\em get\+Partitio\+N\+Text This method returns a text representing a partition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_summary_page_a8e0bd026c5d978fbb1bf157439867fd5}{used\+Pages\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em used\+Pages This variable defines which pages was shown to the user \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a custom implementation of a wizard page. 
+
+This class is a custom implementation of a wizard page It displays all information which where previous entered. \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a798aff071dddd63b2b5ee049fa87e6a7}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a798aff071dddd63b2b5ee049fa87e6a7}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!Summary\+Page@{Summary\+Page}}
+\index{Summary\+Page@{Summary\+Page}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{Summary\+Page()}{SummaryPage()}}
+{\footnotesize\ttfamily Summary\+Page\+::\+Summary\+Page (\begin{DoxyParamCaption}\item[{int}]{used\+Pages,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1wizard_1_1pages_1_1_partition_page}{Partition\+Page}} This is a constructor. 
+
+This constructor creates the layout of the page 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object which this object is associated with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a93b880d988f9f85f28c3d239ce1457e0}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a93b880d988f9f85f28c3d239ce1457e0}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!````~Summary\+Page@{$\sim$\+Summary\+Page}}
+\index{````~Summary\+Page@{$\sim$\+Summary\+Page}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{$\sim$\+Summary\+Page()}{~SummaryPage()}}
+{\footnotesize\ttfamily Summary\+Page\+::$\sim$\+Summary\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Summary\+Page Destructor 
+
+This destructor will free up used resources 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_af31d12dc5ed2c917c8f65fe7790b661f}\label{classui_1_1wizard_1_1pages_1_1_summary_page_af31d12dc5ed2c917c8f65fe7790b661f}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!get\+Disk\+Text@{get\+Disk\+Text}}
+\index{get\+Disk\+Text@{get\+Disk\+Text}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{get\+Disk\+Text()}{getDiskText()}}
+{\footnotesize\ttfamily Q\+String Summary\+Page\+::get\+Disk\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Disk\+Text This method returns a text representing a disk 
+
+This method querries all attributes of a disk and creates a human readable string which can be used to display disk inormation \begin{DoxyReturn}{Returns}
+Summary of disk in string format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a0100c8e2a029708c5447c20c83bd7257}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a0100c8e2a029708c5447c20c83bd7257}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!get\+Partitio\+N\+Text@{get\+Partitio\+N\+Text}}
+\index{get\+Partitio\+N\+Text@{get\+Partitio\+N\+Text}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{get\+Partitio\+N\+Text()}{getPartitioNText()}}
+{\footnotesize\ttfamily Q\+String Summary\+Page\+::get\+Partitio\+N\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Partitio\+N\+Text This method returns a text representing a partition 
+
+This method querries all attributes of a partition and creates a human readable string which can be used to display disk inormation \begin{DoxyReturn}{Returns}
+Summary of partition in string format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a987e9e51fef71237349acb3b47818737}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a987e9e51fef71237349acb3b47818737}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!initialize\+Page@{initialize\+Page}}
+\index{initialize\+Page@{initialize\+Page}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{initialize\+Page()}{initializePage()}}
+{\footnotesize\ttfamily void Summary\+Page\+::initialize\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+initialize\+Page This method initializes the page 
+
+This method overrides the base initialize\+Page method to ensure that Custom behaivour can be implemented. This method sets the subtitle with all previous entered information \mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a343463680aad6cf8357c9f13fe23e57d}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a343463680aad6cf8357c9f13fe23e57d}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!next\+Id@{next\+Id}}
+\index{next\+Id@{next\+Id}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{next\+Id()}{nextId()}}
+{\footnotesize\ttfamily int Summary\+Page\+::next\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+next\+Id This method returns the next id for the wizard 
+
+This method overrides the default implementation to ensure a dynamic wizard. This page will allways return -\/1 to signal a final page. \begin{DoxyReturn}{Returns}
+next wizard ID 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classui_1_1wizard_1_1pages_1_1_summary_page_a8e0bd026c5d978fbb1bf157439867fd5}\label{classui_1_1wizard_1_1pages_1_1_summary_page_a8e0bd026c5d978fbb1bf157439867fd5}} 
+\index{ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}!used\+Pages\+\_\+m@{used\+Pages\+\_\+m}}
+\index{used\+Pages\+\_\+m@{used\+Pages\+\_\+m}!ui\+::wizard\+::pages\+::\+Summary\+Page@{ui\+::wizard\+::pages\+::\+Summary\+Page}}
+\subsubsection{\texorpdfstring{used\+Pages\+\_\+m}{usedPages\_m}}
+{\footnotesize\ttfamily int ui\+::wizard\+::pages\+::\+Summary\+Page\+::used\+Pages\+\_\+m\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+used\+Pages This variable defines which pages was shown to the user 
+
+This variable is used to determine which information will be displayed to the user 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/wizard/pages/summarypage.\+h\item 
+ui/wizard/pages/summarypage.\+cpp\end{DoxyCompactItemize}

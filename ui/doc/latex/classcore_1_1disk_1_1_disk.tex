@@ -1,0 +1,172 @@
+\hypertarget{classcore_1_1disk_1_1_disk}{}\section{core\+:\+:disk\+:\+:Disk Class Reference}
+\label{classcore_1_1disk_1_1_disk}\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+
+
+The \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} class.  
+
+
+
+
+{\ttfamily \#include $<$disk.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk_a1531676df8b095dc6e818458aebf9dee}{Disk}} (unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a4f0d7b0ab94fb0ed0a58bb19ce85729f}{capacity}}, std\+::string \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a889c305501805431f1189f179d8281ca}{name}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk_ad7164897c3af79602e86463065550754}{Disk}} (unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a4f0d7b0ab94fb0ed0a58bb19ce85729f}{capacity}}, const char $\ast$\mbox{\hyperlink{classcore_1_1disk_1_1_disk_a889c305501805431f1189f179d8281ca}{name}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Constructor. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a4f0d7b0ab94fb0ed0a58bb19ce85729f}{capacity}} (void)
+\begin{DoxyCompactList}\small\item\em capacity This method returns the disk capacity \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a889c305501805431f1189f179d8281ca}{name}} (void)
+\begin{DoxyCompactList}\small\item\em name This method returns the manufcator name of the disk \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} $\ast$ \mbox{\hyperlink{classcore_1_1disk_1_1_disk_ac3ed02b2b44d2d15039d3616238c0985}{M\+BR}} (void)
+\begin{DoxyCompactList}\small\item\em M\+BR This method returns the Master Boot Record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk_ad1fec93b14401a2496053fee61ec093e}{Disk}} (\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} \&disk)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk_a2c193c2ef0c575fe9ffa77eb2f7cf5ef}{Disk}} (\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} $\ast$disk)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Copy Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a318813d090c1ea19e8cbd71d275906c6}\label{classcore_1_1disk_1_1_disk_a318813d090c1ea19e8cbd71d275906c6}} 
+unsigned long long \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a318813d090c1ea19e8cbd71d275906c6}{capacity\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em capacity\+\_\+m This attributes contains the size of the disk \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a20569196ce0a16f1fe04e8065cb5e233}\label{classcore_1_1disk_1_1_disk_a20569196ce0a16f1fe04e8065cb5e233}} 
+\mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} $\ast$ \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a20569196ce0a16f1fe04e8065cb5e233}{M\+B\+R\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em M\+B\+R\+\_\+m This attribute represents a Master Boot Recorc entry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a9669787c8b3049213956af71a99edf7b}\label{classcore_1_1disk_1_1_disk_a9669787c8b3049213956af71a99edf7b}} 
+std\+::string \mbox{\hyperlink{classcore_1_1disk_1_1_disk_a9669787c8b3049213956af71a99edf7b}{name\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em name\+\_\+m This attributes contains the manufactor name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_ab1a95b006b3b89b708da1cd417d1d96d}\label{classcore_1_1disk_1_1_disk_ab1a95b006b3b89b708da1cd417d1d96d}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} \&disk)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} class. 
+
+This class is a representation of a physical disk \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_ad1fec93b14401a2496053fee61ec093e}\label{classcore_1_1disk_1_1_disk_ad1fec93b14401a2496053fee61ec093e}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!Disk@{Disk}}
+\index{Disk@{Disk}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{Disk()}{Disk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Disk\+::\+Disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} \&}]{disk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Copy Constructor. 
+
+A disk copy operation is not allowed as a result to represent a physical hard drive 
+\begin{DoxyExceptions}{Exceptions}
+{\em Allways} & throws a runtime exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a2c193c2ef0c575fe9ffa77eb2f7cf5ef}\label{classcore_1_1disk_1_1_disk_a2c193c2ef0c575fe9ffa77eb2f7cf5ef}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!Disk@{Disk}}
+\index{Disk@{Disk}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{Disk()}{Disk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Disk\+::\+Disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} $\ast$}]{disk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Copy Constructor. 
+
+A disk copy operation is not allowed as a result to represent a physical hard drive 
+\begin{DoxyExceptions}{Exceptions}
+{\em Allways} & throws a runtime exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a1531676df8b095dc6e818458aebf9dee}\label{classcore_1_1disk_1_1_disk_a1531676df8b095dc6e818458aebf9dee}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!Disk@{Disk}}
+\index{Disk@{Disk}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{Disk()}{Disk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Disk\+::\+Disk (\begin{DoxyParamCaption}\item[{unsigned long long}]{capacity,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Constructor. 
+
+This constructor creates a new \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} with an empty Master Boot Record 
+\begin{DoxyParams}{Parameters}
+{\em capacity} & This argument will be assigned to capacity\+\_\+m and specify the disk capactiy \\
+\hline
+{\em name} & This argument will be assigned to name\+\_\+m and specify the manufcator name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_ad7164897c3af79602e86463065550754}\label{classcore_1_1disk_1_1_disk_ad7164897c3af79602e86463065550754}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!Disk@{Disk}}
+\index{Disk@{Disk}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{Disk()}{Disk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Disk\+::\+Disk (\begin{DoxyParamCaption}\item[{unsigned long long}]{capacity,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} Constructor. 
+
+This constructor creates a new \mbox{\hyperlink{classcore_1_1disk_1_1_disk}{Disk}} with an empty Master Boot Record 
+\begin{DoxyParams}{Parameters}
+{\em capacity} & This argument will be assigned to capacity\+\_\+m and specify the disk capactiy \\
+\hline
+{\em name} & This argument will be assigned to name\+\_\+m and specify the manufcator name \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a4f0d7b0ab94fb0ed0a58bb19ce85729f}\label{classcore_1_1disk_1_1_disk_a4f0d7b0ab94fb0ed0a58bb19ce85729f}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!capacity@{capacity}}
+\index{capacity@{capacity}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily unsigned long long Disk\+::capacity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+capacity This method returns the disk capacity 
+
+\begin{DoxyReturn}{Returns}
+capacity\+\_\+m 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_ac3ed02b2b44d2d15039d3616238c0985}\label{classcore_1_1disk_1_1_disk_ac3ed02b2b44d2d15039d3616238c0985}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!M\+BR@{M\+BR}}
+\index{M\+BR@{M\+BR}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{M\+B\+R()}{MBR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1disk_1_1_master_boot_record}{Master\+Boot\+Record}} $\ast$ Disk\+::\+M\+BR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+M\+BR This method returns the Master Boot Record. 
+
+\begin{DoxyReturn}{Returns}
+mbr\+\_\+m 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1disk_1_1_disk_a889c305501805431f1189f179d8281ca}\label{classcore_1_1disk_1_1_disk_a889c305501805431f1189f179d8281ca}} 
+\index{core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}!name@{name}}
+\index{name@{name}!core\+::disk\+::\+Disk@{core\+::disk\+::\+Disk}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string Disk\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+name This method returns the manufcator name of the disk 
+
+\begin{DoxyReturn}{Returns}
+name\+\_\+m 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/disk.\+h\item 
+core/disk.\+cpp\end{DoxyCompactItemize}

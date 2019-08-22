@@ -1,0 +1,86 @@
+\hypertarget{classcore_1_1_i_file_system}{}\section{core\+:\+:I\+File\+System Class Reference}
+\label{classcore_1_1_i_file_system}\index{core\+::\+I\+File\+System@{core\+::\+I\+File\+System}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a6ce2b2c38629462050b9ec53eda0a248}\label{classcore_1_1_i_file_system_a6ce2b2c38629462050b9ec53eda0a248}} 
+{\bfseries I\+File\+System} (long block\+Size, long block\+Count)
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a493334ffcc971d8319bd00a141dca6e5}\label{classcore_1_1_i_file_system_a493334ffcc971d8319bd00a141dca6e5}} 
+long {\bfseries block\+Size} (void)
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_abd457a1423ac45a0c2e1fb980120dbf5}\label{classcore_1_1_i_file_system_abd457a1423ac45a0c2e1fb980120dbf5}} 
+long {\bfseries amount\+Blocks} (void)
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a00693ff330dde579f2ac4740903d9904}\label{classcore_1_1_i_file_system_a00693ff330dde579f2ac4740903d9904}} 
+virtual void {\bfseries mount} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a1fc1e6c654103f93abcd307009b7b175}\label{classcore_1_1_i_file_system_a1fc1e6c654103f93abcd307009b7b175}} 
+virtual void {\bfseries unmount} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a05a699c4bd1efafa91871b71d40dac7f}\label{classcore_1_1_i_file_system_a05a699c4bd1efafa91871b71d40dac7f}} 
+virtual void {\bfseries self\+Check} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a4c968735ba948b62fcd401b9a4d0d76b}\label{classcore_1_1_i_file_system_a4c968735ba948b62fcd401b9a4d0d76b}} 
+virtual void {\bfseries self\+Repair} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a1c197a52cb302e708a961fedfd0f2b4f}\label{classcore_1_1_i_file_system_a1c197a52cb302e708a961fedfd0f2b4f}} 
+virtual void {\bfseries create\+File} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a2afdee3dd280f84415d6d0e8cf3c43b9}\label{classcore_1_1_i_file_system_a2afdee3dd280f84415d6d0e8cf3c43b9}} 
+virtual void {\bfseries create\+Directory} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_acbf35289019edc01a4ca8705e7894ec0}\label{classcore_1_1_i_file_system_acbf35289019edc01a4ca8705e7894ec0}} 
+virtual void {\bfseries delete\+File} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a2aa404fe7bd033745a7e8a84a6f59e21}\label{classcore_1_1_i_file_system_a2aa404fe7bd033745a7e8a84a6f59e21}} 
+virtual void {\bfseries delete\+Directory} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a79903fcc3d8c3e3cb42eebed7dd0b0f0}\label{classcore_1_1_i_file_system_a79903fcc3d8c3e3cb42eebed7dd0b0f0}} 
+virtual void {\bfseries open\+File} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a85d426cd90b6f6bb437d64cf17303226}\label{classcore_1_1_i_file_system_a85d426cd90b6f6bb437d64cf17303226}} 
+virtual void {\bfseries close\+File} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a2f3e927026b148bbefd9d44f3e1dfaef}\label{classcore_1_1_i_file_system_a2f3e927026b148bbefd9d44f3e1dfaef}} 
+virtual const char $\ast$ {\bfseries read\+File} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_adbcc31a9db94f4787620d326bc920d60}\label{classcore_1_1_i_file_system_adbcc31a9db94f4787620d326bc920d60}} 
+virtual const char $\ast$ {\bfseries read\+File} (int length)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_ae1108a72181c1c304426e90ceda31d25}\label{classcore_1_1_i_file_system_ae1108a72181c1c304426e90ceda31d25}} 
+virtual void {\bfseries write\+File} (const char $\ast$data, int length)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_ab55a79b54bc802aea7a013cb8c8914e8}\label{classcore_1_1_i_file_system_ab55a79b54bc802aea7a013cb8c8914e8}} 
+virtual char {\bfseries fragmentation} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a6938f746c7a5f520884e746543d00658}\label{classcore_1_1_i_file_system_a6938f746c7a5f520884e746543d00658}} 
+virtual void {\bfseries defrag} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_ac2a36a24f58595213d43df9d7935a390}\label{classcore_1_1_i_file_system_ac2a36a24f58595213d43df9d7935a390}} 
+virtual long {\bfseries free\+Space} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a88692a64f0e55150680b81c1db4eb020}\label{classcore_1_1_i_file_system_a88692a64f0e55150680b81c1db4eb020}} 
+virtual long {\bfseries used\+Space} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a1051ca91a2c34231e437956a5a5b2acd}\label{classcore_1_1_i_file_system_a1051ca91a2c34231e437956a5a5b2acd}} 
+virtual long {\bfseries capacity} (void)=0
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a117d4301045c1f8cb85290f5c73e5c8b}\label{classcore_1_1_i_file_system_a117d4301045c1f8cb85290f5c73e5c8b}} 
+virtual void {\bfseries change\+Attributes} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_a6fc974f16f1350e21941989075e01023}\label{classcore_1_1_i_file_system_a6fc974f16f1350e21941989075e01023}} 
+long {\bfseries block\+Size\+\_\+m}
+\item 
+\mbox{\Hypertarget{classcore_1_1_i_file_system_ae87ddee28a5da64b90c2d197b83ed3c9}\label{classcore_1_1_i_file_system_ae87ddee28a5da64b90c2d197b83ed3c9}} 
+long {\bfseries block\+Count\+\_\+m}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/ifilesystem.\+h\item 
+core/ifilesystem.\+cpp\end{DoxyCompactItemize}

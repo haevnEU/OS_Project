@@ -1,0 +1,133 @@
+\hypertarget{classui_1_1window_1_1_detail_page}{}\section{ui\+:\+:window\+:\+:Detail\+Page Class Reference}
+\label{classui_1_1window_1_1_detail_page}\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+
+
+This class handles all new created windows.  
+
+
+
+
+{\ttfamily \#include $<$detailpage.\+h$>$}
+
+Inheritance diagram for ui\+:\+:window\+:\+:Detail\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classui_1_1window_1_1_detail_page}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a4104cccd964dece9660152be1109e987}\label{classui_1_1window_1_1_detail_page_a4104cccd964dece9660152be1109e987}} 
+enum {\bfseries display} \{ {\bfseries Disk\+\_\+\+Info}, 
+{\bfseries Partition\+\_\+\+Resize}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classui_1_1window_1_1_detail_page_a151e61733c9f0cfbff77d58f161b15bf}{Detail\+Page}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classui_1_1window_1_1_detail_page}{Detail\+Page}} Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classui_1_1window_1_1_detail_page_ab50d547f466fa6b6bba924b79282aae1}{$\sim$\+Detail\+Page}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Detail\+Page Destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_detail_page_a1bbc24ad94c66e55e29ba208586a5bf5}{toggle\+Page}} (display which)
+\begin{DoxyCompactList}\small\item\em toggle\+Page This method toggles the visibility of a window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_detail_page_ad677d96003c9405071abed57a2310c9d}{set\+Disk}} (\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$disk)
+\begin{DoxyCompactList}\small\item\em set\+Disk This method sets the workind disk \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classui_1_1window_1_1_detail_page_a2eba9774cf72106a5b87357c2348f5ae}{close}} (void)
+\begin{DoxyCompactList}\small\item\em close This method closes all windows \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a6e23be528d79660b733da5130b237671}\label{classui_1_1window_1_1_detail_page_a6e23be528d79660b733da5130b237671}} 
+\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_detail_page_a6e23be528d79660b733da5130b237671}{working\+Disk\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em working\+Disk\+\_\+m This is the disk which all windows should be using \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a8d92bb2023fcec9ea1e5f89b51ca6f5e}\label{classui_1_1window_1_1_detail_page_a8d92bb2023fcec9ea1e5f89b51ca6f5e}} 
+\mbox{\hyperlink{classui_1_1window_1_1_disk_info}{Disk\+Info}} $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_detail_page_a8d92bb2023fcec9ea1e5f89b51ca6f5e}{disk\+Info\+Page\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em disk\+Info\+Page This page shows all infomration about a specified disk \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a03d29770a526ca650e3ed145d800ab1d}\label{classui_1_1window_1_1_detail_page_a03d29770a526ca650e3ed145d800ab1d}} 
+\mbox{\hyperlink{classui_1_1window_1_1_resize_partition}{Resize\+Partition}} $\ast$ \mbox{\hyperlink{classui_1_1window_1_1_detail_page_a03d29770a526ca650e3ed145d800ab1d}{resize\+Partition\+\_\+m}}
+\begin{DoxyCompactList}\small\item\em disk\+Info\+Page This page allows resizeing a partition from a specific partition of a specified disk \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles all new created windows. 
+
+This class is a handler for UI windows, it will create and destroy windows As well as manage their data content. \begin{DoxyAuthor}{Author}
+Nils Milewski (10010480) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a151e61733c9f0cfbff77d58f161b15bf}\label{classui_1_1window_1_1_detail_page_a151e61733c9f0cfbff77d58f161b15bf}} 
+\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}!Detail\+Page@{Detail\+Page}}
+\index{Detail\+Page@{Detail\+Page}!ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+\subsubsection{\texorpdfstring{Detail\+Page()}{DetailPage()}}
+{\footnotesize\ttfamily Detail\+Page\+::\+Detail\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classui_1_1window_1_1_detail_page}{Detail\+Page}} Constructor. 
+
+This constructor creates all required attritbutes and windows \mbox{\Hypertarget{classui_1_1window_1_1_detail_page_ab50d547f466fa6b6bba924b79282aae1}\label{classui_1_1window_1_1_detail_page_ab50d547f466fa6b6bba924b79282aae1}} 
+\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}!````~Detail\+Page@{$\sim$\+Detail\+Page}}
+\index{````~Detail\+Page@{$\sim$\+Detail\+Page}!ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+\subsubsection{\texorpdfstring{$\sim$\+Detail\+Page()}{~DetailPage()}}
+{\footnotesize\ttfamily Detail\+Page\+::$\sim$\+Detail\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+$\sim$\+Detail\+Page Destructor 
+
+This destructor calls all windows destructors and frees his used heap memory. It will not destruct the workin\+Disk\+\_\+m attribute. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a2eba9774cf72106a5b87357c2348f5ae}\label{classui_1_1window_1_1_detail_page_a2eba9774cf72106a5b87357c2348f5ae}} 
+\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}!close@{close}}
+\index{close@{close}!ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Detail\+Page\+::close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+close This method closes all windows 
+
+This method calls the hide method from all available windows \mbox{\Hypertarget{classui_1_1window_1_1_detail_page_ad677d96003c9405071abed57a2310c9d}\label{classui_1_1window_1_1_detail_page_ad677d96003c9405071abed57a2310c9d}} 
+\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}!set\+Disk@{set\+Disk}}
+\index{set\+Disk@{set\+Disk}!ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+\subsubsection{\texorpdfstring{set\+Disk()}{setDisk()}}
+{\footnotesize\ttfamily void Detail\+Page\+::set\+Disk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1disk_1_1_disk}{core\+::disk\+::\+Disk}} $\ast$}]{disk }\end{DoxyParamCaption})}
+
+
+
+set\+Disk This method sets the workind disk 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disk} & New working disk\\
+\hline
+\end{DoxyParams}
+This method sets the working disk of all windows using their set\+Disk method \mbox{\Hypertarget{classui_1_1window_1_1_detail_page_a1bbc24ad94c66e55e29ba208586a5bf5}\label{classui_1_1window_1_1_detail_page_a1bbc24ad94c66e55e29ba208586a5bf5}} 
+\index{ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}!toggle\+Page@{toggle\+Page}}
+\index{toggle\+Page@{toggle\+Page}!ui\+::window\+::\+Detail\+Page@{ui\+::window\+::\+Detail\+Page}}
+\subsubsection{\texorpdfstring{toggle\+Page()}{togglePage()}}
+{\footnotesize\ttfamily void Detail\+Page\+::toggle\+Page (\begin{DoxyParamCaption}\item[{Detail\+Page\+::display}]{which }\end{DoxyParamCaption})}
+
+
+
+toggle\+Page This method toggles the visibility of a window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em which} & Which window should be toggled \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+static enum display
+\end{DoxySeeAlso}
+This method toggles the visibility of a window. The window must be specified by the parameter which, which is an enum of all possible windows. If a window is allready visible it will hide the window. If a window is allready hidden it will show the window. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/pages/detailpage.\+h\item 
+ui/pages/detailpage.\+cpp\end{DoxyCompactItemize}
