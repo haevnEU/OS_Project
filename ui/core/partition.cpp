@@ -1,5 +1,5 @@
 #include "partition.h"
-
+#include "FAT.h"
 using namespace core::logic;
 
 Partition::Partition(Partition* partition){
@@ -10,11 +10,26 @@ Partition::Partition(Partition &partition){
     throw std::runtime_error("Call to Partition(Partition &partition) is not allowed");
 }
 
-Partition::Partition(unsigned long long blockSize, unsigned long long amountBlocks, IFileSystem* fileSystem){
+Partition::Partition(unsigned long long blockSize, unsigned long long amountBlocks, FileSystem::fileSystemType fileSystem){
     blockSize_m = blockSize;
     amountBlocks_m = amountBlocks;
-    fileSystem_m = fileSystem;
-    blocks_m = new std::list<Block*>();
+    blocks_m = new std::vector<Block*>();
+
+    switch(fileSystem){
+        case core::FileSystem::fileSystemType::INode:
+            fileSystem_m = nullptr;
+            break;
+        case core::FileSystem::fileSystemType::FAT:
+
+            fileSystem_m = new FAT(blockSize, amountBlocks, blocks_m, '/');
+            break;
+        case core::FileSystem::fileSystemType::CD_ROM:
+            fileSystem_m = nullptr;
+            break;
+        case core::FileSystem::fileSystemType::other:
+            fileSystem_m = nullptr;
+            break;
+    }
 
     for(unsigned long long i = 0; i < amountBlocks; i++){
         blocks_m->push_back(new Block(blockSize));
@@ -23,14 +38,30 @@ Partition::Partition(unsigned long long blockSize, unsigned long long amountBloc
     mounted_m = false;
 }
 
-bool Partition::format(unsigned long long blockSize, unsigned long long amountBlocks, IFileSystem* fileSystem){
+bool Partition::format(unsigned long long blockSize, unsigned long long amountBlocks, FileSystem::fileSystemType fileSystem){
     if(isMounted() || !erase()){
         return false;
     }
     blockSize_m = blockSize;
     amountBlocks_m = amountBlocks;
-    fileSystem_m = fileSystem;
-    blocks_m = new std::list<Block*>();
+
+    switch(fileSystem){
+        case core::FileSystem::fileSystemType::INode:
+            fileSystem_m = nullptr;
+            break;
+        case core::FileSystem::fileSystemType::FAT:
+
+            fileSystem_m = new FAT(blockSize, amountBlocks, blocks_m, '/');
+            break;
+        case core::FileSystem::fileSystemType::CD_ROM:
+            fileSystem_m = nullptr;
+            break;
+        case core::FileSystem::fileSystemType::other:
+            fileSystem_m = nullptr;
+            break;
+    }
+
+    blocks_m = new std::vector<Block*>();
 
     for(unsigned long long i = 0; i < amountBlocks; i++){
         blocks_m->push_back(new Block(blockSize));
@@ -57,7 +88,7 @@ bool Partition::erase(void){
     return true;
 }
 
-IFileSystem* Partition::fileSystem(void){
+core::FileSystem* Partition::fileSystem(void){
     return fileSystem_m;
 }
 
@@ -82,14 +113,16 @@ bool Partition::isMounted(void){
 }
 
 void Partition::resize(unsigned long long newSize){
-    long long requiredBlocks = static_cast<long long>(newSize) - static_cast<long long>((blockSize_m * amountBlocks_m));
+    long long requiredBlocks = static_cast<long long>(newSize) - static_cast<long long>((amountBlocks_m));
     if(requiredBlocks > 0){
         for(long long i = 0; i < requiredBlocks; i++){
            blocks_m->push_back(new logic::Block(blockSize_m));
+           amountBlocks_m++;
         }
     }else if(requiredBlocks < 0){
-        for(long long i = requiredBlocks; i > 0; i++){
+        for(long long i = requiredBlocks; i < 0; i++){
            blocks_m->pop_back();
+           amountBlocks_m--;
         }
     }
 }

@@ -58,7 +58,7 @@ namespace ui{
              * @brief ~SummaryPage Destructor
              * @details This destructor will free up used resources
              */
-            virtual ~SummaryPage(void) override;
+            //virtual ~SummaryPage(void) override;
 
         protected:
             /**

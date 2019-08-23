@@ -20,8 +20,14 @@
         <file>res/dark/trash.svg</file>
         <file>res/dark/box.svg</file>
         <file>res/dark/database.svg</file>
+        <file>res/dark/layers.svg</file>
+        <file>res/dark/list.svg</file>
+        <file>res/dark/file.svg</file>
+        <file>res/dark/folder.svg</file>
+        <file>res/dark/x-circle.svg</file>
+        <file>res/dark/eye.svg</file>
     </qresource>
-    <qresource prefix="/images/themes/light">
+    <qresource prefix="/images/theme/light">
         <file>res/light/align-center.svg</file>
         <file>res/light/arrow-left-circle.svg</file>
         <file>res/light/arrow-right-circle.svg</file>
@@ -42,5 +48,11 @@
         <file>res/light/trash.svg</file>
         <file>res/light/box.svg</file>
         <file>res/light/database.svg</file>
+        <file>res/light/list.svg</file>
+        <file>res/light/layers.svg</file>
+        <file>res/light/file.svg</file>
+        <file>res/light/folder.svg</file>
+        <file>res/light/x-circle.svg</file>
+        <file>res/light/eye.svg</file>
     </qresource>
 </RCC>

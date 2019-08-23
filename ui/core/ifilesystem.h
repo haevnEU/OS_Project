@@ -1,8 +1,12 @@
 #ifndef IFILESYSTEM_H
 #define IFILESYSTEM_H
 
+#include "FileSystem.h"
+
 namespace core{
-    class IFileSystem{
+typedef FileSystem IFileSystem;
+
+ /*   class IFileSystem{
     private:
         long blockSize_m;
         long blockCount_m;
@@ -43,6 +47,6 @@ namespace core{
 
         virtual void changeAttributes() = 0;
 
-    };
+    };*/
 } // core
 #endif // IFILESYSTEM_H

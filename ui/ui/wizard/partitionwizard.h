@@ -38,7 +38,7 @@ namespace ui{
          * @details This destructor will free up used resources
          */
 
-        virtual ~PartitionWizard(void) override;
+        //virtual ~PartitionWizard(void) override;
         /**
          * @brief getResultedPartition This method returns the partition which where created.
          * @details This method creates a new partition based on prviouus entered information

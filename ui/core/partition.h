@@ -1,7 +1,7 @@
 #ifndef PARTITION_H
 #define PARTITION_H
 
-class IFileSystem;
+#include <core/FileSystem.h>
 
 #include <exception>
 #include <list>
@@ -36,12 +36,12 @@ namespace core {
             /**
              * @brief blocks_m The actual blocks
              */
-            std::list<Block*>* blocks_m;
+            std::vector<Block*>* blocks_m;
 
             /**
              * @brief fileSystem_m The used filesystem(INode, FAT)
              */
-            IFileSystem* fileSystem_m;
+            FileSystem* fileSystem_m;
 
             /**
              * @brief mounted_m States if the partition is mounted or not
@@ -72,7 +72,7 @@ namespace core {
              * @param amountBlocks Amount of the blocks, how many block should be created
              * @param fileSystem The underlying file system
              */
-            Partition(unsigned long long blockSize, unsigned long long amountBlocks, IFileSystem* fileSystem);
+            Partition(unsigned long long blockSize, unsigned long long amountBlocks, FileSystem::fileSystemType fileSystem);
 
             /**
              * @brief format This method formats the partition
@@ -87,7 +87,7 @@ namespace core {
              * @param fileSystem New File syste,
              * @return true if the partition was formated otherwise false
              */
-            bool format(unsigned long long blockSize, unsigned long long amountBlocks, IFileSystem* fileSystem);
+            bool format(unsigned long long blockSize, unsigned long long amountBlocks, FileSystem::fileSystemType fileSystem);
 
             /**
              * @brief erase This method erased the partition
@@ -118,7 +118,7 @@ namespace core {
              * @details This method is the primary way to interact with the underlying file system
              * @return fileSystem_m
              */
-            IFileSystem* fileSystem(void);
+            FileSystem* fileSystem(void);
 
             /**
              * @brief mount This method mounts the partition and sets the mounted_m attribute to true

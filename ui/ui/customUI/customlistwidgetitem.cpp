@@ -3,15 +3,10 @@
 using namespace ui::customUI;
 
 CustomListWidgetItem::CustomListWidgetItem(QString text, QString res) : QListWidgetItem(){
-        darkModeIcon_m = new QIcon(QPixmap(QString(":/images/theme/dark/res/dark/").append(res)));
-        lightModeIcon_m = new QIcon(QPixmap(QString(":/images/theme/light/res/light/").append(res)));
-       enableDarkMode();
-
-       setText(text);
-}
-
-CustomListWidgetItem::~CustomListWidgetItem(){
-    QListWidgetItem::~QListWidgetItem();
+    darkModeIcon_m = new QIcon(QPixmap(QString(":/images/theme/dark/res/dark/").append(res)));
+    lightModeIcon_m = new QIcon(QPixmap(QString(":/images/theme/light/res/light/").append(res)));
+    enableDarkMode();
+    setText(text);
 }
 
 void CustomListWidgetItem::enableLightMode(void){

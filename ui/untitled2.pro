@@ -25,18 +25,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES +=  main.cpp \
+    core/FAT.cpp \
+    core/File.cpp \
+    core/FileSystem.cpp \
     core/api.cpp \
     core/block.cpp \
     core/disk.cpp \
     core/ifilesystem.cpp \
     core/masterbootrecord.cpp \
     core/partition.cpp \
-    ui/customUI/customcontrolbar.cpp \
     ui/customUI/customlistwidgetitem.cpp \
+    ui/pages/addfiledir.cpp \
+    ui/pages/contentdisplay.cpp \
+    ui/pages/defrag.cpp \
     ui/pages/detailpage.cpp \
     ui/pages/diskinfo.cpp \
     ui/pages/mainwindow.cpp \
+    ui/pages/modifyfiledir.cpp \
+    ui/pages/removefiledir.cpp \
     ui/pages/resizepartition.cpp \
+    ui/pages/showfragmentation.cpp \
     ui/wizard/diskwizard.cpp \
     ui/wizard/pages/diskpage.cpp \
     ui/wizard/pages/intropage.cpp \
@@ -46,17 +54,25 @@ SOURCES +=  main.cpp \
 
 
 HEADERS +=  core/api.h \
+    core/FAT.h \
+    core/File.h \
+    core/FileSystem.h \
     core/block.h \
     core/disk.h \
     core/ifilesystem.h \
     core/masterbootrecord.h \
     core/partition.h \
-    ui/customUI/customcontrolbar.h \
     ui/customUI/customlistwidgetitem.h \
+    ui/pages/addfiledir.h \
+    ui/pages/contentdisplay.h \
+    ui/pages/defrag.h \
     ui/pages/detailpage.h \
     ui/pages/diskinfo.h \
     ui/pages/mainwindow.h \
+    ui/pages/modifyfiledir.h \
+    ui/pages/removefiledir.h \
     ui/pages/resizepartition.h \
+    ui/pages/showfragmentation.h \
     ui/wizard/diskwizard.h \
     ui/wizard/pages/diskpage.h \
     ui/wizard/pages/intropage.h \

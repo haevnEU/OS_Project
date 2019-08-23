@@ -7,6 +7,12 @@
 #include "diskinfo.h"
 #include "core/disk.h"
 #include "resizepartition.h"
+#include "addfiledir.h"
+#include "modifyfiledir.h"
+#include "removefiledir.h"
+#include "showfragmentation.h"
+#include "defrag.h"
+#include "contentdisplay.h"
 
 //! This namespace contains all ui elements for this project
 namespace ui{
@@ -24,13 +30,11 @@ namespace ui{
 
     public:
 
-        static enum display{Disk_Info, Partition_Resize};
+        static enum display{Disk_Info, Partition_Resize,
+                            Add_File_Dir, Remove_File_Dir, Modify_File_Dir, Defrag, Show_Fragmentation,
+                            Display_Content};
 
     private:
-        /**
-         * @brief workingDisk_m This is the disk which all windows should be using
-         */
-        core::disk::Disk* workingDisk_m;
 
         /**
          * @brief diskInfoPage This page shows all infomration about a specified disk
@@ -41,6 +45,37 @@ namespace ui{
          * @brief diskInfoPage This page allows resizeing a partition from a specific partition of a specified disk
          */
         ResizePartition* resizePartition_m;
+
+        /**
+         * @brief addFileDir_m This page allows adding a file or directory to the filesystem
+         */
+        AddFileDir* addFileDir_m;
+
+        /**
+         * @brief modifyFileDir_m This page allows modify a file or directory to the filesystem
+         */
+        ModifyFileDir* modifyFileDir_m;
+
+        /**
+         * @brief removeFileDir_m This page allows removing a file or directory to the filesystem
+         */
+        RemoveFileDir* removeFileDir_m;
+
+        /**
+         * @brief showFragmenation_m This page shows the partition fragmentation
+         */
+        ShowFragmentation* showFragmenation_m;
+
+        /**
+         * @brief defrag_m This page shows the partition fragmentation
+         */
+        ui::window::Defrag* defrag_m;
+
+        /**
+         * @brief defrag_m This page shows the content of a partition fragmentation
+         */
+        ContentDisplay* display_content;
+
 
     public:
         /**
@@ -67,17 +102,31 @@ namespace ui{
         void togglePage(display which);
 
         /**
-         * @brief setDisk This method sets the workind disk
-         * @param disk New working disk
-         * @details This method sets the working disk of all windows using their setDisk method
+         * @brief diskChanged This method should be called if the disk changes
+         * @details This method should be invoked if the disk changed to another one.
+         *          This method will handle all requirements to refresh the UI
          */
-        void setDisk(core::disk::Disk *disk);
+        void diskChanged();
+
+        /**
+         * @brief setPartition This method sets the current partiton of the working disk
+         * @param disk New working disk
+         * @details This method sets the current partition of the disk of all windows using
+         * their setPartition method
+         */
+        void setPartition(int idx);
 
         /**
          * @brief close This method closes all windows
          * @details This method calls the hide method from all available windows
          */
-        void close(void);
+        void closeAll(void);
+
+    private slots:
+        void currentDiskChanged(void);
+
+
+        void currentPartitionIndexChanged(void);
     };
     } // window
 } // ui

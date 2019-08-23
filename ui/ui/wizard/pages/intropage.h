@@ -41,7 +41,7 @@ namespace ui{
              * @brief ~IntroPage Destructor
              * @details This destructor will free up used resources
              */
-            virtual ~IntroPage(void) override;
+            //virtual ~IntroPage(void) override;
 
             /**
              * @brief nextId This method returns the next id

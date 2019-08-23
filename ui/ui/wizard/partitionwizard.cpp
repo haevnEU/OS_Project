@@ -1,5 +1,5 @@
 #include "partitionwizard.h"
-
+#include "core/FAT.h"
 using namespace ui::wizard;
 
 PartitionWizard::PartitionWizard(unsigned long long diskSize, QWidget* parent) :QWizard(parent){
@@ -10,26 +10,23 @@ PartitionWizard::PartitionWizard(unsigned long long diskSize, QWidget* parent) :
     setWizardStyle(QWizard::WizardStyle::NStyles);
 }
 
-PartitionWizard::~PartitionWizard(){
-    QWizard::~QWizard();
-}
-
-
 core::logic::Partition* PartitionWizard::getResultedPartition(void){
     long blockSize = field("partitionBlockSize").toLongLong();
     long blockCount = field("partitionBlockCount").toLongLong();
     int fs = field("partitionFileSystem").toInt();
-
+    core::FileSystem::fileSystemType fileSystem;
     switch(fs){
     case 0:
-//        text.append("INode");
+        fileSystem = core::FileSystem::fileSystemType::INode;
         break;
     case 1:
-//        text.append("FAT");
+        fileSystem = core::FileSystem::fileSystemType::FAT;
         break;
     case 2:
-//        text.append("CD-ROM");
+        fileSystem = core::FileSystem::fileSystemType::CD_ROM;
         break;
+    default:
+        fileSystem = core::FileSystem::fileSystemType::other;
     }
 
     switch(blockSize){
@@ -50,7 +47,7 @@ core::logic::Partition* PartitionWizard::getResultedPartition(void){
         break;
     }
 
-   return new core::logic::Partition(static_cast<unsigned long long>(blockSize), static_cast<unsigned long long>(blockCount), nullptr);
+   return new core::logic::Partition(static_cast<unsigned long long>(blockSize), static_cast<unsigned long long>(blockCount), fileSystem);
 }
 
 void PartitionWizard::done(int result){

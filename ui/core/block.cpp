@@ -75,6 +75,23 @@ const unsigned char* Block::data(void) {
     return data_m;
 }
 
+bool Block::setByte(int offset,char byte) {
+    if(offset>blockSize_m) {
+        return false;
+    }else{
+        data_m[offset] = byte;
+        return true;
+    }
+}
+
+char Block::getByte(int offset) {
+    if(offset>blockSize_m) {
+        return 0;
+    }else{
+        return data_m[offset];
+    }
+}
+
 std::ostream& core::logic::operator<<(std::ostream& os, Block& block){
 
     return os;

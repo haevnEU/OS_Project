@@ -7,10 +7,6 @@ SummaryPage::SummaryPage(int usedPages, QWidget* parent) : QWizardPage (parent){
     usedPages_m = usedPages;
 }
 
-SummaryPage::~SummaryPage(){
-    QWizardPage::~QWizardPage();
-}
-
 void SummaryPage::initializePage(){
     QString text = "";
     if((usedPages_m & pages_enum::diskPage) == pages_enum::diskPage){

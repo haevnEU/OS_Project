@@ -11,9 +11,6 @@ DiskWizard::DiskWizard(QWidget* parent) : QWizard (parent){
     setWizardStyle(QWizard::WizardStyle::NStyles);
 }
 
-DiskWizard::~DiskWizard(){
-    QWizard::~QWizard();
-}
 
 core::disk::Disk *DiskWizard::getResultedDisk(){
 
@@ -58,20 +55,22 @@ core::disk::Disk *DiskWizard::getResultedDisk(){
             break;
         }
         int fs = field("partitionFileSystem").toInt();
-        IFileSystem* fileSystem = nullptr;
+        core::FileSystem::fileSystemType fileSystem;
         switch(fs){
             // INode
             case 0:
-                fileSystem = nullptr;
+                fileSystem = core::FileSystem::fileSystemType::INode;
                 break;
             // FAT
             case 1:
-                fileSystem = nullptr;
+                fileSystem = core::FileSystem::fileSystemType::FAT;
                 break;
             // CD-ROM
             case 2:
-                fileSystem = nullptr;
+                fileSystem = core::FileSystem::fileSystemType::CD_ROM;
                 break;
+            default:
+                fileSystem = core::FileSystem::fileSystemType::other;
         }
         disk->MBR()->addPartition(blockSize, amluntBlocks, fileSystem);
     }

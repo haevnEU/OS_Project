@@ -8,10 +8,6 @@ IntroPage::IntroPage(QString text, pages_enum nextPage, QWidget* parent) : QWiza
     nextPage_m  = nextPage;
 }
 
-IntroPage::~IntroPage(){
-    QWizardPage::~QWizardPage();
-}
-
 int IntroPage::nextId() const{
     return nextPage_m;
 }

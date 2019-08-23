@@ -1,4 +1,5 @@
 #include "diskinfo.h"
+#include "core/api.h"
 
 using namespace ui::window;
 
@@ -85,10 +86,8 @@ DiskInfo::~DiskInfo(){
 
 }
 
-void DiskInfo::setDisk(core::disk::Disk *disk){
-    this->workingDisk_m = disk;
-
-
+void DiskInfo::diskChanged(){
+    core::disk::Disk* disk = API::GetInstance()->currentDisk();
     lbDiskCapacity->setText(QString::number(disk->capacity()).append("Byte"));
     lbDiskName->setText(QString(disk->name().c_str()));
     if(nullptr != disk->MBR()->getPartition(0)){
@@ -153,4 +152,9 @@ void DiskInfo::setDisk(core::disk::Disk *disk){
     }
 
     // TODO setup UI info
+}
+
+
+void DiskInfo::setPartition(int idx){
+
 }

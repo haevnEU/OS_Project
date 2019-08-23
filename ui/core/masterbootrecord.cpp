@@ -15,12 +15,18 @@ core::logic::Partition* MasterBootRecord::getPartition(int index){
     if(index >= MasterBootRecord::MAX_PARTITION){
         throw std::runtime_error("Index out of range");
     }
-    if(nullptr == partitions_m[index]){
-       return nullptr;
-    }
     return partitions_m[index];
 }
 
+bool MasterBootRecord::addPartition(int index, logic::Partition* partition){
+    if(index >= MasterBootRecord::MAX_PARTITION){
+        return false;
+    }
+    if(nullptr != partitions_m[index]){
+       return false;
+    }
+    partitions_m[index] = partition;
+}
 bool MasterBootRecord::addPartition(logic::Partition* partition){
     if((availableDiskCapacity_m - (partition->blockSize() * partition->amountBlocks())) <= 0){
         return false;
@@ -38,7 +44,7 @@ bool MasterBootRecord::addPartition(logic::Partition* partition){
 
 }
 
-bool MasterBootRecord::addPartition(long blockSize, long amountBlocks, IFileSystem* fileSystem){
+bool MasterBootRecord::addPartition(long blockSize, long amountBlocks, FileSystem::fileSystemType fileSystem){
     if((availableDiskCapacity_m - (blockSize * amountBlocks)) <= 0){
         return false;
     }
@@ -54,7 +60,7 @@ bool MasterBootRecord::addPartition(long blockSize, long amountBlocks, IFileSyst
     return false;
 }
 
-bool MasterBootRecord::addPartition(int index, long blockSize, long amountBlocks, IFileSystem* fileSystem){
+bool MasterBootRecord::addPartition(int index, long blockSize, long amountBlocks, FileSystem::fileSystemType fileSystem){
     if(index >= MasterBootRecord::MAX_PARTITION){
         return false;
     }

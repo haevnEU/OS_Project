@@ -39,7 +39,7 @@ namespace ui{
              * @brief ~DiskPage Destructor
              * @details This destructor will free up used resources
              */
-            virtual ~DiskPage(void) override;
+            //virtual ~DiskPage(void) override;
 
             /**
              * @brief nextId This method returns the next id

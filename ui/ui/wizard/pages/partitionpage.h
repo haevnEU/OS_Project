@@ -54,7 +54,7 @@ namespace ui{
              * @brief ~PartitionPage Destructor
              * @details This destructor will free up used resources
              */
-            virtual ~PartitionPage(void) override;
+            //virtual ~PartitionPage(void) override;
 
             /**
              * @brief PartitionPage This is a constructor

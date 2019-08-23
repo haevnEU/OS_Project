@@ -1,11 +1,14 @@
 #include "resizepartition.h"
 
+#include <QDebug>
+
 using namespace ui::window;
 
 ResizePartition::ResizePartition(){
 
     // Initialize UI elements
     lbMaxValue= new QLabel();
+    lbPartitionInfo = new QLabel();
     lbCurrentValue= new QLabel();
     sdPartitionSize = new QSlider;
     btOk = new QPushButton("Ok");
@@ -20,7 +23,8 @@ ResizePartition::ResizePartition(){
 
     QGridLayout* layout = new QGridLayout;
 
-    layout->addWidget(lbCurrentValue, 0,0,1,3);
+    layout->addWidget(lbPartitionInfo, 0,0);
+    layout->addWidget(lbCurrentValue, 0,1);
     layout->addWidget(new QLabel("0"), 1,0);
     layout->addWidget(sdPartitionSize, 1, 1);
     layout->addWidget(lbMaxValue, 1,2);
@@ -45,8 +49,7 @@ ResizePartition::~ResizePartition(){
 }
 
 void ResizePartition::btOkPressed(){
-    unsigned long long newSize = sdPartitionSize->value();
-    disk_m->MBR()->getPartition(index_m)->resize(newSize);
+    API::GetInstance()->resizePartition(index_m, sdPartitionSize->value());
     this->setVisible(false);
 }
 
@@ -54,8 +57,8 @@ void ResizePartition::btCancelPressed(){
     this->setVisible(false);
 }
 
-void ResizePartition::setDisk(core::disk::Disk *disk){
-    this->disk_m = disk;
+void ResizePartition::diskChanged(){
+    display();
 }
 
 void ResizePartition::setIndex(int index){
@@ -64,20 +67,37 @@ void ResizePartition::setIndex(int index){
 
 void ResizePartition::showEvent(QShowEvent *event){
     QWidget::showEvent(event);
-    if(nullptr == disk_m){
+    if(nullptr == API::GetInstance()->currentDisk()){
         return;
     }
-    if(nullptr == disk_m->MBR()->getPartition(index_m)){
-        return;
-    }
-
-    long long maxSize = disk_m->MBR()->getPartition(index_m)->blockSize() * disk_m->MBR()->getPartition(index_m)->amountBlocks();
-    lbMaxValue->setText(QString::number(maxSize));
-    sdPartitionSize->setMinimum(0);
-    sdPartitionSize->setMaximum(maxSize);
+   display();
 }
 
+void ResizePartition::display(){
+    if(nullptr == API::GetInstance()->currentDisk()->MBR()->getPartition(index_m)){
+        return;
+    }
+
+    unsigned long long newBlockCount = 0;
+    unsigned long long blockSize = API::GetInstance()->blockSize(index_m);
+    unsigned long long amountBlocks = API::GetInstance()->blockCount(index_m);
+    unsigned long long maxSize =  amountBlocks + API::GetInstance()->availableDiskSize() / blockSize;
+
+    lbMaxValue->setText(QString::number(maxSize));
+    sdPartitionSize->setMinimum(1);
+    sdPartitionSize->setMaximum(maxSize);
+    sdPartitionSize->setValue(amountBlocks);
+
+    lbPartitionInfo->setText(QString("Amount blocks: ").append(QString::number(amountBlocks))
+                             .append("Block size").append(QString::number(blockSize)));
+    API::GetInstance()->resizePartition(index_m, newBlockCount);
+}
 
 void ResizePartition::valueChanged(int value){
     lbCurrentValue->setText(QString::number(value));
+}
+
+void ResizePartition::setPartition(int idx){
+    setIndex(idx);
+    display();
 }

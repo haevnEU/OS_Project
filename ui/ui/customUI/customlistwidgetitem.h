@@ -51,7 +51,7 @@ namespace ui{
          * @brief ~CustomListWidgetItem Destructor
          * @details This destructor will free up used resources
          */
-        virtual ~CustomListWidgetItem(void);
+        //virtual ~CustomListWidgetItem(void);
 
         /**
          * @brief enableLightMode This method enabled the light mode

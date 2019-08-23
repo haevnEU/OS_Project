@@ -67,7 +67,7 @@ namespace core {
              * @param fileSystem Filesystem of the Partition
              * @return true if the Partition was created otherwise false
              */
-            bool addPartition( long blockSize,  long amountBlocks, IFileSystem* fileSystem);
+            bool addPartition( long blockSize,  long amountBlocks, FileSystem::fileSystemType fileSystem);
 
             /**
              * @brief addPartition Adds a new partition to the MBR
@@ -80,7 +80,7 @@ namespace core {
              * @param fileSystem Filesystem of the Partition
              * @return true if the Partition was created otherwise false
              */
-            bool addPartition(int index,  long blockSize,  long amountBlocks, IFileSystem* fileSystem);
+            bool addPartition(int index,  long blockSize,  long amountBlocks, FileSystem::fileSystemType fileSystem);
 
             /**
              * @brief removePartition Removes a partition
@@ -101,6 +101,7 @@ namespace core {
 
             friend std::ostream& operator<< (std::ostream& os, MasterBootRecord& mbr);
             bool addPartition(logic::Partition *partition);
+            bool addPartition(int index, logic::Partition *partition);
         };
     } // disk
 } // core

@@ -129,6 +129,23 @@ namespace core {
          */
         const unsigned char* data(void);
 
+
+        /**
+         * sets byte in block
+         * @author Leon
+         * @param offset the index in block
+         * @param byte the byte to set
+         * @return returns false if index is out of bounce
+         */
+        bool setByte(int offset,char byte);
+        /**
+         * gets byte out of block
+         * @author Leon
+         * @param offset index in the block
+         * @return the byte value of the index in the block if offset out of bounce returns 0
+         */
+        char getByte(int offset);
+
         /**
          * TODO write comment
          */

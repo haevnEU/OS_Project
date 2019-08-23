@@ -12,7 +12,7 @@
 
 #include "core/disk.h"
 #include "core/partition.h"
-#include "core/ifilesystem.h"
+#include "core/FileSystem.h"
 
 //! This namespace contains all ui elements for this project
 namespace ui{
@@ -38,7 +38,7 @@ namespace ui{
         /**
          * @brief ~DiskWizard Destrucotr
          */
-        virtual ~DiskWizard(void) override;
+      //  virtual ~DiskWizard(void) override;
 
         /**
          * @brief getResultedDisk This method returns the disk which where created.

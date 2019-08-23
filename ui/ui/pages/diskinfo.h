@@ -121,7 +121,7 @@ namespace ui{
         /**
          * @brief workingDisk_m This attribute is used as the disk which all information contains
          */
-        core::disk::Disk* workingDisk_m;
+        //core::disk::Disk* workingDisk_m;
 
     public:
         /**
@@ -139,12 +139,13 @@ namespace ui{
         ~DiskInfo();
 
         /**
-         * @brief setDisk This method sets the working disk
-         * @param disk New working disk
-         * @details This method sets the working disk of this windows
+         * @brief diskChanged This method should be called if the disk changes
+         * @details This method should be invoked if the disk changed to another one.
+         *          This method will handle all requirements to refresh the UI
          */
-        void setDisk(core::disk::Disk* workingDisk_m);
+        void diskChanged();
 
+        void setPartition(int idx);
     };
     } // window
 } // ui

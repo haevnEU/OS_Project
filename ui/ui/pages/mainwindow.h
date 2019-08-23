@@ -9,7 +9,6 @@
 
 #include "core/disk.h"
 #include "detailpage.h"
-#include "../customUI/CustomControlBar.h"
 #include "../customUI/customlistwidgetitem.h"
 
 //! This namespace contains all ui elements for this project
@@ -28,19 +27,24 @@ namespace ui{
 
         QHBoxLayout *layout;
         QHBoxLayout* detailPane;
-        ui::customUI::CustomControlBar* tmp;
         QListWidget* diskPane;
-        QListWidgetItem* currentDisk;
+        QListWidgetItem* currentDiskWidgetItem;
         QListWidget* partitionPane;
-        QListWidgetItem* currentPartition;
+        QListWidgetItem* currentPartitionWidgetItem;
         QListWidget* toolPane;
         QListWidgetItem* currentTool;
 
 
+        ui::customUI::CustomListWidgetItem* DBGitem;
         ui::customUI::CustomListWidgetItem* rootItem;
         ui::customUI::CustomListWidgetItem* diskInfoItem;
         ui::customUI::CustomListWidgetItem* resizeItem;
-
+        ui::customUI::CustomListWidgetItem* formatItem;
+        ui::customUI::CustomListWidgetItem* defragItem;
+        ui::customUI::CustomListWidgetItem* showFragmentationItem;
+        ui::customUI::CustomListWidgetItem* addFileDirItem;
+        ui::customUI::CustomListWidgetItem* closeAllWindowsItem;
+        ui::customUI::CustomListWidgetItem* displayContentItem;
 
         ui::customUI::CustomListWidgetItem* addPartition;
         std::vector<core::disk::Disk*>* disks;
@@ -49,7 +53,6 @@ namespace ui{
     public:
         MainWindow();
 
-        ~MainWindow();
 
         void refreshDisks(void);
         void refreshPartition(void);
@@ -60,10 +63,13 @@ namespace ui{
         void hideEvent(QHideEvent* event) override;
 
     public slots:
-        void diskPaneItemClicked(QListWidgetItem* item);
-        void click();
-        void controlPaneItemClicked(QListWidgetItem *item);
-        void partitionPaneItemClicked(QListWidgetItem *item);
+        void diskPaneItemActivated(QListWidgetItem *item);
+        void controlPaneItemActivated(QListWidgetItem *item);
+        void partitionPaneItemActivated(QListWidgetItem *item);
+        void diskPaneRowChanged(int row);
+        void partitionPaneRowChanged(int row);
+        void diskChanged();
+
     };
     } // window
 } // ui

@@ -60,10 +60,6 @@ PartitionPage::PartitionPage(QWidget* parent) : QWizardPage(parent){
     connect(slider, &QSlider::valueChanged, this, &PartitionPage::amountBlocksSliderValueChanged);
 }
 
-PartitionPage::~PartitionPage(){
-    QWizardPage::~QWizardPage();
-}
-
 int PartitionPage::nextId() const{
     return pages_enum::summaryPage;
 }

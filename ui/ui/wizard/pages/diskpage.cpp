@@ -41,10 +41,6 @@ DiskPage::DiskPage(QWidget* parent) : QWizardPage (parent){
     setLayout(layout);
 }
 
-DiskPage::~DiskPage(){
-    QWizardPage::~QWizardPage();
-}
-
 int DiskPage::nextId() const{
     bool partition = field("createPartition").toBool();
     if(partition){

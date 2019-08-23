@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QGridLayout>
 
+#include "core/api.h"
 #include "core/disk.h"
 
 //! This namespace contains all ui elements for this project
@@ -34,6 +35,10 @@ namespace ui{
         QLabel* lbMaxValue;
 
         /**
+         * @brief lbPartitionInfo This UI element displays the partition info
+         */
+        QLabel* lbPartitionInfo;
+        /**
          * @brief currentLabel This UI element displays the current value of the slider
          */
         QLabel* lbCurrentValue;
@@ -54,15 +59,15 @@ namespace ui{
         QPushButton* btCancel;
 
         /**
-         * @brief disk This attribute represent the current working disk
-         */
-        core::disk::Disk* disk_m;
-
-        /**
          * @brief index This attributes is used to detemrine which partition should be resized.
          */
         int index_m;
 
+        /**
+         * @brief display Internal usage
+         * @details This method refreshs the ui
+         */
+        void display();
     public:
 
         /**
@@ -80,11 +85,10 @@ namespace ui{
         virtual ~ResizePartition(void) override;
 
         /**
-         * @brief setDisk This method sets the working disk
-         * @details This method sets the working disk which the resize operation should be operate on
-         * @param disk New working disk
+         * @brief diskChanged This method should be called if the disk changes.
+         * @details This method should be called if the disk changes, it will handle the UI refresh.
          */
-        void setDisk(core::disk::Disk* disk);
+        void diskChanged();
 
         /**
          * @brief setIndex This method sets the index of the partition
@@ -101,6 +105,14 @@ namespace ui{
          * @param event QtInternal...
          */
         void showEvent(QShowEvent* event) override;
+
+        /**
+         * @brief setDisk This method sets the partition of the working disk
+         * @details This method sets the the partition of the working disk which the resize
+         *          operation should be operate on
+         * @param idx New index of the partition
+         */
+        void setPartition(int idx);
 
     public slots:
         /**
