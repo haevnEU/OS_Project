@@ -1,38 +1,22 @@
-//
-// Created by Leon on 15.07.2019.
-//
+#include "block.h"
+#include "disk.h"
+#include "masterbootrecord.h"
+#include "partition.h"
+
 #include <iostream>
-#include <diskSimulation/Disk.h>
+#include <iomanip>
 
-using namespace std;
-int main() {
+int main(int argc, const char* argv[]){
+/*
+    std::cout << "BLA" << std::boolalpha << std::endl;
+    disk::Disk* disk = new disk::Disk(1024, "computer inc");
+    std::cout << disk->MBR()->addPartition(512,1,nullptr) << std::endl;
+    std::cout << disk->MBR()->addPartition(1024,1,nullptr)<< std::endl;
+    std::cout << disk->MBR()->addPartition(2, 512,1, nullptr)<< std::endl;
+    std::cout << disk->MBR()->addPartition(3, 1024,1, nullptr)<< std::endl;
 
-    Disk* test1 =new Disk(160,16);
-
-    for(int i=0;i < 10; i++){
-        cout <<endl << "Block " << i <<": "<< endl;
-        for(int n =0; n < 16;n++){
-            cout << test1->getBit(i,n) ;
-        }
-
-    }
-    test1->setBit(0,1,1);
-    for(int i=0;i < 10; i++){
-        cout <<endl << "Block " << i <<": "<< endl;
-        for(int n =0; n < 16;n++){
-            cout << test1->getBit(i,n) ;
-        }
-
-    }
-    test1->coppyBlockContent(0,1);
-    for(int i=0;i < 10; i++){
-        cout <<endl << "Block " << i <<": "<< endl;
-        for(int n =0; n < 16;n++){
-            cout << test1->getBit(i,n) ;
-        }
-
-    }
-
+    disk->MBR()->getPartition(2)->mount();
+    std::cout << *disk << std::endl;
+*/
     return 0;
-
 }

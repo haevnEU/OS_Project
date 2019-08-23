@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project
+CMAKE_SOURCE_DIR = "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_P
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,7 +69,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,60 @@ OS_Project/fast:
 	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/build
 .PHONY : OS_Project/fast
 
+core/FAT.obj: core/FAT.cpp.obj
+
+.PHONY : core/FAT.obj
+
+# target to build an object file
+core/FAT.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/FAT.cpp.obj
+.PHONY : core/FAT.cpp.obj
+
+core/FAT.i: core/FAT.cpp.i
+
+.PHONY : core/FAT.i
+
+# target to preprocess a source file
+core/FAT.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/FAT.cpp.i
+.PHONY : core/FAT.cpp.i
+
+core/FAT.s: core/FAT.cpp.s
+
+.PHONY : core/FAT.s
+
+# target to generate assembly for a file
+core/FAT.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/FAT.cpp.s
+.PHONY : core/FAT.cpp.s
+
+core/File.obj: core/File.cpp.obj
+
+.PHONY : core/File.obj
+
+# target to build an object file
+core/File.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/File.cpp.obj
+.PHONY : core/File.cpp.obj
+
+core/File.i: core/File.cpp.i
+
+.PHONY : core/File.i
+
+# target to preprocess a source file
+core/File.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/File.cpp.i
+.PHONY : core/File.cpp.i
+
+core/File.s: core/File.cpp.s
+
+.PHONY : core/File.s
+
+# target to generate assembly for a file
+core/File.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/File.cpp.s
+.PHONY : core/File.cpp.s
+
 core/FileSystem.obj: core/FileSystem.cpp.obj
 
 .PHONY : core/FileSystem.obj
@@ -149,140 +203,86 @@ core/FileSystem.cpp.s:
 	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/FileSystem.cpp.s
 .PHONY : core/FileSystem.cpp.s
 
-core/diskSimulation/Block.obj: core/diskSimulation/Block.cpp.obj
+core/api.obj: core/api.cpp.obj
 
-.PHONY : core/diskSimulation/Block.obj
-
-# target to build an object file
-core/diskSimulation/Block.cpp.obj:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj
-.PHONY : core/diskSimulation/Block.cpp.obj
-
-core/diskSimulation/Block.i: core/diskSimulation/Block.cpp.i
-
-.PHONY : core/diskSimulation/Block.i
-
-# target to preprocess a source file
-core/diskSimulation/Block.cpp.i:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.i
-.PHONY : core/diskSimulation/Block.cpp.i
-
-core/diskSimulation/Block.s: core/diskSimulation/Block.cpp.s
-
-.PHONY : core/diskSimulation/Block.s
-
-# target to generate assembly for a file
-core/diskSimulation/Block.cpp.s:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.s
-.PHONY : core/diskSimulation/Block.cpp.s
-
-core/diskSimulation/Disk.obj: core/diskSimulation/Disk.cpp.obj
-
-.PHONY : core/diskSimulation/Disk.obj
+.PHONY : core/api.obj
 
 # target to build an object file
-core/diskSimulation/Disk.cpp.obj:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj
-.PHONY : core/diskSimulation/Disk.cpp.obj
+core/api.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/api.cpp.obj
+.PHONY : core/api.cpp.obj
 
-core/diskSimulation/Disk.i: core/diskSimulation/Disk.cpp.i
+core/api.i: core/api.cpp.i
 
-.PHONY : core/diskSimulation/Disk.i
+.PHONY : core/api.i
 
 # target to preprocess a source file
-core/diskSimulation/Disk.cpp.i:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.i
-.PHONY : core/diskSimulation/Disk.cpp.i
+core/api.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/api.cpp.i
+.PHONY : core/api.cpp.i
 
-core/diskSimulation/Disk.s: core/diskSimulation/Disk.cpp.s
+core/api.s: core/api.cpp.s
 
-.PHONY : core/diskSimulation/Disk.s
+.PHONY : core/api.s
 
 # target to generate assembly for a file
-core/diskSimulation/Disk.cpp.s:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.s
-.PHONY : core/diskSimulation/Disk.cpp.s
+core/api.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/api.cpp.s
+.PHONY : core/api.cpp.s
 
-core/diskSimulation/MBR.obj: core/diskSimulation/MBR.cpp.obj
+core/block.obj: core/block.cpp.obj
 
-.PHONY : core/diskSimulation/MBR.obj
+.PHONY : core/block.obj
 
 # target to build an object file
-core/diskSimulation/MBR.cpp.obj:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj
-.PHONY : core/diskSimulation/MBR.cpp.obj
+core/block.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/block.cpp.obj
+.PHONY : core/block.cpp.obj
 
-core/diskSimulation/MBR.i: core/diskSimulation/MBR.cpp.i
+core/block.i: core/block.cpp.i
 
-.PHONY : core/diskSimulation/MBR.i
+.PHONY : core/block.i
 
 # target to preprocess a source file
-core/diskSimulation/MBR.cpp.i:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.i
-.PHONY : core/diskSimulation/MBR.cpp.i
+core/block.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/block.cpp.i
+.PHONY : core/block.cpp.i
 
-core/diskSimulation/MBR.s: core/diskSimulation/MBR.cpp.s
+core/block.s: core/block.cpp.s
 
-.PHONY : core/diskSimulation/MBR.s
+.PHONY : core/block.s
 
 # target to generate assembly for a file
-core/diskSimulation/MBR.cpp.s:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.s
-.PHONY : core/diskSimulation/MBR.cpp.s
+core/block.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/block.cpp.s
+.PHONY : core/block.cpp.s
 
-core/diskSimulation/Partition.obj: core/diskSimulation/Partition.cpp.obj
+core/disk.obj: core/disk.cpp.obj
 
-.PHONY : core/diskSimulation/Partition.obj
+.PHONY : core/disk.obj
 
 # target to build an object file
-core/diskSimulation/Partition.cpp.obj:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj
-.PHONY : core/diskSimulation/Partition.cpp.obj
+core/disk.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/disk.cpp.obj
+.PHONY : core/disk.cpp.obj
 
-core/diskSimulation/Partition.i: core/diskSimulation/Partition.cpp.i
+core/disk.i: core/disk.cpp.i
 
-.PHONY : core/diskSimulation/Partition.i
-
-# target to preprocess a source file
-core/diskSimulation/Partition.cpp.i:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.i
-.PHONY : core/diskSimulation/Partition.cpp.i
-
-core/diskSimulation/Partition.s: core/diskSimulation/Partition.cpp.s
-
-.PHONY : core/diskSimulation/Partition.s
-
-# target to generate assembly for a file
-core/diskSimulation/Partition.cpp.s:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.s
-.PHONY : core/diskSimulation/Partition.cpp.s
-
-core/diskSimulation/PartitionTable.obj: core/diskSimulation/PartitionTable.cpp.obj
-
-.PHONY : core/diskSimulation/PartitionTable.obj
-
-# target to build an object file
-core/diskSimulation/PartitionTable.cpp.obj:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj
-.PHONY : core/diskSimulation/PartitionTable.cpp.obj
-
-core/diskSimulation/PartitionTable.i: core/diskSimulation/PartitionTable.cpp.i
-
-.PHONY : core/diskSimulation/PartitionTable.i
+.PHONY : core/disk.i
 
 # target to preprocess a source file
-core/diskSimulation/PartitionTable.cpp.i:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.i
-.PHONY : core/diskSimulation/PartitionTable.cpp.i
+core/disk.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/disk.cpp.i
+.PHONY : core/disk.cpp.i
 
-core/diskSimulation/PartitionTable.s: core/diskSimulation/PartitionTable.cpp.s
+core/disk.s: core/disk.cpp.s
 
-.PHONY : core/diskSimulation/PartitionTable.s
+.PHONY : core/disk.s
 
 # target to generate assembly for a file
-core/diskSimulation/PartitionTable.cpp.s:
-	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.s
-.PHONY : core/diskSimulation/PartitionTable.cpp.s
+core/disk.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/disk.cpp.s
+.PHONY : core/disk.cpp.s
 
 core/main.obj: core/main.cpp.obj
 
@@ -311,6 +311,60 @@ core/main.cpp.s:
 	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/main.cpp.s
 .PHONY : core/main.cpp.s
 
+core/masterbootrecord.obj: core/masterbootrecord.cpp.obj
+
+.PHONY : core/masterbootrecord.obj
+
+# target to build an object file
+core/masterbootrecord.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj
+.PHONY : core/masterbootrecord.cpp.obj
+
+core/masterbootrecord.i: core/masterbootrecord.cpp.i
+
+.PHONY : core/masterbootrecord.i
+
+# target to preprocess a source file
+core/masterbootrecord.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.i
+.PHONY : core/masterbootrecord.cpp.i
+
+core/masterbootrecord.s: core/masterbootrecord.cpp.s
+
+.PHONY : core/masterbootrecord.s
+
+# target to generate assembly for a file
+core/masterbootrecord.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.s
+.PHONY : core/masterbootrecord.cpp.s
+
+core/partition.obj: core/partition.cpp.obj
+
+.PHONY : core/partition.obj
+
+# target to build an object file
+core/partition.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/partition.cpp.obj
+.PHONY : core/partition.cpp.obj
+
+core/partition.i: core/partition.cpp.i
+
+.PHONY : core/partition.i
+
+# target to preprocess a source file
+core/partition.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/partition.cpp.i
+.PHONY : core/partition.cpp.i
+
+core/partition.s: core/partition.cpp.s
+
+.PHONY : core/partition.s
+
+# target to generate assembly for a file
+core/partition.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_Project.dir\build.make CMakeFiles/OS_Project.dir/core/partition.cpp.s
+.PHONY : core/partition.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -320,27 +374,33 @@ help:
 	@echo ... rebuild_cache
 	@echo ... OS_Project
 	@echo ... edit_cache
+	@echo ... core/FAT.obj
+	@echo ... core/FAT.i
+	@echo ... core/FAT.s
+	@echo ... core/File.obj
+	@echo ... core/File.i
+	@echo ... core/File.s
 	@echo ... core/FileSystem.obj
 	@echo ... core/FileSystem.i
 	@echo ... core/FileSystem.s
-	@echo ... core/diskSimulation/Block.obj
-	@echo ... core/diskSimulation/Block.i
-	@echo ... core/diskSimulation/Block.s
-	@echo ... core/diskSimulation/Disk.obj
-	@echo ... core/diskSimulation/Disk.i
-	@echo ... core/diskSimulation/Disk.s
-	@echo ... core/diskSimulation/MBR.obj
-	@echo ... core/diskSimulation/MBR.i
-	@echo ... core/diskSimulation/MBR.s
-	@echo ... core/diskSimulation/Partition.obj
-	@echo ... core/diskSimulation/Partition.i
-	@echo ... core/diskSimulation/Partition.s
-	@echo ... core/diskSimulation/PartitionTable.obj
-	@echo ... core/diskSimulation/PartitionTable.i
-	@echo ... core/diskSimulation/PartitionTable.s
+	@echo ... core/api.obj
+	@echo ... core/api.i
+	@echo ... core/api.s
+	@echo ... core/block.obj
+	@echo ... core/block.i
+	@echo ... core/block.s
+	@echo ... core/disk.obj
+	@echo ... core/disk.i
+	@echo ... core/disk.s
 	@echo ... core/main.obj
 	@echo ... core/main.i
 	@echo ... core/main.s
+	@echo ... core/masterbootrecord.obj
+	@echo ... core/masterbootrecord.i
+	@echo ... core/masterbootrecord.s
+	@echo ... core/partition.obj
+	@echo ... core/partition.i
+	@echo ... core/partition.s
 .PHONY : help
 
 

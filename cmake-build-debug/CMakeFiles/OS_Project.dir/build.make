@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "P:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\Leon Heindl\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project
+CMAKE_SOURCE_DIR = "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OS_Project.dir/depend.make
@@ -56,129 +56,161 @@ include CMakeFiles/OS_Project.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/OS_Project.dir/flags.make
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
-CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
-CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj: ../core/diskSimulation/Block.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\diskSimulation\Block.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Block.cpp
+CMakeFiles/OS_Project.dir/core/api.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/api.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/api.cpp.obj: ../core/api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OS_Project.dir/core/api.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\api.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\api.cpp"
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Block.cpp > CMakeFiles\OS_Project.dir\core\diskSimulation\Block.cpp.i
+CMakeFiles/OS_Project.dir/core/api.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/api.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\api.cpp" > CMakeFiles\OS_Project.dir\core\api.cpp.i
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Block.cpp -o CMakeFiles\OS_Project.dir\core\diskSimulation\Block.cpp.s
+CMakeFiles/OS_Project.dir/core/api.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/api.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\api.cpp" -o CMakeFiles\OS_Project.dir\core\api.cpp.s
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
-CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
-CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj: ../core/diskSimulation/Disk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\diskSimulation\Disk.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Disk.cpp
+CMakeFiles/OS_Project.dir/core/block.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/block.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/block.cpp.obj: ../core/block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OS_Project.dir/core/block.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\block.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\block.cpp"
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Disk.cpp > CMakeFiles\OS_Project.dir\core\diskSimulation\Disk.cpp.i
+CMakeFiles/OS_Project.dir/core/block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/block.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\block.cpp" > CMakeFiles\OS_Project.dir\core\block.cpp.i
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Disk.cpp -o CMakeFiles\OS_Project.dir\core\diskSimulation\Disk.cpp.s
+CMakeFiles/OS_Project.dir/core/block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/block.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\block.cpp" -o CMakeFiles\OS_Project.dir\core\block.cpp.s
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
-CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
-CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj: ../core/diskSimulation/MBR.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\diskSimulation\MBR.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\MBR.cpp
+CMakeFiles/OS_Project.dir/core/disk.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/disk.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/disk.cpp.obj: ../core/disk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OS_Project.dir/core/disk.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\disk.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\disk.cpp"
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\MBR.cpp > CMakeFiles\OS_Project.dir\core\diskSimulation\MBR.cpp.i
+CMakeFiles/OS_Project.dir/core/disk.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/disk.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\disk.cpp" > CMakeFiles\OS_Project.dir\core\disk.cpp.i
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\MBR.cpp -o CMakeFiles\OS_Project.dir\core\diskSimulation\MBR.cpp.s
-
-CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
-CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
-CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj: ../core/diskSimulation/Partition.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\diskSimulation\Partition.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Partition.cpp
-
-CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Partition.cpp > CMakeFiles\OS_Project.dir\core\diskSimulation\Partition.cpp.i
-
-CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\Partition.cpp -o CMakeFiles\OS_Project.dir\core\diskSimulation\Partition.cpp.s
+CMakeFiles/OS_Project.dir/core/disk.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/disk.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\disk.cpp" -o CMakeFiles\OS_Project.dir\core\disk.cpp.s
 
 CMakeFiles/OS_Project.dir/core/main.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
 CMakeFiles/OS_Project.dir/core/main.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
 CMakeFiles/OS_Project.dir/core/main.cpp.obj: ../core/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OS_Project.dir/core/main.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\main.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OS_Project.dir/core/main.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\main.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\main.cpp"
 
 CMakeFiles/OS_Project.dir/core/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/main.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\main.cpp > CMakeFiles\OS_Project.dir\core\main.cpp.i
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\main.cpp" > CMakeFiles\OS_Project.dir\core\main.cpp.i
 
 CMakeFiles/OS_Project.dir/core/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/main.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\main.cpp -o CMakeFiles\OS_Project.dir\core\main.cpp.s
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\main.cpp" -o CMakeFiles\OS_Project.dir\core\main.cpp.s
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
-CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
-CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj: ../core/diskSimulation/PartitionTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\diskSimulation\PartitionTable.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\PartitionTable.cpp
+CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj: ../core/masterbootrecord.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\masterbootrecord.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\masterbootrecord.cpp"
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\PartitionTable.cpp > CMakeFiles\OS_Project.dir\core\diskSimulation\PartitionTable.cpp.i
+CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\masterbootrecord.cpp" > CMakeFiles\OS_Project.dir\core\masterbootrecord.cpp.i
 
-CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\diskSimulation\PartitionTable.cpp -o CMakeFiles\OS_Project.dir\core\diskSimulation\PartitionTable.cpp.s
+CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\masterbootrecord.cpp" -o CMakeFiles\OS_Project.dir\core\masterbootrecord.cpp.s
+
+CMakeFiles/OS_Project.dir/core/partition.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/partition.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/partition.cpp.obj: ../core/partition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OS_Project.dir/core/partition.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\partition.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\partition.cpp"
+
+CMakeFiles/OS_Project.dir/core/partition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/partition.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\partition.cpp" > CMakeFiles\OS_Project.dir\core\partition.cpp.i
+
+CMakeFiles/OS_Project.dir/core/partition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/partition.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\partition.cpp" -o CMakeFiles\OS_Project.dir\core\partition.cpp.s
+
+CMakeFiles/OS_Project.dir/core/FAT.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/FAT.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/FAT.cpp.obj: ../core/FAT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OS_Project.dir/core/FAT.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\FAT.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FAT.cpp"
+
+CMakeFiles/OS_Project.dir/core/FAT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/FAT.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FAT.cpp" > CMakeFiles\OS_Project.dir\core\FAT.cpp.i
+
+CMakeFiles/OS_Project.dir/core/FAT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/FAT.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FAT.cpp" -o CMakeFiles\OS_Project.dir\core\FAT.cpp.s
 
 CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
 CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
 CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj: ../core/FileSystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj"
-	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\FileSystem.cpp.obj -c C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\FileSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\FileSystem.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FileSystem.cpp"
 
 CMakeFiles/OS_Project.dir/core/FileSystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/FileSystem.cpp.i"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\FileSystem.cpp > CMakeFiles\OS_Project.dir\core\FileSystem.cpp.i
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FileSystem.cpp" > CMakeFiles\OS_Project.dir\core\FileSystem.cpp.i
 
 CMakeFiles/OS_Project.dir/core/FileSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/FileSystem.cpp.s"
-	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\core\FileSystem.cpp -o CMakeFiles\OS_Project.dir\core\FileSystem.cpp.s
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\FileSystem.cpp" -o CMakeFiles\OS_Project.dir\core\FileSystem.cpp.s
+
+CMakeFiles/OS_Project.dir/core/File.cpp.obj: CMakeFiles/OS_Project.dir/flags.make
+CMakeFiles/OS_Project.dir/core/File.cpp.obj: CMakeFiles/OS_Project.dir/includes_CXX.rsp
+CMakeFiles/OS_Project.dir/core/File.cpp.obj: ../core/File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OS_Project.dir/core/File.cpp.obj"
+	P:\GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OS_Project.dir\core\File.cpp.obj -c "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\File.cpp"
+
+CMakeFiles/OS_Project.dir/core/File.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OS_Project.dir/core/File.cpp.i"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\File.cpp" > CMakeFiles\OS_Project.dir\core\File.cpp.i
+
+CMakeFiles/OS_Project.dir/core/File.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OS_Project.dir/core/File.cpp.s"
+	P:\GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\core\File.cpp" -o CMakeFiles\OS_Project.dir\core\File.cpp.s
 
 # Object files for target OS_Project
 OS_Project_OBJECTS = \
-"CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj" \
-"CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj" \
-"CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj" \
-"CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/api.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/block.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/disk.cpp.obj" \
 "CMakeFiles/OS_Project.dir/core/main.cpp.obj" \
-"CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj" \
-"CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj"
+"CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/partition.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/FAT.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj" \
+"CMakeFiles/OS_Project.dir/core/File.cpp.obj"
 
 # External object files for target OS_Project
 OS_Project_EXTERNAL_OBJECTS =
 
-OS_Project.exe: CMakeFiles/OS_Project.dir/core/diskSimulation/Block.cpp.obj
-OS_Project.exe: CMakeFiles/OS_Project.dir/core/diskSimulation/Disk.cpp.obj
-OS_Project.exe: CMakeFiles/OS_Project.dir/core/diskSimulation/MBR.cpp.obj
-OS_Project.exe: CMakeFiles/OS_Project.dir/core/diskSimulation/Partition.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/api.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/block.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/disk.cpp.obj
 OS_Project.exe: CMakeFiles/OS_Project.dir/core/main.cpp.obj
-OS_Project.exe: CMakeFiles/OS_Project.dir/core/diskSimulation/PartitionTable.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/masterbootrecord.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/partition.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/FAT.cpp.obj
 OS_Project.exe: CMakeFiles/OS_Project.dir/core/FileSystem.cpp.obj
+OS_Project.exe: CMakeFiles/OS_Project.dir/core/File.cpp.obj
 OS_Project.exe: CMakeFiles/OS_Project.dir/build.make
 OS_Project.exe: CMakeFiles/OS_Project.dir/linklibs.rsp
 OS_Project.exe: CMakeFiles/OS_Project.dir/objects1.rsp
 OS_Project.exe: CMakeFiles/OS_Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable OS_Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable OS_Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OS_Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -191,6 +223,6 @@ CMakeFiles/OS_Project.dir/clean:
 .PHONY : CMakeFiles/OS_Project.dir/clean
 
 CMakeFiles/OS_Project.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug C:\Users\Leon\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\cmake-build-debug\CMakeFiles\OS_Project.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug" "C:\Users\Leon Heindl\Documents\UNI\AiSo19\Betriebsystem\Projekt\OS_Project\OS_Project\cmake-build-debug\CMakeFiles\OS_Project.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/OS_Project.dir/depend
 

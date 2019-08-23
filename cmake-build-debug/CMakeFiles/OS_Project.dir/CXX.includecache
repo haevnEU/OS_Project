@@ -6,47 +6,65 @@
 
 #IncludeRegexTransform: 
 
-../core/FileSystem.h
+../core_old/include/Definitionsh.h
 
-../core/diskSimulation/Disk.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/FileSystem.cpp
-FileSystem.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/FileSystem.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/FileSystem.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Block.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Disk.cpp
-Disk.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Disk.h
-Block.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Block.h
-PartitionTable.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/PartitionTable.h
-FileSystem.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/FileSystem.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Disk.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Partition.cpp
-Partition.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Partition.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Partition.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/PartitionTable.cpp
-PartitionTable.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/PartitionTable.h
-Partition.h
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/Partition.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/diskSimulation/PartitionTable.h
-
-C:/Users/Leon/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/core/main.cpp
+../core_old/include/File.h
 iostream
 -
-diskSimulation/Disk.h
+string
+-
+
+../core_old/include/ifilesystem.h
+vector
+-
+iostream
+-
+File.h
+../core_old/include/File.h
+Definitionsh.h
+../core_old/include/Definitionsh.h
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/Block.h
+iostream
+-
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/FAT.cpp
+list
+-
+FAT.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/FAT.h
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/FAT.h
+ifilesystem.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/ifilesystem.h
+block.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/block.h
+FileSystem.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/FileSystem.h
+file.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/file.h
+list
+-
+vector
+-
+math.h
+-
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/FileSystem.h
+list
+-
+vector
+-
+Block.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/Block.h
+File.h
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/File.h
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/block.h
+iostream
+-
+
+C:/Users/Leon Heindl/Documents/UNI/AiSo19/Betriebsystem/Projekt/OS_Project/OS_Project/core/file.h
+string
 -
 
